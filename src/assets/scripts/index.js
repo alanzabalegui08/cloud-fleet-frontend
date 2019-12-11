@@ -13,5 +13,5 @@ import './datatable';
 // import './datepicker';
 // import './email';
 // import './fullcalendar';
-// import './googleMaps';
+import './googleMaps';
 // import './utils';

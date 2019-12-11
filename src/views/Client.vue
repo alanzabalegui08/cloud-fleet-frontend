@@ -19,7 +19,7 @@
                                         <div class="col-md-12">
                                             <div class="bgc-white bd bdrs-3 p-20 mB-20">
                                                 <h4 class="c-grey-900 mB-20">Tables</h4>
-                                                <table-klay></table-klay>
+                                                <table-klay :list="clients"></table-klay>
                                             </div>
                                         </div>
                                     </div>
@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import $ from 'jquery';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
@@ -57,11 +58,16 @@ export default {
     created (){
     },
     computed : {
+        ...mapGetters({
+            clients: 'client/getClients'
+        })
     },
     methods : {
         showModal() {
             let element = this.$refs.modal.$el;
-            $(element).modal('show')
+            $(element).modal('show');
+         console.log(this.clients);
+         
         }
     }
 

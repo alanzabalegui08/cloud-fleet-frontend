@@ -2,37 +2,40 @@
 <div class="masonry-item col-md-12">
     <div class="bgc-white p-20 bd">
         <div class="mT-10">
-            <form>
+            <form @submit.prevent="handleSubmit">
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="inputName">Nombre</label>
-                        <input type="text" class="form-control" id="name_client" placeholder="Nombre completo">
+                        <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="inputPassword">Contraseña</label>
-                        <input type="password" class="form-control" id="password_client" placeholder="Contraseña">
+                        <input type="password" class="form-control" id="password_client" v-model="client.password" placeholder="Contraseña">
                     </div>
                     <div class="form-group col-md-6">
                         <label>Color texto</label>
-                        <select class="form-control" id="color_client">
-                            <option value="greeb">GREEN</option>
-                            <option value="greeb">YELLOW</option>
-                            <option value="greeb">BLUE</option>
-                            <option value="greeb">ORANGE</option>
+                        <select class="form-control" id="color_client" v-model="client.text_color">
+                            <option value="#FF0000">GREEN</option>
+                            <option value="#FF00AA">YELLOW</option>
+                            <option value="#FF00BB">BLUE</option>
+                            <option value="#FF00CC">ORANGE</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
                         <label>Color Fondo</label>
-                        <select class="form-control" id="color_down">
-                            <option value="greeb">GREEN</option>
-                            <option value="greeb">YELLOW</option>
-                            <option value="greeb">BLUE</option>
-                            <option value="greeb">ORANGE</option>
+                        <select class="form-control" id="color_down" v-model="client.backgroud_color">
+                            <option value="#FF0023">GREEN</option>
+                            <option value="#FF0044">YELLOW</option>
+                            <option value="#FF0088">BLUE</option>
+                            <option value="#FF0011">ORANGE</option>
                         </select>
                     </div>
                 </div>
-                <turno></turno>
-                <!-- <button type="submit" class="btn btn-primary">Sign in</button>-->
+                <turno :list="client.turn" />
+                <google-map/>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                </div>
             </form>
         </div>
     </div>
@@ -40,16 +43,23 @@
 </template>
 
 <script>
-import turno from './turno';
-
+import Turno from './Turno';
+import GoogleMap from './GoogleMap';
+import { mapActions } from 'vuex';
 export default {
   name : 'form-client',
   components : {
-      turno,
+      Turno,
+      GoogleMap
   },
   data () {
     return {
-
+        client : {
+            name : '',
+            password: '',
+            text_color : '',
+            backgroud_color : '',
+        },
     }
   },
   created (){
@@ -59,7 +69,13 @@ export default {
 
   },
   methods : {
+      ...mapActions({
+          add : 'client/createClient'
+      }),
 
+      handleSubmit(){
+          this.add(this.client);
+      },
   }
 }
 </script>
