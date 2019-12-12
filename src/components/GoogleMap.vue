@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   name: "GoogleMap",
   data() {
@@ -23,15 +24,21 @@ export default {
     };
   },
 
+  computed : {
+    ...mapGetters({
+      position : 'map/getPosition'
+    }),
+  },
   mounted() {
     this.geolocate();
   },
-
+ 
   methods: {
     setPlace(place) {
       this.currentPlace = place;
     },
     updateCoordinates(location) {
+      
       this.coordinates = {
         lat: location.latLng.lat(),
         lng: location.latLng.lng(),

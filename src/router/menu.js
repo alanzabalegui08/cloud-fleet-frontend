@@ -30,16 +30,16 @@ export default {
                 },
                 {
                     name : 'Operadores',
-                    path : '/',
+                    path : '/operadores',
                     icon : ''
                 },
                 {
                     name : 'Unidades',
-                    path : '/',
+                    path : '/unidades',
                     icon : ''},
                 {
                     name : 'Supervisores',
-                    path : '/',
+                    path : '/supervisor',
                     icon : ''
                 },
                 {

@@ -1,12 +1,33 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-//import Storage  from '../service/Storage';
 import HomeView from '../views/Home.vue';
 import LoginView from '../views/LoginPage.vue';
-import ClientView from '../views/Client.vue';
-import PathView from '../views/Path';
+// customers
+import CustomerView from '../views/customers/index.vue';
+import CustomerDataView from '../views/customers/data.vue';
+import CustomerCreateView from '../views/customers/create.vue';
+// paths 
+import PathView from '../views/paths/index.vue';
+import PathDataView from '../views/paths/data.vue';
+import PathCreateView from '../views/paths/create.vue';
+
+// drivers
+import DriverView from '../views/driver/index.vue';
+import DriverDataView from '../views/driver/data.vue';
+import DriverCreateView from '../views/driver/create.vue';
+
+// truck
+import TruckView from '../views/truck/index.vue';
+import TruckDataView from '../views/truck/data.vue';
+import TruckCreateView from '../views/truck/create.vue';
+
+// truck
+import SupervisorView from '../views/supervisor/index.vue';
+import SupervisorDataView from '../views/supervisor/data.vue';
+import SupervisorCreateView from '../views/supervisor/create.vue';
 
 Vue.use(Router);
+
 
 export const router  = new Router({
     mode : 'history',
@@ -21,8 +42,17 @@ export const router  = new Router({
         },
         {
             path : '/clientes',
-            name : 'Client', 
-            component : ClientView,
+            component : CustomerView,
+            children : [
+                {
+                    path : '',
+                    component : CustomerDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : CustomerCreateView
+                }
+            ],
             meta : {
                 requiresAuth: true,
             }
@@ -31,6 +61,70 @@ export const router  = new Router({
             path : '/rutas',
             name : 'Rutas', 
             component : PathView,
+            children : [
+                {
+                    path : '',
+                    component : PathDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : PathCreateView
+                }
+            ],            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/operadores',
+            name : 'Operadores', 
+            component : DriverView,
+            children : [
+                {
+                    path : '',
+                    component : DriverDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : DriverCreateView
+                }
+            ],            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/unidades',
+            name : 'Unidades', 
+            component : TruckView,
+            children : [
+                {
+                    path : '',
+                    component : TruckDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : TruckCreateView
+                }
+            ],            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/supervisor',
+            name : 'Supervisor', 
+            component : SupervisorView,
+            children : [
+                {
+                    path : '',
+                    component : SupervisorDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : SupervisorCreateView
+                }
+            ],            
             meta : {
                 requiresAuth: true,
             }

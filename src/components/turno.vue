@@ -48,7 +48,7 @@
                         <td>{{turno.name}}</td>
                        <td>{{turno.input}}</td>
                        <td>{{turno.output}}</td>
-                       <td><button type="button" class="btn cur-p btn-outline-danger mr-3 position-absolute"  @click="removeTurn()"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                       <td><button type="button" class="btn cur-p btn-outline-danger mr-3 position-absolute"  @click="removeTurn(turno)"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                     </tr>
                 </tbody>
             </table>            
@@ -91,6 +91,9 @@ export default {
         this.add(this.turno);
       },
       removeTurn(turn){
+          console.log(turn);
+          console.log('[KLAY] error turn');
+          
           this.remove(turn)
       }
   }
