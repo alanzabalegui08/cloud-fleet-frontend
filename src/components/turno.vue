@@ -51,7 +51,7 @@
                        <td><button type="button" class="btn cur-p btn-outline-danger mr-3 position-absolute"  @click="removeTurn(turno)"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                     </tr>
                 </tbody>
-            </table>            
+            </table>
         </div>
 </template>
 

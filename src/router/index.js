@@ -26,6 +26,23 @@ import SupervisorView from '../views/supervisor/index.vue';
 import SupervisorDataView from '../views/supervisor/data.vue';
 import SupervisorCreateView from '../views/supervisor/create.vue';
 
+// stations
+import StationsView from '../views/stations/index.vue';
+import StationsDataView from '../views/stations/data.vue';
+import StationsCreateView from '../views/stations/create.vue';
+
+//banners
+import BannerView from '../views/banner/index.vue';
+import BannerDataView from '../views/banner/data.vue';
+import BannerCreateView from '../views/banner/create.vue';
+
+//regions
+import RegionsView from '../views/regions/index.vue';
+import RegionsDataView from '../views/regions/data.vue';
+import RegionsCreateView from '../views/regions/create.vue';
+
+//monitor
+import MonitorView from '../views/regions/index.vue';
 Vue.use(Router);
 
 
@@ -128,7 +145,69 @@ export const router  = new Router({
             meta : {
                 requiresAuth: true,
             }
-        },        
+        },
+        {
+            path : '/estaciones',
+            name : 'Estaciones', 
+            component : StationsView,
+            children : [
+                {
+                    path : '',
+                    component : StationsDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : StationsCreateView
+                }
+            ],            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/banners',
+            name : 'Banners', 
+            component : BannerView,
+            children : [
+                {
+                    path : '',
+                    component : BannerDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : BannerCreateView
+                }
+            ],            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/regiones',
+            name : 'Regiones', 
+            component : RegionsView,
+            children : [
+                {
+                    path : '',
+                    component : RegionsDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : RegionsCreateView
+                }
+            ],            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/monitor',
+            name : 'Monitor', 
+            component : MonitorView,            
+            meta : {
+                requiresAuth: true,
+            }
+        },
         {
             path: '/login',
             name: 'login',

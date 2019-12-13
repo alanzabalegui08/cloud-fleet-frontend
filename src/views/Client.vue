@@ -66,8 +66,6 @@ export default {
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');
-         console.log(this.clients);
-         
         }
     }
 

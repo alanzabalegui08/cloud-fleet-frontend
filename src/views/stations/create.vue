@@ -8,7 +8,7 @@
                             <form @submit.prevent="handleSubmit">
                                 <div class="row">
                                     <div class="masonry-sizer col-md-10">
-                                        <h2 >Nueva Operador</h2>
+                                        <h2 >Nueva Esatcion</h2>
                                     </div>
                                     <div class="masonry-sizer col-md-1">
                                          <button type="submit" class="btn cur-p btn-outline-success" >Guardar</button>
@@ -16,8 +16,8 @@
                                     <div class="masonry-sizer col-md-1">
                                          <button @click="cancelar" class="btn cur-p btn-outline-danger" >Cancelar</button>
                                     </div>                                    
-                                </div>  
-                                <form-driver></form-driver>
+                                </div>
+                                <form-station></form-station>
                             </form>
                         </div>
                     </div>
@@ -26,14 +26,13 @@
         </div>
     </div>
 </template>
-
 <script>
 
-import FormDriver from '../../components/FormDriver';
+import FormStation from '../../components/FormStation';
 export default {
-    name : 'create-drive',
+    name : 'create',
     components : {
-        FormDriver
+        FormStation
     },
     data () {
         return {
@@ -45,9 +44,11 @@ export default {
     },
     methods : {
         handleSubmit(){
+            // this.$emit('create');
+            // this.$router.push('/clientes');
         },
         cancelar(){
-            this.$router.push('/operadores');
+            this.$router.push('/estaciones');
         }
     }
 }

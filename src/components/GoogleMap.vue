@@ -38,7 +38,6 @@ export default {
       this.currentPlace = place;
     },
     updateCoordinates(location) {
-      
       this.coordinates = {
         lat: location.latLng.lat(),
         lng: location.latLng.lng(),

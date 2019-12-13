@@ -17,7 +17,7 @@
                                          <button @click="cancelar" class="btn cur-p btn-outline-danger" >Cancelar</button>
                                     </div>                                    
                                 </div>  
-                                <path-form></path-form>
+                                <form-truck></form-truck>
                             </form>
                         </div>
                     </div>
@@ -29,11 +29,11 @@
 
 <script>
 
-import PathForm from '../../components/PathForm';
+import FormTruck from '../../components/FormTruck';
 export default {
     name : 'create',
     components : {
-        PathForm
+        FormTruck
     },
     data () {
         return {
@@ -49,7 +49,7 @@ export default {
             // this.$router.push('/clientes');
         },
         cancelar(){
-            this.$router.push('/rutas');
+            this.$router.push('/unidades');
         }
     }
 }

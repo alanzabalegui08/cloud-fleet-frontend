@@ -44,12 +44,17 @@ export default {
                 },
                 {
                     name : 'Estaciones',
-                    path : '/',
+                    path : '/estaciones',
                     icon : ''
                 },
                 {
-                    name : 'Reportes',
-                    path : '/',
+                    name : 'Banners',
+                    path : '/banners',
+                    icon : ''
+                },
+                {
+                    name : 'Regiones',
+                    path : '/regiones',
                     icon : ''
                 }
             ]
@@ -58,7 +63,7 @@ export default {
             name : 'Monitor',
             only : true,
             down : false,
-            path : '/',
+            path : '/monitor',
             icon : 'fa fa-laptop',
             class: 'nav-item dropdown',
             toggle : false,

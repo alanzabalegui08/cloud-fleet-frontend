@@ -15,9 +15,9 @@
                                     </div>
                                     <div class="masonry-sizer col-md-1">
                                          <button @click="cancelar" class="btn cur-p btn-outline-danger" >Cancelar</button>
-                                    </div>                                    
-                                </div>  
-                                <path-form></path-form>
+                                    </div>
+                                </div>
+                                <form-supervisor></form-supervisor>
                             </form>
                         </div>
                     </div>
@@ -29,11 +29,11 @@
 
 <script>
 
-import PathForm from '../../components/PathForm';
+import FormSupervisor from '../../components/FormSupervisor';
 export default {
     name : 'create',
     components : {
-        PathForm
+        FormSupervisor
     },
     data () {
         return {
@@ -45,11 +45,9 @@ export default {
     },
     methods : {
         handleSubmit(){
-            // this.$emit('create');
-            // this.$router.push('/clientes');
         },
         cancelar(){
-            this.$router.push('/rutas');
+            this.$router.push('/supervisor');
         }
     }
 }

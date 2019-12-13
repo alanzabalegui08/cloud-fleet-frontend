@@ -7,31 +7,31 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="inputName">Nombre Ruta</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
+                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Cliente</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
+                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Tolerancia</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
+                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Kilometraje</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
+                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Tipo Ruta</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
+                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Precio Operador</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
+                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Precio Cliente</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="Nombre completo">
+                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
                         </div>                                                                                                                                                
                     </div>
                 </div>
@@ -43,11 +43,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="inputName">Url Ruta Entrada</label>
-                            <input type="text" class="form-control"  placeholder="Nombre completo">
+                            <input type="text" class="form-control"  placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">URL Ruta Salida</label>
-                            <input type="text" class="form-control"  placeholder="Nombre completo">
+                            <input type="text" class="form-control"  placeholder="">
                         </div>                                                                                                                                             
                     </div>
                     <div class="form-row">
@@ -94,6 +94,28 @@
                     </div>
                 </div>
             </div>
+            <table id="table_turn" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nombre Turno</th>
+                        <th>Hora inicio </th>
+                        <th>Hora fin</th>
+                        <th>Sentido</th>
+                        <th>Codigo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nombre</td>
+                       <td>12:000 AM</td>
+                       <td>3:00 PM</td>
+                       <td>ENTRADA</td>
+                       <td>COD200</td>
+                       <td><button type="button" class="btn cur-p btn-outline-danger" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>        
     </div>
 </template>

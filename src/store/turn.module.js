@@ -30,13 +30,14 @@ const  mutations = {
     removeTurn(state,indexTurn){
         state.list.splice(indexTurn,1);
     }
-
 };
 
 const getters = {
     
     getTurns : state => { 
         return state.list
+    },
+    getTurnById(){
     }
 }
 
