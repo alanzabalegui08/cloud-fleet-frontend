@@ -3,7 +3,7 @@
     <gmap-map
       :center="center"
       :zoom="14"
-      style="width:100%;  height: 400px;"
+      style="width:100%;  height: 700px;"
     >
     <gmap-marker :position="center" :draggable="true" @drag="updateCoordinates" />
     </gmap-map>

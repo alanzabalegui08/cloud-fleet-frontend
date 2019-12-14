@@ -79,7 +79,7 @@ export default {
             submenu : [
                 {
                     name : 'Programación',
-                    path : '/',
+                    path : '/programacion',
                     icon : ''
                 },
                 {

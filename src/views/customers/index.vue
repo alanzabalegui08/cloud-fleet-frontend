@@ -18,7 +18,6 @@ import $ from 'jquery';
 import Sidebar from '../../components/Sidebar';
 import Navbar from '../../components/Navbar';
 
-
 export default {
     name : 'home',
     components : {
@@ -32,6 +31,7 @@ export default {
     created (){
     },
     computed : {
+
         ...mapGetters({
             clients: 'client/getClients'
         })

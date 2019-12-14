@@ -1,12 +1,8 @@
 <template>
     <table id="dataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Area</th>
-                <th>Color</th>
-                <th>Color</th>
-                <th>Acciones</th>
+            <tr >
+                <th v-for="(colum,index) in colums" :key="index" > {{colum.columname}}</th>
             </tr>
         </thead>
         <tbody>
@@ -31,15 +27,17 @@ export default {
     props : {
         list : {
             type : Array
-        }
+        },
+        colums : {
+            type : Array
+        },
     },
     data () {
         return {
         }
     },
     created (){
-        console.log(this.list);
-        
+   
     },
     computed : {
     },

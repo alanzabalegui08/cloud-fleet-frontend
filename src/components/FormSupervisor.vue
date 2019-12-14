@@ -19,7 +19,7 @@
                                     <input type="text" class="form-control" id="" v-model="driver.clave" placeholder="">
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="inputName">Telefono</label>
+                                    <label for="inputName">Teléfono</label>
                                     <input type="text" class="form-control" id="" v-model="driver.clave" placeholder="">
                                 </div>
                                 <div class="form-group col-md-4">

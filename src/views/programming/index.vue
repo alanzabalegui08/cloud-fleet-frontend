@@ -5,35 +5,31 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <filter-monitor />
+                    <div class="bgc-white bd" >
+                        <div class="mT-10">
+                            <bar-search/>
                         </div>
-                        <div class="col-md-9">
-                            <div class="bgc-white p-20 bd" style="height:750px">
-                                <google-map/>
-                            </div>                             
-                        </div>
-                    </div>                    
+                    </div>
                 </div>
             </main>
         </div>
     </div>
 </template>
+
 <script>
 
 import $ from 'jquery';
 import Sidebar from '../../components/Sidebar';
 import Navbar from '../../components/Navbar';
-import GoogleMap from '../../components/GoogleMap'
-import FilterMonitor from '../../components/FilterMonitor'
+//import TableKlay from '../../components/Table';
+import BarSearch from '../../components/BarSearch';
+
 export default {
-    name : 'monitor',
+    name : 'banner',
     components : {
         Sidebar,
         Navbar,
-        GoogleMap,
-        FilterMonitor,
+        BarSearch,
     },
     data () {
         return {

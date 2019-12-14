@@ -26,7 +26,7 @@
       </div>
       <ul class="sidebar-menu scrollable pos-r">
         <li  v-for="(item, index) in listMenu" :class="item.class" :key="index" >
-          <a  :class=" (item.down) ? 'dropdown-toggle' :'sidebar-link'"  href="#"  @click.prevent="acctionSubmenu(item)">
+          <a  :class="(item.down) ? 'dropdown-toggle' :'sidebar-link'"  href="#"  @click.prevent="acctionSubmenu(item)">
             <span class="icon-holder">
               <i :class="item.icon"></i>
             </span>
@@ -65,6 +65,10 @@ export default {
     },
     methods : {
       acctionSubmenu (menu) {
+        console.log(menu);
+        if(menu.only){
+          this.$router.push(menu.path);
+        }
         (!menu.toggle) ? menu.class += ' open': menu.class = menu.class.replace('open','');
         menu.toggle = !menu.toggle;
       },

@@ -42,7 +42,12 @@ import RegionsDataView from '../views/regions/data.vue';
 import RegionsCreateView from '../views/regions/create.vue';
 
 //monitor
-import MonitorView from '../views/regions/index.vue';
+import MonitorView from '../views/monitor';
+
+//programacion
+import ProgrammingView from '../views/programming';
+
+
 Vue.use(Router);
 
 
@@ -204,6 +209,14 @@ export const router  = new Router({
             path : '/monitor',
             name : 'Monitor', 
             component : MonitorView,            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/programacion',
+            name : 'Programacion', 
+            component : ProgrammingView,            
             meta : {
                 requiresAuth: true,
             }
