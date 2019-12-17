@@ -7,7 +7,7 @@
                 <div id='mainContent'>
                     <div class="bgc-white bd" >
                         <div class="mT-10">
-                            <bar-search/>
+                            <bar-programming />
                             <div class="col-md-12">
                                 <table-klay :list="datasource" :colums="gridHeader"></table-klay>
                             </div>
@@ -21,24 +21,21 @@
 
 <script>
 
-/*
- remuve button for afdd newfeatures
-*/
 
 import $ from 'jquery';
 import Sidebar from '../../components/Sidebar';
 import Navbar from '../../components/Navbar';
 import TableKlay from '../../components/Table';
 import DataGrid from '../../util/datasource.js';
-import BarSearch from '../../components/BarSearch';
+import BarProgramming from '../../components/BarProgramming'
 
 export default {
-    name : 'banner',
+    name : 'pvxr',
     components : {
         Sidebar,
         Navbar,
-        BarSearch,
-        TableKlay
+        TableKlay,
+        BarProgramming
     },
     data () {
         return {

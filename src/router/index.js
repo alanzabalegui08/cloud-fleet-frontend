@@ -46,7 +46,13 @@ import MonitorView from '../views/monitor';
 
 //programacion
 import ProgrammingView from '../views/programming';
-
+import PvxrView from '../views/pvxr';
+import NotificationView from '../views/notification';
+import HistoryTruckView from '../views/historico';
+import TravelReportView from '../views/travel';
+import CommentsView from '../views/comments';
+import ProgramminReportView from '../views/programmingreport';
+import DriverPathView from '../views/driverWithoutPath';
 
 Vue.use(Router);
 
@@ -222,10 +228,66 @@ export const router  = new Router({
             }
         },
         {
+            path : '/pvxr',
+            name : 'PV XR', 
+            component : PvxrView,            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/notificaciones',
+            name : 'Notificaciones', 
+            component : NotificationView,            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+          path : '/historico-unidad',
+          name : 'Historico de unidad',
+          component : HistoryTruckView,            
+          meta : {
+              requiresAuth: true,
+          }          
+        },
+        {
+            path : '/viajes',
+            name : 'Viajes',
+            component : TravelReportView,            
+            meta : {
+                requiresAuth: true,
+            }          
+        },
+        {
+            path : '/comentarios',
+            name : 'Comentarios',
+            component : CommentsView,            
+            meta : {
+                requiresAuth: true,
+            }          
+        },
+        {
+            path : '/reporte-de-programacion',
+            name : 'Reporte programacion',
+            component : ProgramminReportView,            
+            meta : {
+                requiresAuth: true,
+            }          
+        },
+        {
+            path : '/operadore-sin-ruta',
+            name : 'Operadores sin ruta',
+            component : DriverPathView,            
+            meta : {
+                requiresAuth: true,
+            }          
+        },
+        {
             path: '/login',
             name: 'login',
             component: LoginView,
-            meta: {
+            meta:   {
                 guest: true
             }
         },

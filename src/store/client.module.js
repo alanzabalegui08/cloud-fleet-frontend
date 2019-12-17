@@ -25,7 +25,7 @@ const mutations = {
 
     createClient (state,client) {
         state.clientList.push({name : client.name,area : 'area',text_color : client.text_color,backgroud_color : client.backgroud_color});
-    }
+    },
 }
 
 const getters = {

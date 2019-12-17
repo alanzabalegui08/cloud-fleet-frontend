@@ -84,7 +84,7 @@ export default {
                 },
                 {
                     name : 'PV XR',
-                    path : '/',
+                    path : '/pvxr',
                     icon : ''
                 }
             ]            
@@ -93,7 +93,7 @@ export default {
             name : 'Notificaciones',
             only : true,
             down : false,
-            path : '/',
+            path : '/notificaciones',
             icon : 'fa fa-bell',
             class: 'nav-item dropdown',
             toggle : false,
@@ -109,27 +109,27 @@ export default {
             submenu : [
                 {
                     name : 'Historico unidad',
-                    path : '/',
+                    path : '/historico-unidad',
                     icon : ''
                 },
                 {
                     name : 'Viajes',
-                    path : '/',
+                    path : '/viajes',
                     icon : ''
                 },
                 {
                     name : 'Comentarios',
-                    path : '/',
+                    path : '/comentarios',
                     icon : ''
                 },
                 {
-                    name : 'Prograamción',
-                    path : '/',
+                    name : 'Programación',
+                    path : '/reporte-de-programacion',
                     icon : ''
                 },
                 {
-                    name : 'Operadores de ruta',
-                    path : '/',
+                    name : 'Operadores sin ruta',
+                    path : '/operadore-sin-ruta',
                     icon : ''
                 }
             ]                

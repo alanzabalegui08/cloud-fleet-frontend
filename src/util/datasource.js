@@ -57,5 +57,158 @@ export default {
             colum: 'accions',
             columname : 'Acciones',
         },        
-    ]    
+    ],
+    programming : [
+        {
+            id : 0,
+            colum: 'code',
+            columname : 'Código',
+        },
+        {
+            id : 1,
+            colum: 'path',
+            columname : 'Ruta',
+        },
+        {
+            id : 2,
+            colum: 'pax',
+            columname : 'PAX',
+        },
+        {
+            id : 3,
+            colum: 'llegada',
+            columname : 'Llegada',
+        },
+        {
+            id : 4,
+            colum: 'turn',
+            columname : 'Turno',
+        },
+        {
+            id : 5,
+            colum: 'timeinit',
+            columname : 'Hora inicio',
+        },
+        {
+            id : 6,
+            colum: 'timeend',
+            columname : 'Hora fin',
+        },
+        {
+            id : 7,
+            colum: 'driver',
+            columname : 'Operador',
+        },
+        {
+            id : 5,
+            colum: 'commnets',
+            columname : 'Comentarios',
+        },  
+    ],
+    comments : [
+        {
+            id : 0,
+            colum: 'date',
+            columname : 'Fecha',
+        },
+        {
+            id : 1,
+            colum: 'truck',
+            columname : 'Unidad',
+        },
+        {
+            id : 2,
+            colum: 'driver',
+            columname : 'Operador',
+        },
+        {
+            id : 3,
+            colum: 'path',
+            columname : 'Ruta',
+        },
+        {
+            id : 4,
+            colum: 'turn',
+            columname : 'Turno',
+        },
+        {
+            id : 5,
+            colum: 'comments',
+            columname : '',
+        },
+        {
+            id : 6,
+            colum: 'category',
+            columname : 'Categorias',
+        },
+        {
+            id : 7,
+            colum: 'Subcategory',
+            columname : 'Subcategoria',
+        },
+        {
+            id : 5,
+            colum: 'modul',
+            columname : 'Modulo',
+        },
+        {
+            id : 5,
+            colum: 'review',
+            columname : 'Revisado',
+        }, 
+    ],
+    programminReport : [
+        {
+            id : 0,
+            colum: 'date',
+            columname : 'Fecha',
+        },
+        {
+            id : 1,
+            colum: 'client',
+            columname : 'Cliente',
+        },
+        {
+            id : 2,
+            colum: 'truck',
+            columname : 'Unidad',
+        },        
+        {
+            id : 3,
+            colum: 'driver',
+            columname : 'Operador',
+        },
+        {
+            id : 4,
+            colum: 'path',
+            columname : 'Ruta',
+        },
+        {
+            id : 5,
+            colum: 'turn',
+            columname : 'Turno',
+        },
+        {
+            id : 6,
+            colum: 'sentido',
+            columname : 'Sentido',
+        },
+    ],
+    driverWithoutpath : [
+        {
+            id : 0,
+            colum: 'name',
+            columname : 'Nombre',
+        },
+        {
+            id : 1,
+            colum: 'lastbame',
+            columname : 'Apellios',
+        },
+        {
+            id : 2,
+            colum: 'clave',
+            columname : 'Clave',
+        },
+    ] 
 }
