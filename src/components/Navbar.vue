@@ -3,7 +3,7 @@
     <div class="header-container">
         <ul class="nav-left">
             <li>
-                <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
+                <a id='sidebar-toggle' class="sidebar-toggle" href="#" @click.prevent="toggleNavbar()" >
                   <i class="ti-menu"></i>
                 </a>
               </li>
@@ -233,6 +233,14 @@ export default {
     computed : {
     },
     methods : {
+      toggleNavbar(){
+        const app = document.querySelector('.is-collapsed');
+        if(app === null) {
+           document.querySelector('.app').classList.add('is-collapsed');
+        }else {
+          document.querySelector('.app').classList.remove('is-collapsed');
+        }
+      }
     }
 }
 </script>

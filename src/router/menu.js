@@ -145,12 +145,12 @@ export default {
             submenu : [
                 {
                     name : 'Cargas',
-                    path : '/',
+                    path : '/carga-combustible',
                     icon : ''
                 },
                 {
                     name : 'Alertas',
-                    path : '/',
+                    path : '/alertas-combustibles',
                     icon : ''
                 }
             ]              

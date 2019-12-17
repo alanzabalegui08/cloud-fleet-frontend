@@ -54,6 +54,16 @@ import CommentsView from '../views/comments';
 import ProgramminReportView from '../views/programmingreport';
 import DriverPathView from '../views/driverWithoutPath';
 
+
+// load gas
+import LoadGasView from '../views/loadgas';
+import LoadGasDataView from '../views/loadgas/data.vue';
+import LoadGasCreateView from '../views/loadgas/create.vue';
+import AlertGas  from  '../views/alerts';
+
+
+
+
 Vue.use(Router);
 
 
@@ -279,6 +289,32 @@ export const router  = new Router({
             path : '/operadore-sin-ruta',
             name : 'Operadores sin ruta',
             component : DriverPathView,            
+            meta : {
+                requiresAuth: true,
+            }          
+        },
+        {
+            path : '/carga-combustible',
+            name : 'Carga combustible', 
+            component : LoadGasView,
+            children : [
+                {
+                    path : '',
+                    component : LoadGasDataView
+                },
+                {
+                    path : 'nuevo',
+                    component : LoadGasCreateView
+                }
+            ],            
+            meta : {
+                requiresAuth: true,
+            }
+        },
+        {
+            path : '/alertas-combustibles',
+            name : 'Alertas',
+            component : AlertGas,            
             meta : {
                 requiresAuth: true,
             }          

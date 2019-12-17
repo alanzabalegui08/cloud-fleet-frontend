@@ -98,7 +98,7 @@ export default {
         }
     },
     created (){
-        // reset login
+        // reset login        
     },
     computed : {
         /*...mapGetters({

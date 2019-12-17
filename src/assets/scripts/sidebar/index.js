@@ -59,6 +59,7 @@ export default (function () {
   // ٍSidebar Toggle
   $('.sidebar-toggle').on('click', e => {
     $('.app').toggleClass('is-collapsed');
+    console.log("side bar click");
     e.preventDefault();
   });
 
