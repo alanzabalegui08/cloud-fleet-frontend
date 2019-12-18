@@ -4,7 +4,7 @@
       <div class="sidebar-logo">
         <div class="peers ai-c fxw-nw">
           <div class="peer peer-greed">
-            <a class="sidebar-link td-n" href="index.html">
+            <a class="sidebar-link td-n" href="#">
               <div class="peers ai-c fxw-nw">
                 <div class="peer">
                   <div class="logo">
@@ -17,7 +17,7 @@
           </div>
           <div class="peer">
             <div class="mobile-toggle sidebar-toggle">
-              <a href="" class="td-n">
+              <a  href="#" @click.prevent="changeToggleNav()" class="td-n">
                 <i class="ti-arrow-circle-left"></i>
               </a>
             </div>
@@ -49,7 +49,7 @@
 <script>
 import logo from '../assets/static/images/logo_klay.png';
 import sidebarMenu from '../router/menu';
-
+import { toggleNav }  from '../util/SettingLayout';
 export default {
     name : 'sidebar',
     data () {
@@ -72,6 +72,10 @@ export default {
         (!menu.toggle) ? menu.class += ' open': menu.class = menu.class.replace('open','');
         menu.toggle = !menu.toggle;
       },
+
+      changeToggleNav(){
+        toggleNav();
+      }
     }
 }
 </script>

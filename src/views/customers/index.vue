@@ -31,7 +31,6 @@ export default {
     created (){
     },
     computed : {
-
         ...mapGetters({
             clients: 'client/getClients'
         })

@@ -9,6 +9,8 @@ const initialState = () => ({
 });
 
 // se crea la inicializacion del state 
+//model of account 
+
 const state = initialState();
 
 const actions = {
@@ -19,7 +21,8 @@ const actions = {
         router.push('/');
     },
     logout () {
-    } ,
+        // datasheet 
+    },
     resetState ({commit}) {
         commit('stateReset');
         router.push('/login')
@@ -47,7 +50,6 @@ const getters = {
         return state.status.loggedIn;
     }
 };
-
 
 export const account = {
     namespaced: true,
