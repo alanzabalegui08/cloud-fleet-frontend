@@ -11,7 +11,7 @@
                 <div class="mT-30">
                     <div class="row">
                         <div class="col-md-12">
-                            <table-klay :list="clients" :colums="dataGrid"></table-klay>
+                            <table-klay :list="clients"  @onDeleteItem="onDeleteItem" :colums="dataGrid"></table-klay>
                         </div>
                     </div>
                 </div>
@@ -48,6 +48,9 @@ export default {
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');
+        },
+        onDeleteItem(item){
+            console.log(item);
         }
     }
 }

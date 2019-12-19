@@ -1,14 +1,5 @@
 export default {
     menu :[
-        // {
-        //     name : 'Dashboard',
-        //     only : true,
-        //     down : false,
-        //     path : '/',
-        //     icon : 'fa fa-home',            
-        //     class: 'nav-item mT-30 actived',
-        //     toggle : false,
-        // },
         {
             name : 'Catalogo',
             only : false,

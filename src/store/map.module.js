@@ -3,7 +3,6 @@ const initialState = () => ({
     position : {}
 });
 
-
 const state  = initialState();
 
 const actions = {

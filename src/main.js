@@ -7,6 +7,16 @@ import { store } from './store';
 import { router } from './router';
 import App from './App.vue';
 import * as VueGoogleMaps from "vue2-google-maps";
+import * as rules from 'vee-validate/dist/rules';
+import { ValidationObserver, ValidationProvider, extend, localize } from 'vee-validate';
+import es from 'vee-validate/dist/locale/es.json';
+
+Object.keys(rules).forEach(rule => {
+  extend(rule, rules[rule]);
+});
+localize('es', es);
+Vue.component('ValidationObserver', ValidationObserver);
+Vue.component('ValidationProvider', ValidationProvider);
 
 Vue.use(VueGoogleMaps, {
   load: {

@@ -1,12 +1,32 @@
 // import router from '../router';
 
 const initialState = () => ({
-    clientList: [{
-        name : 'Tiger Nixon',
-        area : 'System Architect',
-        text_color : '#FF000',
-        backgroud_color :'#FFCC00'
-    }],
+    clientList: [
+        {
+            name : 'Tiger Nixon',
+            area : 'System Architect',
+            text_color : '#FF000',
+            backgroud_color :'#FFCC00'
+        },
+        {
+            name : 'Tiger Nixon',
+            area : 'System Architect',
+            text_color : '#FF000',
+            backgroud_color :'#FFCC00'
+        },
+        {
+            name : 'Tiger Nixon',
+            area : 'System Architect',
+            text_color : '#FF000',
+            backgroud_color :'#FFCC00'
+        },
+        {
+            name : 'Tiger Nixon',
+            area : 'System Architect',
+            text_color : '#FF000',
+            backgroud_color :'#FFCC00'
+        }        
+    ],
     status : null,
     title  : 'Clientes',
     proccess : false,
