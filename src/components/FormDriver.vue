@@ -18,22 +18,31 @@
                                 <div class="col-md-8">
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Nombre</label>
-                                        <input type="text" class="form-control" id="" v-model="driver.name" placeholder="">
+                                        <ValidationProvider vid="name" name="Nombre" rules="required|alpha" v-slot="{ errors }">
+                                            <input type="text" class="form-control" id="" v-model="driver.name" placeholder="">
+                                            <span style="color:red;">{{ errors[0] }}</span>
+                                        </ValidationProvider>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Apellido</label>
-                                        <input type="text" class="form-control" id="" v-model="driver.lastname" placeholder="">
+                                        <ValidationProvider vid="lastname" name="Apellido" rules="required|alpha" v-slot="{ errors }">
+                                            <input type="text" class="form-control" id="" v-model="driver.lastname" placeholder="">
+                                            <span style="color:red;">{{ errors[0] }}</span>
+                                        </ValidationProvider>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Clave</label>
-                                        <input type="text" class="form-control" id="" v-model="driver.clave" placeholder="">
+                                        <ValidationProvider vid="clave" name="Clave" rules="alpha_num" v-slot="{ errors }">
+                                            <input type="text" class="form-control" id="" v-model="driver.clave" placeholder="">
+                                            <span style="color:red;">{{ errors[0] }}</span>
+                                        </ValidationProvider>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>        
                     <div class="form-group col-md-12">
-                        <label for="inputPassword">Dirección</label>
+                        <label for="inputPassword">Dirección</label>                        
                         <input type="password" class="form-control" id="" v-model="driver.addresses" placeholder="">
                     </div>
                     <div class="col-md-12">
@@ -65,39 +74,39 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputtext">Num. Seguro Social</label>
-                            <input type="text" class="form-control" id="" v-model="driver.rfc" placeholder="">
+                            <input type="text" class="form-control" id="" v-model="driver.seguroSocial" placeholder="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="inputtext">Num. Licencia Estatal </label>
-                            <input type="text" class="form-control" id="" v-model="driver.rfc" placeholder="">
+                            <input type="text" class="form-control" id="" v-model="driver.noLicenciaEstatal" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputtext">Vingencia Licencia Estatal </label>
-                            <input type="text" class="form-control" id="" v-model="driver.rfc" placeholder="">
+                            <date-picker class="form-control" name="date" v-model="driver.vigLicenciaEstatal" :config="options"></date-picker>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputtext">Num. Licencia Federal </label>
-                            <input type="text" class="form-control" id="" v-model="driver.rfc" placeholder="">
+                            <input type="text" class="form-control" id="" v-model="driver.noLicenciaFederal" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputtext">Vigencia Licencia Federal </label>
-                            <input type="text" class="form-control" id="" v-model="driver.rfc" placeholder="">
+                            <date-picker class="form-control" name="date" v-model="driver.vigLicenciaFederal" :config="options"></date-picker>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="inputtext">Contraseña XR a Bordo</label>
-                            <input type="password" class="form-control" id="" v-model="driver.password_xr" placeholder="">
+                            <input type="password" class="form-control" id="" v-model="driver.passwordXR" placeholder="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputtext">Tipo de sangre</label>
-                            <input type="text" class="form-control" id="" v-model="driver.rfc" placeholder="">
+                            <input type="text" class="form-control" id="" v-model="driver.typeBlood" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputtext">Region</label>
-                            <input type="text" class="form-control" id="" v-model="driver.rfc" placeholder="">
+                            <input type="text" class="form-control" id="" v-model="driver.region" placeholder="">
                         </div>
                     </div>
                     <div class="form-group col-md-12">
@@ -117,36 +126,28 @@
 </template>
 
 <script>
-//import { mapActions } from 'vuex';
+import { driverModel } from "../util/model";
+import datePicker from 'vue-bootstrap-datetimepicker';
+import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
+
 export default {
   name : 'form-driver',
   components : {
+      datePicker,
   },
   data () {
     return {
-        driver : {
-            name : '',
-            lastname: '',
-            clave : '',
-            addresses : '',
-            phone : '',
-            cellphone :'',
-            cellphone_network : '',
-            rfc : '',
-            num_seguro_social : '',
-            num_licencia_estatal : '',
-            vigencia_licencia_estatal : '',
-            num_licencia_federal : '',
-            vigencia_licencia_federal : '',
-            tipo_sangre : '',
-            password_xr : '',
-            region : '',
-            active : true,
-        },
+        driver : driverModel(),
+        date: new Date(),
+        options: {
+            format: 'DD/MM/YYYY h:mm:ss',
+            useCurrent: false,
+            showClear: true,
+            showClose: true,
+        }
     }
   },
   created (){
-      //this.$parent.$on('create',this.handClient)
   },
   computed : {
 

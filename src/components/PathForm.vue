@@ -77,32 +77,32 @@
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputName">Nombre</label>
-                            <input type="text" class="form-control" >
+                            <input type="text" class="form-control" v-model="turn.name" >
                         </div>
                         <div class="form-group col-md-2">
                             <label>Entrada</label>
-                            <select class="form-control"  >
+                            <select class="form-control"  v-model="turn.input" >
                                 <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                             <label>Salida</label>
-                            <select class="form-control"  >
+                            <select class="form-control" v-model="turn.output" >
                                 <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                             <label>Sentido</label>
-                            <select class="form-control" >
+                            <select class="form-control"  v-model="turn.sentido">
                                 <option v-for="(away,index) in awayOptions" :key="index">{{away.name}}</option>
                             </select>
                         </div> 
                         <div class="form-group col-md-2">
                             <label for="inputName">Codigo</label>
-                            <input type="text" class="form-control" >
+                            <input type="text" class="form-control"  v-model="turn.code">
                         </div>                       
                         <div class="form-group col-md-1">
-                            <button type="button" class="btn cur-p btn-outline-danger mr-3 position-absolute" ><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <button type="button" class="btn cur-p btn-outline-danger mr-3 position-absolute" @click="addTrun" ><i class="fa fa-plus" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
@@ -119,13 +119,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Nombre</td>
-                       <td>12:000 AM</td>
-                       <td>3:00 PM</td>
-                       <td>ENTRADA</td>
-                       <td>COD200</td>
-                       <td><button type="button" class="btn cur-p btn-outline-danger" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                    <tr v-for="(turn, index) in route.turns" :key="index">
+                        <td>{{turn.name}}</td>
+                       <td>{{turn.input}}</td>
+                       <td>{{turn.output}}</td>
+                       <td>{{turn.sentido}}</td>
+                       <td>{{turn.code}}</td>
+                       <td><button type="button" class="btn cur-p btn-outline-danger" @click="removeTurn(turn)" ><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                     </tr>
                 </tbody>
             </table>
@@ -153,10 +153,17 @@ export default {
             url_route_input : '',
             url_route_output : '',
             active : false,
+            turns : [],
+        },
+        turn : {
+            name  : '',
+            input : '',
+            output : '',
+            sentido : '' ,
+            code : '',
         },
         awayOptions : SELECT_TURN,
         selectTime : SELECT_TIME
-
     }
   },
   created (){
@@ -165,6 +172,16 @@ export default {
       
   },
   methods : {
+      addTrun () {
+          this.route.turns.push({...this.turn});
+      },
+      removeTurn (turn) {
+           const indexTurn  =  this.route.turns.findIndex(item  => item.id === turn.id);
+           this.route.turns.splice(indexTurn,1);
+      },
+      existsgTurn () { 
+          
+      }
   }
 }
 </script>

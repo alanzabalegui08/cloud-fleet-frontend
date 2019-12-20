@@ -2,7 +2,7 @@
     <div class="row gap-20 masonry pos-r">
         <div class="masonry-item colo-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
-                <div class="mT-30">
+                <div class="mT-10">
                     <ValidationObserver v-slot="{handleSubmit}">
                     <form @submit.prevent="handleSubmit(onSubmit)">
                         <div class="row">
