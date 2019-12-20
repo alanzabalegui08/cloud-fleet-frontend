@@ -3,24 +3,24 @@
         <div class="masonry-item colo-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
                 <div class="mT-30">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <form @submit.prevent="handleSubmit">
-                                <div class="row">
-                                    <div class="masonry-sizer col-md-10">
-                                        <h2 >Nueva Ruta</h2>
-                                    </div>
-                                    <div class="masonry-sizer col-md-1">
-                                         <button type="submit" class="btn cur-p btn-outline-success" >Guardar</button>
-                                    </div>
-                                    <div class="masonry-sizer col-md-1">
-                                         <button @click="cancelar" class="btn cur-p btn-outline-danger" >Cancelar</button>
-                                    </div>                                    
-                                </div>  
-                                <path-form></path-form>
-                            </form>
+                    <ValidationObserver v-slot="{handleSubmit}">
+                    <form @submit.prevent="handleSubmit(onSubmit)">
+                        <div class="row">
+                            <div class="masonry-sizer col-md-6">
+                                <h2>Nuevo ruta</h2>
+                            </div>
+                            <div class="masonry-sizer col-md-6">
+                                <button type="submit" class="btn cur-p btn-outline-success mr-5">Guardar</button>
+                                <button @click="cancelar" class="btn cur-p btn-outline-danger">Cancelar</button>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <path-form></path-form>
+                            </div>
+                        </div>
+                    </form>
+                    </ValidationObserver>
                 </div>
             </div>                            
         </div>
@@ -44,9 +44,9 @@ export default {
     computed : {
     },
     methods : {
-        handleSubmit(){
-            // this.$emit('create');
-            // this.$router.push('/clientes');
+        onSubmit(){
+            console.log("[ klay ] : submit");
+            
         },
         cancelar(){
             this.$router.push('/rutas');

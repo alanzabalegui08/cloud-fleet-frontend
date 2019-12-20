@@ -10,10 +10,13 @@ import * as VueGoogleMaps from "vue2-google-maps";
 import * as rules from 'vee-validate/dist/rules';
 import { ValidationObserver, ValidationProvider, extend, localize } from 'vee-validate';
 import es from 'vee-validate/dist/locale/es.json';
+import Toasted from 'vue-toasted';
+
 
 Object.keys(rules).forEach(rule => {
   extend(rule, rules[rule]);
 });
+
 localize('es', es);
 Vue.component('ValidationObserver', ValidationObserver);
 Vue.component('ValidationProvider', ValidationProvider);
@@ -24,7 +27,7 @@ Vue.use(VueGoogleMaps, {
     libraries: "places",
   }
 });
-
+Vue.use(Toasted);
 new Vue({
   el: '#app',
   store,

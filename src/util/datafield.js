@@ -1,4 +1,4 @@
-export const TIME_INPUT = [
+export const SELECT_TIME = [
     {        
         id : 0,
         name  : '00:00',
@@ -115,3 +115,16 @@ export const TIME_INPUT = [
         value : '23:00'
     },
 ];
+
+export const SELECT_TURN = [
+    {
+        id : 0,
+        name : 'ENTRADA',
+        value : 'ENTRADA',
+    },
+    {
+        id : 1,
+        name : 'SALIDA',
+        value : 'SALIDA',
+    },        
+]

@@ -97,7 +97,6 @@ export const router  = new Router({
         },
         {
             path : '/rutas',
-            name : 'Rutas', 
             component : PathView,
             children : [
                 {
@@ -115,7 +114,6 @@ export const router  = new Router({
         },
         {
             path : '/operadores',
-            name : 'Operadores', 
             component : DriverView,
             children : [
                 {
@@ -133,7 +131,6 @@ export const router  = new Router({
         },
         {
             path : '/unidades',
-            name : 'Unidades', 
             component : TruckView,
             children : [
                 {
@@ -151,7 +148,6 @@ export const router  = new Router({
         },
         {
             path : '/supervisor',
-            name : 'Supervisor', 
             component : SupervisorView,
             children : [
                 {
@@ -169,7 +165,6 @@ export const router  = new Router({
         },
         {
             path : '/estaciones',
-            name : 'Estaciones', 
             component : StationsView,
             children : [
                 {
@@ -187,7 +182,6 @@ export const router  = new Router({
         },
         {
             path : '/banners',
-            name : 'Banners', 
             component : BannerView,
             children : [
                 {
@@ -204,8 +198,7 @@ export const router  = new Router({
             }
         },
         {
-            path : '/regiones',
-            name : 'Regiones', 
+            path : '/regiones', 
             component : RegionsView,
             children : [
                 {
@@ -223,7 +216,6 @@ export const router  = new Router({
         },
         {
             path : '/monitor',
-            name : 'Monitor', 
             component : MonitorView,            
             meta : {
                 requiresAuth: true,
@@ -231,7 +223,6 @@ export const router  = new Router({
         },
         {
             path : '/programacion',
-            name : 'Programacion', 
             component : ProgrammingView,            
             meta : {
                 requiresAuth: true,
@@ -295,7 +286,6 @@ export const router  = new Router({
         },
         {
             path : '/carga-combustible',
-            name : 'Carga combustible', 
             component : LoadGasView,
             children : [
                 {

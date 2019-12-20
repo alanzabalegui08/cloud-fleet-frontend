@@ -1,5 +1,4 @@
 // import router from '../router';
-
 const initialState = () => ({
     clientList: [
         {

@@ -37,7 +37,13 @@ const getters = {
     getTurns : state => { 
         return state.list
     },
-    getTurnById(){
+    getTurnById () {
+    },
+    existsgTurn () {
+        if(Array.isArray(state.list) && state.list.length){
+            return true;
+        }
+        return false;
     }
 }
 

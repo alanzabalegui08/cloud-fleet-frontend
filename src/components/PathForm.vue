@@ -1,37 +1,51 @@
 <template>
     <div class="row">
-
         <div class="masonry-item col-md-4">
             <div class="bgc-white p-20 bd" >
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="inputName">Nombre Ruta</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
+                            <ValidationProvider vid="text" name="Nombre Ruta" rules="required" v-slot="{ errors }">
+                                <input type="text" class="form-control" v-model="route.name"  placeholder="">
+                                <span style="color:red;">{{ errors[0] }}</span>
+                            </ValidationProvider>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Cliente</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
+                            <ValidationProvider vid="cliente" name="Cliente" rules="required" v-slot="{ errors }">
+                                <input type="text" class="form-control" v-model="route.customer"  placeholder="">
+                                <span style="color:red;">{{ errors[0] }}</span>
+                            </ValidationProvider>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Tolerancia</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
+                            <ValidationProvider vid="tolerancia" name="Tolerancia" rules="required" v-slot="{ errors }">
+                                <input type="text" class="form-control" v-model="route.tolerancia"  placeholder="">
+                                <span style="color:red;">{{ errors[0] }}</span>
+                            </ValidationProvider>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Kilometraje</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
+                            <ValidationProvider vid="kilometraje" name="Kilometraje" rules="required" v-slot="{ errors }">
+                                <input type="number" class="form-control"  v-model="route.kilometers" placeholder="">
+                                <span style="color:red;">{{ errors[0] }}</span>
+                            </ValidationProvider>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Tipo Ruta</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
+                            <ValidationProvider vid="tiporuta" name="Tipo de ruta" rules="required" v-slot="{ errors }">
+                                <input type="text" class="form-control"  v-model="route.route_type"  placeholder="">
+                                <span style="color:red;">{{ errors[0] }}</span>
+                            </ValidationProvider>
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Precio Operador</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
+                            <input type="text" class="form-control" v-model="route.driver_price"  placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Precio Cliente</label>
-                            <input type="text" class="form-control" id="name_client" v-model="client.name" placeholder="">
+                            <input type="text" class="form-control" v-model="route.customer_price"  placeholder="">
                         </div>                                                                                                                                                
                     </div>
                 </div>
@@ -42,12 +56,22 @@
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="form-group col-md-12">
+                            <div class="">Activo</div>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" v-model="route.active" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
                             <label for="inputName">Url Ruta Entrada</label>
-                            <input type="text" class="form-control"  placeholder="">
+                            <input type="text" class="form-control" v-model="route.customer"  :disabled="!route.active" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">URL Ruta Salida</label>
-                            <input type="text" class="form-control"  placeholder="">
+                            <input type="text" class="form-control" :disabled="!route.active" placeholder="">
                         </div>                                                                                                                                             
                     </div>
                     <div class="form-row">
@@ -58,30 +82,19 @@
                         <div class="form-group col-md-2">
                             <label>Entrada</label>
                             <select class="form-control"  >
-                                <option value="12:00">12:00 AM</option>
-                                <option value="1:00">01:00 AM</option>
-                                <option value="2:00">02:00 AM</option>
-                                <option value="3:00">03:00 AM</option>
-                                <option value="4:00">04:00 AM</option>
-                                <option value="5:00">05:00 AM</option>
+                                <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                             <label>Salida</label>
                             <select class="form-control"  >
-                                <option value="12:00">12:00 AM</option>
-                                <option value="1:00">01:00 AM</option>
-                                <option value="2:00">02:00 AM</option>
-                                <option value="3:00">03:00 AM</option>
-                                <option value="4:00">04:00 AM</option>
-                                <option value="5:00">05:00 AM</option>
+                                <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                             <label>Sentido</label>
                             <select class="form-control" >
-                                <option value="12:00">ENTRADA</option>
-                                <option value="1:00">SALIDA</option>
+                                <option v-for="(away,index) in awayOptions" :key="index">{{away.name}}</option>
                             </select>
                         </div> 
                         <div class="form-group col-md-2">
@@ -121,6 +134,7 @@
 </template>
 
 <script>
+import { SELECT_TURN, SELECT_TIME } from "../util/datafield";
 export default {
   name : 'form-path',
   components : {
@@ -128,18 +142,27 @@ export default {
   },
   data () {
     return {
-        client : {
+        route : {
             name : '',
-            password: '',
-            text_color : '',
-            backgroud_color : '',
+            customer : '',
+            tolerancia : '',
+            kilometers : '',
+            route_type : '',
+            driver_price : '',
+            customer_price : '',
+            url_route_input : '',
+            url_route_output : '',
+            active : false,
         },
+        awayOptions : SELECT_TURN,
+        selectTime : SELECT_TIME
+
     }
   },
   created (){
   },
   computed : {
-
+      
   },
   methods : {
   }

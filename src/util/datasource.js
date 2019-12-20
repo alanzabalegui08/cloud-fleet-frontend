@@ -210,5 +210,31 @@ export default {
             colum: 'clave',
             columname : 'Clave',
         },
-    ] 
+    ],
+    routerDataHeader : [
+        {
+            id : 0,
+            name : 'Nombre Ruta', 
+        },
+        {
+            id : 1,
+            name : 'Cliente'
+        },
+        {
+            id : 2,
+            name : 'Kilometraje',
+        },
+        {
+            id : 3,
+            name : 'Ruta Entrada',
+        },
+        {
+            id : 4,
+            name : 'Ruta Salida',
+        },
+        {
+            id : 5,
+            name : 'Accion'
+        }
+    ]
 }
