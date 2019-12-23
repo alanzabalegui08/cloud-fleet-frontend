@@ -5,7 +5,7 @@ import { router } from '../router';
 const initialState = () => ({
     status : {loggedIn : false},
     user : null,
-    saludo : 'klay'
+    saludo : ''
 });
 
 // se crea la inicializacion del state 

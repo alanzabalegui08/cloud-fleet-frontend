@@ -1,7 +1,7 @@
 <template>
     <div class="row gap-20 masonry pos-r">
         <div class="masonry-sizer col-md-10">
-            <h2 >Supervisor</h2>
+            <h2>Supervisor</h2>
         </div>
         <div class="masonry-sizer col-md-2">
             <router-link to="/supervisor/nuevo" class="btn cur-p btn-outline-primary">Nuevo</router-link>

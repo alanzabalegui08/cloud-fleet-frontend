@@ -3,7 +3,6 @@ const initialState = () => ({
 
 });
 
-
 const state  = initialState();
 
 const actions = {
@@ -11,11 +10,9 @@ const actions = {
         commit('addTurn', turn)
     },
     removeTurn({ state,commit }, turn) {
-        console.log(state.list);
         const indexTurn = state.list.findIndex(item => item.id === turn.id);
         commit('removeTurn',indexTurn);0
-    }    
-
+    }
 }
 
 const  mutations = {
@@ -37,8 +34,10 @@ const getters = {
     getTurns : state => { 
         return state.list
     },
+
     getTurnById () {
     },
+
     existsgTurn () {
         if(Array.isArray(state.list) && state.list.length){
             return true;
@@ -46,7 +45,6 @@ const getters = {
         return false;
     }
 }
-
 
 export const turn = {
     namespaced : true,

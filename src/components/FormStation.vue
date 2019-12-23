@@ -8,11 +8,14 @@
                             <div class="row">
                                 <div class="form-group col-md-12">
                                     <label for="inputName">Nombre</label>
-                                    <input type="text" class="form-control" id="" v-model="driver.name" placeholder="">
+                                    <ValidationProvider vid="name" name="Nombre" rules="required|alpha" v-slot="{ errors }">
+                                        <input type="text" class="form-control" id="" v-model="station.name" placeholder="">
+                                        <span style="color:red;">{{ errors[0] }}</span>
+                                    </ValidationProvider>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="inputName">Dirección</label>
-                                    <input type="text" class="form-control" id="" v-model="driver.lastname" placeholder="">
+                                    <input type="text" class="form-control" id="" v-model="station.address" placeholder="">
                                 </div>
                             </div>
                         </div>
@@ -35,6 +38,7 @@
 <script>
 
 import GoogleMap from './GoogleMap';
+import { stationModel } from "../util/model";
 export default {
   name : 'form-supervisor',
   components : {
@@ -42,25 +46,7 @@ export default {
   },
   data () {
     return {
-        driver : {
-            name : '',
-            lastname: '',
-            clave : '',
-            addresses : '',
-            phone : '',
-            cellphone :'',
-            cellphone_network : '',
-            rfc : '',
-            num_seguro_social : '',
-            num_licencia_estatal : '',
-            vigencia_licencia_estatal : '',
-            num_licencia_federal : '',
-            vigencia_licencia_federal : '',
-            tipo_sangre : '',
-            password_xr : '',
-            region : '',
-            active : true,
-        },
+         station : stationModel (),
     }
   },
   created (){

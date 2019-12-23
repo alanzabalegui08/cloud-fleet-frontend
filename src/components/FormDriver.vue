@@ -49,15 +49,24 @@
                         <div class="row">
                             <div class="form-group col-md-4">
                                 <label for="inputPassword">Teléfono</label>
-                                <input type="password" class="form-control" id="" v-model="driver.phone" placeholder="">
+                                <ValidationProvider vid="phone" name="Teléfono" rules="digits:10" v-slot="{ errors }">
+                                    <input type="text" class="form-control" id="" v-model="driver.phone" placeholder="">
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputPassword">Celular</label>
-                                <input type="password" class="form-control" id="" v-model="driver.cellphone" placeholder="">
+                                <ValidationProvider vid="cellphone" name="Celular" rules="digits:10" v-slot="{ errors }">
+                                    <input type="text" class="form-control" id="" v-model="driver.cellphone" placeholder="">
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>                                    
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputPassword">Celular de red</label>
-                                <input type="password" class="form-control" id="" v-model="driver.cellphone_network" placeholder="">
+                                <ValidationProvider vid="cellphonenewtword" name="Celular de red" rules="digits:10" v-slot="{ errors }">
+                                    <input type="text" class="form-control" id="" v-model="driver.cellphone_network" placeholder="">
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>
                             </div>
                         </div>
                     </div>
