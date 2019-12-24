@@ -26,13 +26,13 @@ const actions = {
     resetState ({commit}) {
         commit('stateReset');
         router.push('/login')
-    }    
+    }
 };
 
 const mutations = {
 
     loginSuccess(state,user){
-        state.status = {loggedIn : true};
+        state.status = { loggedIn : true };
         state.user = user;
     },
 

@@ -39,6 +39,7 @@ export default {
   },
   created (){
       //this.$parent.$on('create',this.handClient)
+      this.$parent.$watch().name
   },
   computed : {
 
