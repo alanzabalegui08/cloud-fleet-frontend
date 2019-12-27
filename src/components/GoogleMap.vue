@@ -1,11 +1,17 @@
 <template>
-  <div>
+  <div class="row">
     <gmap-map
       :center="center"
       :zoom="14"
       style="width:100%;  height: 700px;"
+      @click="addMarketAction"
     >
-    <gmap-marker :position="center" :draggable="true" @drag="updateCoordinates" />
+      <GmapMarker
+        v-for="(item, index) in markers"
+        :key="index"
+        :position="item.position"
+        @click="center = item.position"
+      />
     </gmap-map>
   </div>
 </template>
@@ -42,7 +48,6 @@ export default {
         lat: location.latLng.lat(),
         lng: location.latLng.lng(),
       };
-      console.log(this.coordinates);
     },    
     addMarker() {
       if (this.currentPlace) {
@@ -55,6 +60,19 @@ export default {
         this.center = marker;
         this.currentPlace = null;
       }
+
+    },
+    addMarketAction (location) {
+      this.coordinates = { 
+        position : {
+          lat: location.latLng.lat(),
+          lng: location.latLng.lng(),
+        }
+      };
+      this.addMarker();
+      console.log(this.coordinates);
+      this.markers.push(this.coordinates)
+      
     },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {

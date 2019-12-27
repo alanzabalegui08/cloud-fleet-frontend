@@ -5,13 +5,14 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row gap-20 masonry pos-r">                        
+                    <div class="row gap-20 masonry pos-r">
                         <div class="masonry-sizer col-md-10">
-                            <h2 >Clientes</h2>
+                            <h2>Clientes</h2>
                         </div>
                         <div class="masonry-sizer col-md-2">
-                            <button type="button" class="btn cur-p btn-outline-primary" @click="showModal" >Nuevo</button>
-                        </div>                        
+                            <button type="button" class="btn cur-p btn-outline-primary"
+                                @click="showModal">Nuevo</button>
+                        </div>
                         <div class="masonry-item colo-xs-12 col-md-12">
                             <div class="bgc-white p-20 bd">
                                 <div class="mT-30">
@@ -25,18 +26,19 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </main>
         </div>
-        <client-modal ref="modal" 
-        ></client-modal>
+        <client-modal ref="modal"></client-modal>
     </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import {
+    mapGetters
+} from 'vuex';
 import $ from 'jquery';
 import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
@@ -44,31 +46,27 @@ import TableKlay from '../components/Table';
 import ClientModal from '../components/Modal';
 
 export default {
-    name : 'home',
-    components : {
+    name: 'home',
+    components: {
         Sidebar,
         Navbar,
         TableKlay,
         ClientModal,
     },
-    data () {
-        return {
-        }
+    data() {
+        return {}
     },
-    created (){
-    },
-    computed : {
+    created() {},
+    computed: {
         ...mapGetters({
             clients: 'client/getClients'
         })
     },
-    methods : {
+    methods: {
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');
         }
     }
-
-    
 }
 </script>

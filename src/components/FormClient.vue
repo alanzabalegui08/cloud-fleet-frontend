@@ -37,8 +37,14 @@
             </div>
         </div>
         <div class="col-md-12">
-            <div class="bgc-white p-20 bd" style="height:450px">
-                <google-map />
+            <div class="row">
+                <div class="bgc-white p-20 bd col-md-6" style="height:450px">
+                    <google-map />
+                    
+                </div>
+                <div class="col-md-6 bgc-white p-20" >
+                    <MapAddress></MapAddress>
+                </div>                
             </div>
         </div>
     </div>
@@ -47,6 +53,7 @@
 <script>
 import Turno from './Turno';
 import GoogleMap from './GoogleMap';
+import MapAddress from './MapAddress';
 import { mapActions } from 'vuex';
 import Swatches from 'vue-swatches';
 
@@ -55,7 +62,8 @@ export default {
   components : {
       Turno,
       GoogleMap,
-      Swatches 
+      Swatches,
+      MapAddress,
   },
   data () {
     return {

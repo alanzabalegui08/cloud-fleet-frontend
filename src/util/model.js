@@ -64,3 +64,11 @@ export const stationModel = () => ({
 export const regionModel = () => ({
     name : '',    
 });
+
+export const gasModel = () => ({
+    unidad : '',
+    litros : '',
+    costo : '',
+    date : new Date(),
+    estacion : '',
+});

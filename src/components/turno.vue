@@ -56,11 +56,13 @@
         mapActions,
         mapGetters
     } from 'vuex';
+    import { mix } from "../util/mixins";
     import {
         SELECT_TIME
     } from '../util/datafield';
     export default {
         name: 'turno',
+        mixins : [ mix ],
         props: {
             turn: {
                 type: Object
@@ -91,6 +93,7 @@
             }),
 
             handleTurn() {
+                console.log(this.$data);
                 if (this.turno.name === '') {
                     console.error('[ KLAY ERROR ] :  error campo vacio name');
                     return false;

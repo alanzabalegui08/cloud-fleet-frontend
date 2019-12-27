@@ -17,11 +17,14 @@
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
-                                                    <i class="fa fa-tachometer" aria-hidden="true" style="font-size: 45px; color: red;"></i>
+                                                    <i class="fa fa-tachometer" aria-hidden="true"
+                                                        style="font-size: 45px; color: red;"></i>
                                                     <!-- <span id="sparklinedash"></span> -->
                                                 </div>
                                                 <div class="peer">
-                                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-red-50 c-red-500" style="font-size: 45px;">10</span>
+                                                    <span
+                                                        class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-red-50 c-red-500"
+                                                        style="font-size: 45px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -35,10 +38,13 @@
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
-                                                    <i class="fa fa-question" aria-hidden="true" style="font-size: 45px; color: #ffc107;"></i>
+                                                    <i class="fa fa-question" aria-hidden="true"
+                                                        style="font-size: 45px; color: #ffc107;"></i>
                                                 </div>
                                                 <div class="peer">
-                                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-yellow-50 c-yellow-500" style="font-size: 45px;">10</span>
+                                                    <span
+                                                        class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-yellow-50 c-yellow-500"
+                                                        style="font-size: 45px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -52,10 +58,13 @@
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
-                                                    <i class="fa fa-bar-chart" aria-hidden="true" style="font-size: 45px; color: #4caf50 ;"></i>
+                                                    <i class="fa fa-bar-chart" aria-hidden="true"
+                                                        style="font-size: 45px; color: #4caf50 ;"></i>
                                                 </div>
                                                 <div class="peer">
-                                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-green-50 c-green-500" style="font-size: 45px;">10</span>
+                                                    <span
+                                                        class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-green-50 c-green-500"
+                                                        style="font-size: 45px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,10 +78,13 @@
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
-                                                    <i class="fa fa-user-o" aria-hidden="true" style="font-size: 45px; color: #2196f3 ;"></i>
+                                                    <i class="fa fa-user-o" aria-hidden="true"
+                                                        style="font-size: 45px; color: #2196f3 ;"></i>
                                                 </div>
                                                 <div class="peer">
-                                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-blue-50 c-blue-500" style="font-size: 45px;">10</span>
+                                                    <span
+                                                        class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-blue-50 c-blue-500"
+                                                        style="font-size: 45px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,10 +98,13 @@
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true" style="font-size: 45px; color: #b9c2d0 ;"></i>
+                                                    <i class="fa fa-file-text-o" aria-hidden="true"
+                                                        style="font-size: 45px; color: #b9c2d0 ;"></i>
                                                 </div>
                                                 <div class="peer">
-                                                    <span class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-grey-50 c-grey-500" style="font-size: 45px;">10</span>
+                                                    <span
+                                                        class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-grey-50 c-grey-500"
+                                                        style="font-size: 45px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -106,27 +121,26 @@
 
 <script>
 
-
 import $ from 'jquery';
 import Sidebar from '../../components/Sidebar';
 import Navbar from '../../components/Navbar';
 
 export default {
-    name : 'notification',
-    components : {
+    name: 'notification',
+    components: {
         Sidebar,
         Navbar,
     },
-    data () {
+    data() {
         return {
-            datasource : [],
+            datasource: [],
         }
     },
-    created (){
+    created() {
+
     },
-    computed : {
-    },
-    methods : {
+    computed: {},
+    methods: {
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');

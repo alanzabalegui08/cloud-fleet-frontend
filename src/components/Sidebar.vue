@@ -37,7 +37,8 @@
           </a>
           <ul class="dropdown-menu" v-if="item.down">
             <li  v-for="(o, i) in item.submenu" :key="i" >
-              <a class='sidebar-link' :href="o.path">{{o.name}}</a>
+              <router-link :to="o.path">{{o.name}}</router-link>
+              <!-- <a class='sidebar-link' :href="o.path">{{o.name}}</a> -->
             </li>
           </ul>
         </li>         

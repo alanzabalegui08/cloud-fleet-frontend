@@ -7,27 +7,42 @@
                         <div class="col-md-4">
                             <div class="form-group col-md-12">
                                 <label for="inputName">Unidad</label>
-                                <select class="form-control select-form" id="" >
-                                    <option>Seleccionar unidad</option>
-                                </select>
+                                <ValidationProvider vid="text" name="Unidad" rules="required" v-slot="{ errors }">
+                                    <select class="form-control select-form" v-model="gas.unidad" >
+                                        <option>Seleccionar unidad</option>
+                                    </select>
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputName">Litros</label>
-                                <input type="text" class="form-control select-form" id="" >
+                                <ValidationProvider vid="litros" name="Litros" rules="required|digits:1" v-slot="{ errors }">
+                                    <input type="text" class="form-control select-form" v-model="gas.litros" >
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputName">Costo</label>
-                                <input type="text" class="form-control select-form" id="" >
+                                <ValidationProvider vid="costo" name="Costo" rules="required|digits:1" v-slot="{ errors }">
+                                    <input type="text" class="form-control select-form"  v-model="gas.costo">
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputName">Fecha y Hora del ticket</label>
-                                <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
+                                <ValidationProvider vid="date" name="Fecha y Hora del ticke" rules="required" v-slot="{ errors }">
+                                    <date-picker class="select-form" name="date" :config="options" v-model="gas.date"></date-picker>
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="inputName">Sentido</label>
-                                <select class="form-control select-form" id="" >
-                                    <option>Entrada</option>
-                                </select>
+                                <label for="inputName">Estación</label>
+                                <ValidationProvider vid="estacion" name="Estacion" rules="required" v-slot="{ errors }">
+                                    <select class="form-control select-form" v-model="gas.estacion" >
+                                        <option>Entrada</option>
+                                    </select>
+                                    <span style="color:red;">{{ errors[0] }}</span>
+                                </ValidationProvider>
                             </div>
                         </div>
                     </div>                       
@@ -39,6 +54,7 @@
 <script>
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
+import { gasModel } from "../util/model";
 export default {
   name : 'form-loadgas',
   components : {
@@ -47,13 +63,13 @@ export default {
   data () {
     return {
         datasource : [],
-        date: new Date(),
         options: {
             format: 'DD/MM/YYYY h:mm:ss',
             useCurrent: false,
             showClear: true,
             showClose: true,
-        }
+        },
+        gas : gasModel (),
     }
   },
   created (){
