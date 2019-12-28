@@ -1,6 +1,5 @@
 <template>
     <div class="mT-30">
-        <!-- <form> -->
         <div class="form-row">
             <div class="form-group col-xs-5">
                 <label for="inputName">Nombre</label>
@@ -23,7 +22,6 @@
                     @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button>
             </div>
         </div>
-        <!-- </form> -->
         <div class="table-responsive">
             <table id="table_turn" class="table">
                 <thead>
@@ -56,13 +54,15 @@
         mapActions,
         mapGetters
     } from 'vuex';
-    import { mix } from "../util/mixins";
+    import {
+        mix
+    } from "../util/mixins";
     import {
         SELECT_TIME
     } from '../util/datafield';
     export default {
         name: 'turno',
-        mixins : [ mix ],
+        mixins: [mix],
         props: {
             turn: {
                 type: Object
@@ -112,7 +112,6 @@
             removeTurn(turn) {
                 console.log(turn);
                 console.log('[KLAY] error turn');
-
                 this.remove(turn)
             }
         }

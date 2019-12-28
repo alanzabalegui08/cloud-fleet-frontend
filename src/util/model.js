@@ -72,3 +72,15 @@ export const gasModel = () => ({
     date : new Date(),
     estacion : '',
 });
+
+export const address = () => ({
+    fulladdress : '',
+    street : '',
+    postalcode : '',
+    suburn : '',
+    city : '',
+    state : '',
+    rootList : [],
+    position : {},
+    markets : [],
+});

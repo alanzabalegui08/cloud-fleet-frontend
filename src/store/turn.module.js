@@ -16,7 +16,7 @@ const actions = {
 }
 
 const  mutations = {
-    addTurn(state,turn){
+    addTurn(state,turn) {
         state.list.push({
             id : Math.floor(Math.random() * 100),
             name : turn.name,

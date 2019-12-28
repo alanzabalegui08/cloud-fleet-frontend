@@ -331,7 +331,7 @@ router.beforeEach((to, from, next) => {
       lastname : 'dasbdj'
   };
    //new Storage().getStorage;
-  console.log(storage);
+  //console.log(storage);
 
   if(to.matched.some(record => record.meta.requiresAuth)) {    
       if ( storage === null) {
