@@ -19,28 +19,28 @@
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Nombre</label>
                                         <ValidationProvider vid="name" name="Nombre" rules="required|alpha" v-slot="{ errors }">
-                                            <input type="text" class="form-control" id="" v-model="driver.name" placeholder="">
+                                            <input type="text" class="form-control" id="" v-model="driver.name" placeholder="" autocomplete="off">
                                             <span style="color:red;">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Apellido</label>
                                         <ValidationProvider vid="lastname" name="Apellido" rules="required|alpha" v-slot="{ errors }">
-                                            <input type="text" class="form-control" id="" v-model="driver.lastname" placeholder="">
+                                            <input type="text" class="form-control" id="" v-model="driver.lastname" placeholder="" autocomplete="off">
                                             <span style="color:red;">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Clave</label>
                                         <ValidationProvider vid="clave" name="Clave" rules="alpha_num" v-slot="{ errors }">
-                                            <input type="text" class="form-control" id="" v-model="driver.clave" placeholder="">
+                                            <input type="text" class="form-control" id="" v-model="driver.clave" placeholder="" autocomplete="off"> 
                                             <span style="color:red;">{{ errors[0] }}</span>
                                         </ValidationProvider>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>        
+                    </div>
                     <div class="form-group col-md-12">
                         <label for="inputPassword">Dirección</label>                        
                         <input type="password" class="form-control" id="" v-model="driver.addresses" placeholder="">
@@ -93,7 +93,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputtext">Vingencia Licencia Estatal </label>
-                            <date-picker class="form-control" name="date" v-model="driver.vigLicenciaEstatal" :config="options"></date-picker>
+                            <date-picker class="form-control" name="date" v-model="driver.vigLicenciaEstatal" :config="options" autocomplete="off"></date-picker >
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputtext">Num. Licencia Federal </label>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputtext">Vigencia Licencia Federal </label>
-                            <date-picker class="form-control" name="date" v-model="driver.vigLicenciaFederal" :config="options"></date-picker>
+                            <date-picker class="form-control" name="date" v-model="driver.vigLicenciaFederal" :config="options" autocomplete="off"></date-picker>
                         </div>
                     </div>
                     <div class="row">
@@ -153,6 +153,7 @@ export default {
             useCurrent: false,
             showClear: true,
             showClose: true,
+            locale : 'es-es'
         }
     }
   },

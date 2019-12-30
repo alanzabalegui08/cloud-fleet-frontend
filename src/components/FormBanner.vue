@@ -27,7 +27,7 @@
                         <div class="col-md-7">
                             <div class="row">
                                 <div class="col-md-12 text-center">
-                                    <img src="https://via.placeholder.com/700x300.png"/>
+                                    <img style="width:100%;" src="https://via.placeholder.com/700x300.png"/>
                                 </div>
                             </div>
                         </div>

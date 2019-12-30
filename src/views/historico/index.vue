@@ -8,18 +8,23 @@
                     <div class="row gap-20 masonry pos-r">
                         <div class="masonry-item  w-100">
                             <div class="row gap-20 bd bgc-white ">
+                                <div class="col-md-12">
+                                    <h2 class="">Historico unidad</h2>
+                                </div>
+                            </div>                            
+                            <div class="row gap-20 bd bgc-white ">
                                 <div class="form-group col-md-2">
-                                    <select class="form-control select-form" id="" >
+                                    <select class="form-control select-form"  >
                                         <option>Seleccione una Unidad</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-md-1 text-center">
+                                <div class="form-group col-md-1">
                                     <h4>Desde : </h4>
                                 </div>
                                 <div class="form-group col-md-2 text-center">
                                     <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
                                 </div>
-                                <div class="form-group col-md-1 text-center">
+                                <div class="form-group col-md-1">
                                     <h4>Hasta : </h4>
                                 </div>
                                 <div class="form-group col-md-2 text-center">
@@ -67,6 +72,7 @@ export default {
                 useCurrent: false,
                 showClear: true,
                 showClose: true,
+                locale : 'es-es',
             }
         }
     },

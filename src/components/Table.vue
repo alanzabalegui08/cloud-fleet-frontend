@@ -61,7 +61,9 @@ export default {
 .table {
   width: 100%;
 }
-
+.table-responsive {
+    height: auto;
+}
 @media (max-width: 600px) {
     .table {
         width: 700px

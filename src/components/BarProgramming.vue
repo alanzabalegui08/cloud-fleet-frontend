@@ -1,22 +1,28 @@
 <template>
-    <div class="row m-10" >
-        <div class="form-group col-md-1 text-center">
-          <button type="button" class="btn cur-p btn-outline-primary mr-3" ><i class="fa fa-refresh" aria-hidden="true"></i></button>          
-        </div>
-        <div class="form-group col-md-2 text-center">
-           <date-picker class="select-form " v-model="date" language="es" :config="options"></date-picker>
-        </div>
-        <div class="form-group col-md-2">
-          <select class="form-control select-form" id="" >
-            <option>Turno</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <select class="form-control select-form" id="" >
-            <option>Región</option>
-          </select>
-        </div>
+  <div class="row m-10">
+    <div class="row mr-5">
+      <div class="col-md-12">
+        <h2 class="">PV XR</h2>
+      </div>
     </div>
+    <div class="form-group col-md-1">
+      <button type="button" class="btn cur-p btn-outline-primary mr-3"><i class="fa fa-refresh"
+          aria-hidden="true"></i></button>
+    </div>
+    <div class="form-group col-md-2 text-center">
+      <date-picker class="select-form " v-model="date" language="es" :config="options"></date-picker>
+    </div>
+    <div class="form-group col-md-2">
+      <select class="form-control select-form" id="">
+        <option>Turno</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <select class="form-control select-form" id="">
+        <option>Región</option>
+      </select>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -34,8 +40,9 @@ export default {
         date: new Date(),
         options: {
           format: 'DD/MM/YYYY',
-          useCurrent: false,          
-        }      
+          useCurrent: false,
+          locale : 'es-es',
+        }
     }
   },
   created (){

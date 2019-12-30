@@ -32,15 +32,12 @@
             </div>
         </div>
         <div class="masonry-item col-md-6">
-            <div class="bgc-white p-20 bd" style="">
-                <turno :list="client.turn" />
-            </div>
+            <turno :list="client.turn" />
         </div>
         <div class="col-md-12">
-            <div class="row">
+            <div class="row" style="height: 800px;">
                 <div class="bgc-white p-20 bd col-md-6" style="height:450px">
                     <google-map />
-
                 </div>
                 <div class="col-md-6 bgc-white p-20">
                     <MapAddress></MapAddress>

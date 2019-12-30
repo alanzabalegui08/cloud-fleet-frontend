@@ -91,6 +91,7 @@ export default {
                 useCurrent: false,
                 showClear: true,
                 showClose: true,
+                locale : 'es-es',
             }
         }
     },

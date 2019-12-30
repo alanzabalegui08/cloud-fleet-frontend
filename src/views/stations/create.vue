@@ -7,7 +7,7 @@
                         <form @submit.prevent="handleSubmit(onSubmit)">
                             <div class="row">
                                 <div class="masonry-sizer col-md-6">
-                                    <h2>Nuevo Supervisor</h2>
+                                    <h2>Nueva estacion</h2>
                                 </div>
                                 <div class="masonry-sizer col-md-6">
                                     <button type="submit" class="btn cur-p btn-outline-success mr-5">Guardar</button>

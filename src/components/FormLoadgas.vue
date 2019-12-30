@@ -66,8 +66,9 @@ export default {
         options: {
             format: 'DD/MM/YYYY h:mm:ss',
             useCurrent: false,
-            showClear: true,
-            showClose: true,
+            showClear : true,
+            showClose : true,
+            locale    : 'es-es',
         },
         gas : gasModel (),
     }

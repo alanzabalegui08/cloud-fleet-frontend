@@ -1,5 +1,5 @@
 <template>
-    <div class="row gap-20 masonry pos-r">
+    <div class="row gap-20 masonry pos-r p-15">
         <div class="masonry-sizer col-md-10">
             <h2 >Estaciones</h2>
         </div>

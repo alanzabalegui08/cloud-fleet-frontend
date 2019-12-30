@@ -7,6 +7,11 @@
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
                         <div class="masonry-item  w-100">
+                            <div class="row gap-20 bd bgc-white ">
+                                <div class="col-md-12">
+                                    <h2 class="">Operadores sin ruta</h2>
+                                </div>
+                            </div>  
                             <div class="row gap-20 bd bgc-white" style="height:750px">
                                 <div class="col-md-12">
                                     <div class="row m-10">
@@ -68,6 +73,7 @@ export default {
                 useCurrent: false,
                 showClear: true,
                 showClose: true,
+                locale : 'es-es'
             }
         }
     },

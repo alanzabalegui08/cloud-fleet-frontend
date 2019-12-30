@@ -1,9 +1,14 @@
 <template>
     <div class="bgc-white bd" >
         <div class="mT-10">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="p-15">Monitor</h2>
+                </div>
+            </div>
             <div class="form-row">
                 <div class="col-md-12">
-                    <h4>Filtro</h4>
+                    <h5 class="p-15">Filtro</h5>
                     <div class="form-group col-md-12">
                         <select type="text" class="form-control" id="">
                             <option>UNIDAD</option>
@@ -20,7 +25,7 @@
             </div>
             <div class="col-md-12">
                 <h4>Rutas</h4>
-                <table id="dataTable" class=" table table-striped table-bordered" cellspacing="0" width="100%">
+                <table id="dataTable" class=" table-paths table-striped table-bordered" cellspacing="0" width="100%">
                     <tbody>
                         <tr>
                             <td>
@@ -218,3 +223,8 @@ export default {
   }
 }
 </script>
+<style>
+.table-paths {
+     width: 100%;
+}
+</style>
