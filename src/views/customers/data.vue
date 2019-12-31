@@ -11,7 +11,7 @@
                 <div class="mT-30">
                     <div class="row">
                         <div class="col-md-12">
-                            <table-klay :list="clients"  @onDeleteItem="onDeleteItem" :colums="dataGrid"></table-klay>
+                            <table-klay :list="clients"  @onDeleteItem="onDeleteItem" :columns="dataHeader"></table-klay>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
 import { mapGetters } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '../../components/Table';
-import DataGrid from '../../util/datasource.js';
+import DataHeader from '../../util/datasource.js';
 
 export default {
     name : 'data',
@@ -33,11 +33,11 @@ export default {
     },
     data () {
         return {
-            dataGrid : [],
+            dataHeader : [],
         }
     },
     created (){
-        this.dataGrid = DataGrid.clients
+        this.dataHeader = DataHeader.clients
     },
     computed : {
         ...mapGetters({

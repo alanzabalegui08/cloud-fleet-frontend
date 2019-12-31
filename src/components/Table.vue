@@ -3,7 +3,7 @@
     <table id="table_turn" class="table"> 
         <thead>
             <tr >
-                <th v-for="(colum,index) in colums" :key="index" ><h4> {{colum.columname}}</h4></th>
+                <th v-for="(colum,index) in columns" :key="index" ><h5> {{colum.columname}}</h5></th>
             </tr>
         </thead>
         <tbody>
@@ -30,7 +30,7 @@ export default {
         list : {
             type : Array
         },
-        colums : {
+        columns : {
             type : Array
         },
     },

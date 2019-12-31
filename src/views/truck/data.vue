@@ -4,25 +4,26 @@
             <h2 >Unidades</h2>
         </div>
         <div class="masonry-sizer col-md-2">
-            <router-link to="/unidades/nuevo" class="btn cur-p btn-outline-primary"  >Nuevo</router-link>
+            <router-link to="/unidades/nuevo" class="btn cur-p btn-outline-primary">Nuevo</router-link>
         </div>
         <div class="masonry-item colo-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
                 <div class="mT-30">
                     <div class="row">
                         <div class="col-md-12">
-                            <table-klay :list="clients"></table-klay>
+                            <table-klay :list="clients" :columns="dataHeader"></table-klay>
                         </div>
                     </div>
                 </div>
             </div>                            
         </div>
-    </div>    
+    </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '../../components/Table';
+import DataHeader from '@/util/datasource.js';
 
 export default {
     name : 'data',
@@ -32,9 +33,11 @@ export default {
     },
     data () {
         return {
+            dataHeader : [],
         }
     },
     created (){
+        this.dataHeader = DataHeader.truck;
     },
     computed : {
         ...mapGetters({

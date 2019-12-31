@@ -1,3 +1,4 @@
+
 <template>
     <div class="row gap-20 masonry pos-r p-15">
         <div class="masonry-sizer col-md-10">
@@ -11,7 +12,7 @@
                 <div class="mT-30">
                     <div class="row">
                         <div class="col-md-12">
-                            <table-klay :list="clients"></table-klay>
+                            <table-klay :list="clients" :columns="dataHeader"></table-klay>
                         </div>
                     </div>
                 </div>
@@ -22,7 +23,8 @@
 <script>
 import { mapGetters } from 'vuex';
 import $ from 'jquery';
-import TableKlay from '../../components/Table';
+import TableKlay from '@/components/Table';
+import DataHeader from '@/util/datasource.js'
 
 export default {
     name : 'operadores-data',
@@ -31,9 +33,11 @@ export default {
     },
     data () {
         return {
+            dataHeader : [],
         }
     },
     created (){
+        this.dataHeader = DataHeader.driver
     },
     computed : {
         ...mapGetters({

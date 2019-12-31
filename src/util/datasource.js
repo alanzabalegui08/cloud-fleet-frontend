@@ -1,213 +1,484 @@
 export default {
+
     clients : [
         {
             id : 0,
-            colum: 'name',
+            column: 'name',
             columname : 'Nombre',
         },
         {
             id : 1,
-            colum: 'area',
+            column: 'area',
             columname : 'Area',
         },
         {
             id : 2,
-            colum: 'primarycolor',
+            column: 'primarycolor',
             columname : 'Color primario',
         },
         {
             id : 3,
-            colum: 'backgroundcolor',
+            column: 'backgroundcolor',
             columname : 'Color de fondo',
         },
         {
             id : 4,
-            colum: 'accions',
-            columname : 'Acciones',
+            column: 'Accións',
+            columname : 'Acciónes',
         },        
     ],
     path : [
         {
             id : 0,
-            colum: 'pathname',
+            column: 'pathname',
             columname : 'Nombre de Ruta',
         },
         {
             id : 1,
-            colum: 'customer',
+            column: 'customer',
             columname : 'Clientes',
         },
         {
             id : 2,
-            colum: 'kilometros',
+            column: 'kilometros',
             columname : 'Kilometraje',
         },
         {
             id : 3,
-            colum: 'pathinput',
+            column: 'pathinput',
             columname : 'Ruta de entrada',
         },
         {
             id : 4,
-            colum: 'pathoutput',
+            column: 'pathoutput',
             columname : 'Ruta de salida',
         },
         {
             id : 5,
-            colum: 'accions',
-            columname : 'Acciones',
+            column: 'Accións',
+            columname : 'Acciónes',
         },        
+    ],
+    driver : [
+        {
+            id : 0,
+            column : 'clave',
+            columname : 'Clave',
+        },
+        {
+            id : 1,
+            column : 'name',
+            columname : 'Nombre',
+        },
+        {
+            id : 2,
+            column : 'lastname',
+            columname : 'Apellido',
+        },
+        {
+            id : 3,
+            column : 'unitymovile',
+            columname : 'Unidad Movil',
+        },
+        {
+            id : 4,
+            column : 'address',
+            columname : 'Dirección',
+        },
+        {
+            id : 5,
+            column : 'phone',
+            columname : 'Teléfono',
+        },
+        {
+            id : 6,
+            column : 'cellphone',
+            columname : 'Celular',
+        },
+        {
+            id : 7,
+            column : 'cellphonenetwork',
+            columname : 'Celular Red',
+        },
+        {
+            id : 8,
+            column : 'photo',
+            columname : 'Foto',
+        },
+        {
+            id : 9,
+            column : 'accion',
+            columname : 'Acción',
+        }
+    ],
+    truck : [
+        {
+            id : 0,
+            column : 'truck',
+            columname : 'Unidad',
+        },
+        {
+            id : 1,
+            column : 'driver',
+            columname : 'Operador',
+        },
+        {
+            id : 2,
+            column : 'type',
+            columname : 'Tipo',
+        },
+        {
+            id : 3,
+            column : 'model',
+            columname : 'Modelo',
+        },
+        {
+            id : 4,
+            column : 'marca',
+            columname : 'Marca',
+        },
+        {
+            id : 5,
+            column : 'submarca',
+            columname : 'Sub Marca',
+        },
+        {
+            id : 6,
+            column : 'gas',
+            columname : 'Combustible',
+        },
+        {
+            id : 7,
+            column : 'performance',
+            columname : 'Rendimiento',
+        },
+        {
+            id : 8,
+            column : 'performancereal',
+            columname : 'Rend. real',
+        },
+        {
+            id : 9,
+            column : 'poliza',
+            columname : 'Poliza de seguro',
+        },
+        {
+            id : 10,
+            column : 'gps',
+            columname : 'GPS',
+        },
+        {
+            id : 11,
+            column : 'photo',
+            columname : 'Foto',
+        },
+        {
+            id : 12,
+            column : 'taller',
+            columname : 'Taller',
+        },
+        {
+            id : 13,
+            column : 'tirada',
+            columname : 'Tirada',
+        },
+        {
+            id : 14,
+            column : 'accion',
+            columname : 'Acción',
+        },
+    ],
+    supervisor : [
+        {
+            id : 0,
+            column : 'name',
+            columname : 'Nombre',
+        },
+        {
+            id : 1,
+            column : 'customer',
+            columname : 'Cliente',
+        },
+        {
+            id : 2,
+            column : 'phone',
+            columname : 'Teléfono',
+        },
+        {
+            id : 3,
+            column : 'type',
+            columname : 'Tipo',
+        },
+        {
+            id : 4,
+            column : 'accion',
+            columname : 'Acción',
+        },                                
+        
+    ],
+    station : [
+        {
+            id : 0,
+            column : 'id_station',
+            columname : 'ID estación',
+        },
+        {
+            id : 1,
+            column : 'name',
+            columname : 'Nombre',
+        },
+        {
+            id : 2,
+            column : 'address',
+            columname : 'Dirección',
+        },
+        {
+            id : 3,
+            column : 'location',
+            columname : 'Ubicación',
+        },
+        {
+            id : 4,
+            column : 'accion',
+            columname : 'Acción',
+        },
+    ],
+    banner : [
+        {
+            id : 0,
+            column : 'title',
+            columname : 'Titulo',
+        },
+        {
+            id : 1,
+            column : 'description',
+            columname : 'Descripción',
+        },
+        {
+            id : 3,
+            column : 'img',
+            columname : 'Imagen',
+        },
+        {
+            id : 4,
+            column : 'accion',
+            columname : 'Acción',
+        }               
+    ],
+    region : [
+        {
+            id : 0,
+            column : 'name',
+            columname : 'Nombre',
+        },
+        {
+            id : 1,
+            column : 'accion',
+            columname : 'Acción',
+        }
     ],
     programming : [
         {
             id : 0,
-            colum: 'code',
+            column: 'code',
             columname : 'Código',
         },
         {
             id : 1,
-            colum: 'path',
+            column: 'path',
             columname : 'Ruta',
         },
         {
             id : 2,
-            colum: 'pax',
+            column: 'pax',
             columname : 'PAX',
         },
         {
             id : 3,
-            colum: 'llegada',
+            column: 'llegada',
             columname : 'Llegada',
         },
         {
             id : 4,
-            colum: 'turn',
+            column: 'turn',
             columname : 'Turno',
         },
         {
             id : 5,
-            colum: 'timeinit',
+            column: 'timeinit',
             columname : 'Hora inicio',
         },
         {
             id : 6,
-            colum: 'timeend',
+            column: 'timeend',
             columname : 'Hora fin',
         },
         {
             id : 7,
-            colum: 'driver',
+            column: 'driver',
             columname : 'Operador',
         },
         {
             id : 5,
-            colum: 'commnets',
+            column: 'commnets',
             columname : 'Comentarios',
         },  
     ],
     comments : [
         {
             id : 0,
-            colum: 'date',
+            column: 'date',
             columname : 'Fecha',
         },
         {
             id : 1,
-            colum: 'truck',
+            column: 'truck',
             columname : 'Unidad',
         },
         {
             id : 2,
-            colum: 'driver',
+            column: 'driver',
             columname : 'Operador',
         },
         {
             id : 3,
-            colum: 'path',
+            column: 'path',
             columname : 'Ruta',
         },
         {
             id : 4,
-            colum: 'turn',
+            column: 'turn',
             columname : 'Turno',
         },
         {
             id : 5,
-            colum: 'comments',
+            column: 'comments',
             columname : '',
         },
         {
             id : 6,
-            colum: 'category',
+            column: 'category',
             columname : 'Categorias',
         },
         {
             id : 7,
-            colum: 'Subcategory',
+            column: 'Subcategory',
             columname : 'Subcategoria',
         },
         {
             id : 5,
-            colum: 'modul',
+            column: 'modul',
             columname : 'Modulo',
         },
         {
             id : 5,
-            colum: 'review',
+            column: 'review',
             columname : 'Revisado',
         }, 
+    ],
+    gasoline : [ 
+        {
+            id : 0,
+            column : 'unidad',
+            columname : 'UNIDAD',
+        },
+        {
+            id : 1,
+            column : 'ltr',
+            columname : 'LITROS',
+        },
+        {
+            id : 2,
+            column : 'cost',
+            columname : 'COSTO',
+        },
+        {
+            id : 3,
+            column : 'cu',
+            columname : 'C.U',
+        },
+        {
+            id : 4,
+            column : 'km_rend_real',
+            columname : 'KM REND. REAL',
+        },
+        {
+            id : 5,
+            column : 'km_recorridos',
+            columname : 'KM RECORRIDOS',
+        },
+        {
+            id : 6,
+            column : 'date_upload',
+            columname : 'FECHA CARGA',
+        },
+        {
+            id : 7,
+            column : 'time_ipload',
+            columname : 'TIEMPO CARGA',
+        },
+        {
+            id : 8,
+            column : 'driver',
+            columname : 'OPERADOR',
+        },
+        {
+            id : 9,
+            column : 'station',
+            columname : 'ESTACIÓN',
+        },
     ],
     programminReport : [
         {
             id : 0,
-            colum: 'date',
+            column: 'date',
             columname : 'Fecha',
         },
         {
             id : 1,
-            colum: 'client',
+            column: 'client',
             columname : 'Cliente',
         },
         {
             id : 2,
-            colum: 'truck',
+            column: 'truck',
             columname : 'Unidad',
         },        
         {
             id : 3,
-            colum: 'driver',
+            column: 'driver',
             columname : 'Operador',
         },
         {
             id : 4,
-            colum: 'path',
+            column: 'path',
             columname : 'Ruta',
         },
         {
             id : 5,
-            colum: 'turn',
+            column: 'turn',
             columname : 'Turno',
         },
         {
             id : 6,
-            colum: 'sentido',
+            column: 'sentido',
             columname : 'Sentido',
         },
     ],
     driverWithoutpath : [
         {
             id : 0,
-            colum: 'name',
+            column: 'name',
             columname : 'Nombre',
         },
         {
             id : 1,
-            colum: 'lastbame',
+            column: 'lastbame',
             columname : 'Apellios',
         },
         {
             id : 2,
-            colum: 'clave',
+            column: 'clave',
             columname : 'Clave',
         },
     ],
@@ -234,7 +505,8 @@ export default {
         },
         {
             id : 5,
-            name : 'Accion'
+            name : 'Acción'
         }
-    ]
+    ],
+
 }

@@ -11,7 +11,7 @@
                 <div class="mT-30">
                     <div class="row">
                         <div class="col-md-12">
-                            <table-klay :list="clients"></table-klay>
+                            <table-klay :list="clients" :columns="dataHeader"></table-klay>
                         </div>
                     </div>
                 </div>
@@ -22,19 +22,20 @@
 <script>
 import { mapGetters } from 'vuex';
 import $ from 'jquery';
-import TableKlay from '../../components/Table';
-
+import TableKlay from '@/components/Table';
+import DataHeader from '@/util/datasource.js';
 export default {
     name : 'data',
     components : {
-
         TableKlay,
     },
     data () {
         return {
+            dataHeader : [],
         }
     },
     created (){
+        this.dataHeader = DataHeader.region;
     },
     computed : {
         ...mapGetters({

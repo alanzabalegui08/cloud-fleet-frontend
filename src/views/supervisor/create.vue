@@ -44,7 +44,7 @@ export default {
     computed : {
     },
     methods : {
-        handleSubmit(){
+        onSubmit(){
         },
         cancelar(){
             this.$router.push('/supervisor');

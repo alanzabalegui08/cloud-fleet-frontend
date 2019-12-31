@@ -7,7 +7,6 @@ const state  = address();
 const actions = {
 
     addPosition ({commit},position) {
-        console.log(position);
         commit('setAddressPosition',position)
     },
 
