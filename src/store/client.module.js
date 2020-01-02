@@ -1,62 +1,55 @@
-// import router from '../router';
 const initialState = () => ({
-    clientList: [
-        {
-            name : 'Tiger Nixon',
-            area : 'System Architect',
-            text_color : '#FF000',
-            backgroud_color :'#FFCC00'
-        },
-        {
-            name : 'Tiger Nixon',
-            area : 'System Architect',
-            text_color : '#FF000',
-            backgroud_color :'#FFCC00'
-        },
-        {
-            name : 'Tiger Nixon',
-            area : 'System Architect',
-            text_color : '#FF000',
-            backgroud_color :'#FFCC00'
-        },
-        {
-            name : 'Tiger Nixon',
-            area : 'System Architect',
-            text_color : '#FF000',
-            backgroud_color :'#FFCC00'
-        }        
-    ],
-    status : null,
-    title  : 'Clientes',
-    proccess : false,
+    list: [],
+    status: null,
+    title: 'Clientes',
+    proccess: false,
 });
 
 
-const state  =  initialState();
+const state = initialState();
 
 const actions = {
-    createClient({commit },client) {
+    createClient({
+        commit
+    }, client) {
         commit('createClient', client)
     },
+    removeClient({
+        commit
+    }, client) {
+        const indexClient = state.list.findIndex(
+            item => item.id === client.id
+        );
+        commit('remove', indexClient);
+    }
 }
 
 const mutations = {
 
-    createClient (state,client) {
-        state.clientList.push({name : client.name,area : 'area',text_color : client.text_color,backgroud_color : client.backgroud_color});
+    createClient(state, client) {
+        state.list.push({
+            name: client.name,
+            area: 'area',
+            text_color: client.text_color,
+            backgroud_color: client.backgroud_color
+        });
     },
+
+    remove(state, indexClient) {
+        state.list.splice(indexClient, 1);
+    }
 }
 
 const getters = {
-    getClients : state => {
-        return state.clientList
+    getClients: state => {
+        return state.list
     }
 }
 
 export const client = {
-    namespaced : true,
+    namespaced: true,
     state,
     getters,
     mutations,
-    actions
+    actions,
 }

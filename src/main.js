@@ -34,7 +34,7 @@ Vue.component('ValidationObserver', ValidationObserver);
 Vue.component('ValidationProvider', ValidationProvider);
 
 Vue.use(VueGoogleMaps, {
-  load: {
+  load : {
     key: API_KEY_MAPS,
     libraries: ['places'],
   }

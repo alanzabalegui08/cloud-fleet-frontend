@@ -68,12 +68,13 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">Url Ruta Entrada</label>
-                            <input type="text" class="form-control" v-model="route.customer" :disabled="!route.active"
-                                placeholder="">
+                            <input type="text" class="form-control" v-model="route.url_route_input"
+                                :disabled="!route.active" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputName">URL Ruta Salida</label>
-                            <input type="text" class="form-control" :disabled="!route.active" placeholder="">
+                            <input type="text" class="form-control" :disabled="!route.active"
+                                v-model="route.url_route_output" placeholder="">
                         </div>
                     </div>
                     <div class="form-row">
@@ -136,62 +137,72 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>                
+                </table>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { SELECT_TURN, SELECT_TIME } from "../util/datafield";
+import {
+    SELECT_TURN,
+    SELECT_TIME
+} from "../util/datafield";
+import { mapActions } from 'vuex';
 export default {
-  name : 'form-path',
-  components : {
+    name: 'form-path',
+    components: {
+    },
+    data() {
+        return {
+            route: {
+                name: 'name',
+                customer: 'customer',
+                tolerancia: '2',
+                kilometers: '2',
+                route_type: '2',
+                driver_price: '100',
+                customer_price: '100',
+                url_route_input: 'www.thisistest.com',
+                url_route_output: 'www.thisistest.com',
+                active: false,
+                turns: [],
+            },
+            turn: {
+                name: '',
+                input: '',
+                output: '',
+                sentido: '',
+                code: '',
+            },
+            awayOptions: SELECT_TURN,
+            selectTime: SELECT_TIME
+        }
+    },
+    created() {},
+    computed: {
 
-  },
-  data () {
-    return {
-        route : {
-            name : '',
-            customer : '',
-            tolerancia : '',
-            kilometers : '',
-            route_type : '',
-            driver_price : '',
-            customer_price : '',
-            url_route_input : '',
-            url_route_output : '',
-            active : false,
-            turns : [],
+    },
+    methods: {
+        ...mapActions({
+            'add' : 'path/createPath',
+        }),
+
+        addTrun() {
+            this.route.turns.push({
+                ...this.turn
+            });
         },
-        turn : {
-            name  : '',
-            input : '',
-            output : '',
-            sentido : '' ,
-            code : '',
+
+        removeTurn(turn) {
+            const indexTurn = this.route.turns.findIndex(item => item.id === turn.id);
+            this.route.turns.splice(indexTurn, 1);
         },
-        awayOptions : SELECT_TURN,
-        selectTime : SELECT_TIME
+
+        handlepPath() {            
+            this.add(this.route);
+        }
     }
-  },
-  created (){
-  },
-  computed : {
-      
-  },
-  methods : {
-      addTrun () {
-          this.route.turns.push({...this.turn});
-      },
-      removeTurn (turn) {
-           const indexTurn  =  this.route.turns.findIndex(item  => item.id === turn.id);
-           this.route.turns.splice(indexTurn,1);
-      },
-      existsgTurn () { 
-          
-      }
-  }
 }
 </script>
 

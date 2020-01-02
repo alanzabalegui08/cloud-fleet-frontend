@@ -53,6 +53,7 @@
     "style-loader": "^0.19.0",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
+    "sweetalert": "^2.1.2",
     "vee-validate": "^3.2.0",
     "vue": "^2.6.10",
     "vue-bootstrap-datetimepicker": "^5.0.1",

@@ -1,3 +1,5 @@
+import swall from 'sweetalert';
+
 export const mix  = {
     data : function () {
         return {
@@ -11,6 +13,9 @@ export const mix  = {
     methods: {
         hello : function () {
             console.log('this is a metod');
+        },
+        alerta : function () {
+            swall('hello world');
         }
     },
 }

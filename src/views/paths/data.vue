@@ -11,7 +11,7 @@
                 <div class="mT-30">
                     <div class="row">
                         <div class="col-md-12">
-                            <table-klay :list="clients" :columns="dataHeader"></table-klay>
+                            <table-klay :list="routes" :columns="dataHeader" @onDeleteItem="onDeleteItem"></table-klay>
                         </div>
                     </div>
                 </div>
@@ -20,34 +20,54 @@
     </div>    
 </template>
 <script>
-import { mapGetters } from 'vuex';
+import {
+    mapGetters,
+    mapActions
+} from 'vuex';
 import $ from 'jquery';
 import TableKlay from '../../components/Table';
 import DataHeader from '../../util/datasource';
+import {
+    alerts
+} from '@/util/alerts';
 
 export default {
-    name : 'data',
-    components : {
-
+    name: 'data',
+    mixins: [alerts],
+    components: {
         TableKlay,
     },
-    data () {
+    data() {
         return {
-            dataHeader : [],
+            dataHeader: [],
         }
     },
-    created (){
+    created() {
         this.dataHeader = DataHeader.path;
     },
-    computed : {
+    computed: {
         ...mapGetters({
-            clients: 'client/getClients'
+            routes: 'path/getPaths'
         })
     },
-    methods : {
+    methods: {
+        ...mapActions({
+            'remove': 'path/removePath',
+        }),
+
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');
+        },
+
+        onDeleteItem(item) {
+            this.deleteResource('ruta').then(
+                (result) => {
+                    if (result) {
+                        this.remove(item)
+                    }
+                }
+            );
         }
     }
 }

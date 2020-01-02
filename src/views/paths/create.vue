@@ -16,7 +16,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <path-form></path-form>
+                                <path-form ref="pathForm"></path-form>
                             </div>
                         </div>
                     </form>
@@ -39,14 +39,14 @@ export default {
         return {
         }
     },
-    created (){
+    created () {
     },
     computed : {
     },
     methods : {
-        onSubmit(){
-            console.log("[ klay ] : submit");
-            
+        onSubmit () {
+            this.$refs.pathForm.handlepPath();
+            this.$router.push('/rutas');
         },
         cancelar(){
             this.$router.push('/rutas');

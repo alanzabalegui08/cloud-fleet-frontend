@@ -18,17 +18,17 @@
             </div>                            
         </div>
     </div>    
-</template>
+</template>}
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '../../components/Table';
 import DataHeader from '../../util/datasource.js';
-
+import { alerts } from '@/util/alerts';
 export default {
     name : 'data',
+    mixins : [alerts],
     components : {
-
         TableKlay,
     },
     data () {
@@ -45,11 +45,21 @@ export default {
         })
     },
     methods : {
+        ...mapActions({
+            'remove' : 'client/removeClient'
+        }),
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');
         },
-        onDeleteItem(item){
+        onDeleteItem (item) {
+            this.deleteResource ('cliente').then (
+                (result) => {
+                    if(result) {
+                        this.remove(item);
+                    }
+                }
+            );
             console.log(item);
         }
     }

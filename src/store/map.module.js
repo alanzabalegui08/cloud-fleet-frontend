@@ -49,7 +49,6 @@ const mutations = {
     setAddressPosition(state,position){
         state.markets.push(position);
     }
-
 };
 
 const getters = {

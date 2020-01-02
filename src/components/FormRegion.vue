@@ -27,24 +27,24 @@
 </template>
 
 <script>
-import { regionModel } from "../util/model";
-export default {
-  name : 'form-region',
-  components : {
-  },
-  data () {
-    return {
-        region : regionModel (),
-    }
-  },
-  created (){
-      //this.$parent.$on('create',this.handClient)
-      this.$parent.$watch().name
-  },
-  computed : {
+    import {
+        regionModel
+    } from "../util/model";
+    export default {
+        name: 'form-region',
+        components: {},
+        data() {
+            return {
+                region: regionModel(),
+            }
+        },
+        created() {
+            //this.$parent.$on('create',this.handClient)
+            this.$parent.$watch().name
+        },
+        computed: {
 
-  },
-  methods : {
-  }
-}
+        },
+        methods: {}
+    }
 </script>

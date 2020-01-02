@@ -16,7 +16,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form-driver></form-driver>
+                                    <form-driver ref="formDriver"></form-driver>
                                 </div>
                             </div>
                         </form>
@@ -30,24 +30,23 @@
 <script>
 import FormDriver from '../../components/FormDriver';
 export default {
-    name : 'create-drive',
-    components : {
+    name: 'create-drive',
+    components: {
         FormDriver
     },
-    data () {
+    data() {
         return {
-           
+
         }
     },
-    created (){
-    },
-    computed : {
-    },
-    methods : {
-        onSubmit(){
-            console.log();
+    created() {},
+    computed: {},
+    methods: {
+        onSubmit() {
+            this.$refs.formDriver.handleDriver();
+            this.$router.push('/operadores')
         },
-        cancelar(){
+        cancelar() {
             this.$router.push('/operadores');
         }
     }

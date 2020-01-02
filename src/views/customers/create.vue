@@ -55,7 +55,6 @@ export default {
                 return;
             }
             this.$toasted.show('Debes agregar al menos un turno',{
-                
                 position: "top-right", 
                 duration : 5000
             });

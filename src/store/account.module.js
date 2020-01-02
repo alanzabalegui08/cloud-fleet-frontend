@@ -1,11 +1,15 @@
 //import {userService} from '../service';
-import { router } from '../router';
+import {
+    router
+} from '../router';
 
 // estado inicial del modulo
 const initialState = () => ({
-    status : {loggedIn : false},
-    user : null,
-    saludo : ''
+    status: {
+        loggedIn: false
+    },
+    user: null,
+    saludo: ''
 });
 
 // se crea la inicializacion del state 
@@ -14,16 +18,20 @@ const initialState = () => ({
 const state = initialState();
 
 const actions = {
-    login ({commit},user) {
+    login({
+        commit
+    }, user) {
         //const user_ = userService.login(user.username,user.password);
         //console.warn (user_);
-        commit('loginSuccess',user);
+        commit('loginSuccess', user);
         router.push('/');
     },
-    logout () {
+    logout() {
         // datasheet 
     },
-    resetState ({commit}) {
+    resetState({
+        commit
+    }) {
         commit('stateReset');
         router.push('/login')
     }
@@ -31,14 +39,16 @@ const actions = {
 
 const mutations = {
 
-    loginSuccess(state,user){
-        state.status = { loggedIn : true };
+    loginSuccess(state, user) {
+        state.status = {
+            loggedIn: true
+        };
         state.user = user;
     },
 
     stateReset(state) {
         const newstate = initialState();
-        Object.keys(newstate).forEach( key => {
+        Object.keys(newstate).forEach(key => {
             state[key] = newstate[key];
         });
     },
@@ -46,7 +56,7 @@ const mutations = {
 };
 
 const getters = {
-    isLoggedIn : state => {
+    isLoggedIn: state => {
         return state.status.loggedIn;
     }
 };
