@@ -70,6 +70,7 @@
 <script>
 import { supervisorModel } from "../util/model";
 import { SELECT_USER_TYPE } from "../util/datafield";
+import { mapActions } from 'vuex';
 export default {
   name : 'form-supervisor',
   components : {
@@ -87,6 +88,13 @@ export default {
 
   },
   methods : {
+      ...mapActions({
+          'add' : 'supervisor/createSupervisor'
+      }),
+
+      handleSupervisor() {
+          this.add(this.supervisor);
+      }
   }
 }
 </script>

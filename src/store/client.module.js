@@ -27,12 +27,7 @@ const actions = {
 const mutations = {
 
     createClient(state, client) {
-        state.list.push({
-            name: client.name,
-            area: 'area',
-            text_color: client.text_color,
-            backgroud_color: client.backgroud_color
-        });
+        state.list.push({...client});
     },
 
     remove(state, indexClient) {

@@ -1,22 +1,16 @@
 <template>
 <div class="table-responsive">
     <table id="table_turn" class="table"> 
-        <thead>
+        <thead class="thead-dark" >
             <tr >
                 <th v-for="(colum,index) in columns" :key="index" ><h5> {{colum.columname}}</h5></th>
             </tr>
         </thead>
         <tbody>
             <tr v-for="(item,index) in list" :key="index">
-                <td> {{item.name}} </td>
-                <td> {{item.area}} </td>
-                <td> {{item.text_color}} </td>
-                <td> {{item.backgroud_color}} </td>                
-                <td>
-                    <button type="button" class="btn cur-p btn-outline-danger mr-3"  @click="handlerDelete(item)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                    <button type="button" class="btn cur-p btn-outline-success mr-3" @click="handlerDelete(item)"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
-                    <button type="button" class="btn cur-p btn-outline-primary mr-3" @click="handlerEdit(item)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                </td>
+                <td v-for="(column, indexColum) in columns" :key="indexColum">
+                    <columntable :value="item[column.column]" @onDeleteItem="handlerDelete(item)" :type="column.type" :item="item" ></columntable>
+                </td>               
             </tr>
         </tbody>
     </table>
@@ -24,6 +18,8 @@
 </template>
 
 <script>
+import Columntable from "./Columntable";
+
 export default {
     name : 'table-klay',
     props : {
@@ -34,6 +30,10 @@ export default {
             type : Array
         },
     },
+    components : {
+        Columntable,
+    },
+
     data () {
         return {
 
@@ -69,5 +69,4 @@ export default {
         width: 700px
     }
 }
-
 </style>

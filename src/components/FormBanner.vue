@@ -35,27 +35,36 @@
 </template>
 
 <script>
+import {
+    mapActions
+} from 'vuex'
 
 export default {
-  name : 'form-supervisor',
-  components : {
-  },
-  data () {
-    return {
-        banner : {
-            title : '',
-            name : '',
-            description : ''
-        },
-    }
-  },
-  created (){
-      //this.$parent.$on('create',this.handClient)
-  },
-  computed : {
+    name: 'form-supervisor',
+    components: {},
+    data() {
+        return {
+            banner: {
+                title: '',
+                name: '',
+                description: ''
+            },
+        }
+    },
+    created() {
+        //this.$parent.$on('create',this.handClient)
+    },
+    computed: {
 
-  },
-  methods : {
-  }
+    },
+    methods: {
+        ...mapActions({
+            'add': 'banner/createBanner',
+        }),
+
+        handleBanner() {
+            this.add(this.banner);
+        }
+    }
 }
 </script>

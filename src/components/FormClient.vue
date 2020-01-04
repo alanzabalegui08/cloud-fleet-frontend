@@ -67,8 +67,8 @@ export default {
         client : {
             name : '',
             password: '',
-            text_color : '#1CA085',
-            backgroud_color : '#1CA085',
+            primarycolor : '#1CA085',
+            backgroundcolor : '#1CA085',
         },
     }
   },

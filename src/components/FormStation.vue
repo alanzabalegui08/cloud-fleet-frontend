@@ -39,23 +39,33 @@
 
 import GoogleMap from './GoogleMap';
 import { stationModel } from "../util/model";
-export default {
-  name : 'form-supervisor',
-  components : {
-      GoogleMap
-  },
-  data () {
-    return {
-         station : stationModel (),
-    }
-  },
-  created (){
-      //this.$parent.$on('create',this.handClient)
-  },
-  computed : {
+import { mapActions } from 'vuex';
 
-  },
-  methods : {
-  }
+
+export default {
+    name: 'form-supervisor',
+    components: {
+        GoogleMap
+    },
+    data() {
+        return {
+            station: stationModel(),
+        }
+    },
+    created() {
+        //this.$parent.$on('create',this.handClient)
+    },
+    computed: {
+
+    },
+    methods: {
+        ...mapActions({
+            'add' : 'station/createStation',
+        }),
+
+        handleStation() {
+            this.add(this.station);
+        }
+    }
 }
 </script>

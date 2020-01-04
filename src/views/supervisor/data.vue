@@ -11,7 +11,7 @@
                 <div class="mT-30">
                     <div class="row">
                         <div class="col-md-12">
-                            <table-klay :list="clients" :columns="dataHeder"></table-klay>
+                            <table-klay :list="clients" :columns="dataHeder" @onDeleteItem="onDeleteItem" ></table-klay>
                         </div>
                     </div>
                 </div>
@@ -20,13 +20,14 @@
     </div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '../../components/Table';
 import DataHeader from '@/util/datasource.js';
-
+import { alerts } from '@/util/alerts';
 export default {
     name : 'data',
+    mixins : [ alerts ],
     components : {
 
         TableKlay,
@@ -41,13 +42,27 @@ export default {
     },
     computed : {
         ...mapGetters({
-            clients: 'client/getClients'
+            clients: 'supervisor/getSupervisors'
         })
     },
     methods : {
+        ...mapActions({
+            'remove' : 'supervisor/removeSupervisor',
+        }),
+
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');
+        },
+
+        onDeleteItem(item) {
+            this.deleteResource('Supervisor').then(
+                (result) => {
+                    if(result){
+                        this.remove(item);
+                    }
+                }
+            );
         }
     }
 }

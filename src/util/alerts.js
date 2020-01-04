@@ -15,7 +15,7 @@ export const alerts = {
         deleteResource: function (nameResource) {
             return swal({
                 title: '',
-                text: `Deseas eliminar este ${nameResource}`,
+                text: `Deseas eliminar este ${nameResource} ? `,
                 icon: 'warning',
                 buttons: true,
                 dangerMode: true,

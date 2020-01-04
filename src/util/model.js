@@ -19,20 +19,20 @@ export const driverModel = () => ({
 });
 
 export const truckModel = () =>  ({
-    numUnidad : '',
+    numUnidad : '123',
     driver : '',
     comment : '',
     type : '0',
-    model : '',
-    marca :'',
+    model : 'CAR',
+    marca :'CARS',
     mantenimineto : '',
     subMarca : '',
     placas : '',
     tipoPlacas : '',
     combustible : '0',
-    performance : '',
-    machine : '',
-    noSerie : '',
+    performance : '1',
+    machine : 'M3',
+    noSerie : '1234567',
     poliza : '',
     vigenciaPoliza : '',
     cellphoneSeguro : '',
@@ -46,12 +46,12 @@ export const truckModel = () =>  ({
 });
 
 export const supervisorModel = () => ({
-    name : '',
-    userType : '',
-    customer : '',
-    phone : '',
-    userApp : '',
-    password : '',
+    name : 'nombre',
+    userType : '1',
+    customer : 'cliente',
+    phone : '9863747364',
+    userApp : 'user',
+    password : 'password',
     active : false,
 });
 

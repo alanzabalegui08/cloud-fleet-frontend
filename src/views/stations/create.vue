@@ -16,7 +16,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form-station></form-station>
+                                    <form-station ref="stationForm"></form-station>
                                 </div>
                             </div>
                         </form>
@@ -44,8 +44,8 @@ export default {
     },
     methods : {
         onSubmit(){
-            // this.$emit('create');
-            // this.$router.push('/clientes');
+            this.$refs.stationForm.handleStation();
+            this.$router.push('/estaciones');
         },
         cancelar(){
             this.$router.push('/estaciones');

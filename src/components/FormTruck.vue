@@ -12,7 +12,7 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Fotografia</label>
-                                        <input type="file" class="form-control" id="" placeholder="">
+                                        <input type="file" class="form-control"  placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Operador</label>                                        
-                                        <input type="text" class="form-control" id="" v-model="truck.driver" placeholder="">
+                                        <input type="text" class="form-control"  v-model="truck.driver" placeholder="">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Tipo</label>
@@ -39,27 +39,27 @@
                     </div>        
                     <div class="form-group col-md-12">
                         <label for="inputPassword">Comentario</label>
-                        <input type="text" class="form-control" id="" v-model="truck.comment" placeholder="">
+                        <input type="text" class="form-control"  v-model="truck.comment" placeholder="">
                     </div>
                     <div class="col-md-12">
                         <div class="row">
                             <div class="form-group col-md-4">
                                 <label for="inputPassword">Modelo</label>
                                 <ValidationProvider vid="model" name="Modelo" rules="required|alpha_num" v-slot="{ errors }">
-                                    <input type="text" class="form-control" id="" v-model="truck.model" placeholder="">
+                                    <input type="text" class="form-control"  v-model="truck.model" placeholder="">
                                     <span style="color:red;">{{ errors[0] }}</span>
                                 </ValidationProvider>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputPassword">Marca</label>
                                 <ValidationProvider vid="marca" name="Marca" rules="required|alpha_num" v-slot="{ errors }">
-                                    <input type="text" class="form-control" id="" v-model="truck.marca" placeholder="">
+                                    <input type="text" class="form-control"  v-model="truck.marca" placeholder="">
                                     <span style="color:red;">{{ errors[0] }}</span>
                                 </ValidationProvider>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="inputPassword">Sub-Marca</label>
-                                <input type="text" class="form-control" id="" v-model="truck.subMarca" placeholder="">
+                                <input type="text" class="form-control"  v-model="truck.subMarca" placeholder="">
                             </div>
                         </div>
                     </div>
@@ -75,11 +75,11 @@
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="inputPassword">Placas</label>
-                            <input type="text" class="form-control" id="" v-model="truck.placas" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.placas" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputPassword">Tipo de Placas</label>
-                            <input type="text" class="form-control" id="" v-model="truck.tipoPlacas" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.tipoPlacas" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputPassword">Combustible </label> 
@@ -95,21 +95,21 @@
                         <div class="form-group col-md-4">
                             <label for="inputPassword">Rendimeinto</label>
                             <ValidationProvider vid="rendimiento" name="Rendimiento" rules="required" v-slot="{ errors }">
-                                <input type="number" class="form-control" id="" v-model="truck.performance" placeholder="">
+                                <input type="number" class="form-control"  v-model="truck.performance" placeholder="">
                                 <span style="color:red;">{{ errors[0] }}</span>
                             </ValidationProvider>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputtext">Maquina</label>
                             <ValidationProvider vid="maquina" name="Maquina" rules="required|alpha_num" v-slot="{ errors }">
-                                <input type="text" class="form-control" id="" v-model="truck.machine" placeholder="">
+                                <input type="text" class="form-control"  v-model="truck.machine" placeholder="">
                                 <span style="color:red;">{{ errors[0] }}</span>
                             </ValidationProvider>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputtext">No serie</label>
                             <ValidationProvider vid="numserire" name="no serie" rules="required" v-slot="{ errors }">
-                                <input type="number" class="form-control" id="" v-model="truck.noSerie" placeholder="">
+                                <input type="number" class="form-control"  v-model="truck.noSerie" placeholder="">
                                 <span style="color:red;">{{ errors[0] }}</span>
                             </ValidationProvider>
                         </div>
@@ -117,29 +117,29 @@
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="inputPassword">Poliza</label>
-                            <input type="text" class="form-control" id="" v-model="truck.poliza" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.poliza" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputtext">Vingencia de poliza</label>
-                            <input type="text" class="form-control" id="" v-model="truck.vigenciaPoliza" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.vigenciaPoliza" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputtext">Tel. Aseguradora</label>
-                            <input type="text" class="form-control" id="" v-model="truck.cellphoneSeguro" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.cellphoneSeguro" placeholder="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-4">
                             <label for="inputPassword">Clave Trackjack</label>
-                            <input type="text" class="form-control" id="" v-model="truck.claveTrackJack" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.claveTrackJack" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputtext">Serie Ceiba</label>
-                            <input type="text" class="form-control" id="" v-model="truck.serieCeiba" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.serieCeiba" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputtext">Region</label>
-                            <input type="text" class="form-control" id="" v-model="truck.region" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.region" placeholder="">
                         </div>
                     </div>
                     <div class="row">
@@ -165,7 +165,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputtext">Mantenimiento</label>
-                            <input type="text" class="form-control" id="" v-model="truck.mantenimineto" placeholder="">
+                            <input type="text" class="form-control"  v-model="truck.mantenimineto" placeholder="">
                         </div>
                     </div>
                 </div>
@@ -175,26 +175,34 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import { truckModel } from "../util/model";
-import { SELECT_UNIDAD,SELECT_COMBUSTIBLE } from "../util/datafield";
-export default {
-  name : 'form-truck',
-  components : {
-  },
-  data () {
-    return {
-        truck : truckModel(),
-        selectUnidadType : SELECT_UNIDAD,
-        selectCombustible : SELECT_COMBUSTIBLE,
-    }  
-  },
-  created (){
-      //this.$parent.$on('create',this.handClient)
-  },
-  computed : {
+import { SELECT_UNIDAD, SELECT_COMBUSTIBLE } from "../util/datafield";
 
-  },
-  methods : {
-  }
+export default {
+    name: 'form-truck',
+    components: {},
+    data() {
+        return {
+            truck: truckModel(),
+            selectUnidadType: SELECT_UNIDAD,
+            selectCombustible: SELECT_COMBUSTIBLE,
+        }
+    },
+    created() {
+        //this.$parent.$on('create',this.handClient)
+    },
+    computed: {
+
+    },
+    methods: {
+        ...mapActions({
+            'add': 'truck/createTruck',
+        }),
+
+        handleTruck() {
+            this.add(this.truck);
+        }
+    }
 }
 </script>

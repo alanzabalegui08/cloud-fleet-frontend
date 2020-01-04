@@ -45,8 +45,8 @@ export default {
     },
     methods : {
         onSubmit(){
-            // this.$emit('create');
-            // this.$router.push('/clientes');
+            this.$refs.formTruck.handleTruck();
+            this.$router.push('/unidades');
         },
         cancelar(){
             this.$router.push('/unidades');

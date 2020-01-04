@@ -16,7 +16,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <form-banner></form-banner>
+                                <form-banner ref="bannerForm"></form-banner>
                             </div>
                         </div>
                     </form>
@@ -29,25 +29,24 @@
 
 <script>
 
-import FormBanner from '../../components/FormBanner';
+import FormBanner from '@/components/FormBanner';
 export default {
-    name : 'create',
-    components : {
+    name: 'create',
+    components: {
         FormBanner
     },
-    data () {
-        return {
-        }
+    data() {
+        return {}
     },
-    created (){
-    },
-    computed : {
-    },
-    methods : {
-        onSubmit(){
+    created() {},
+    computed: {},
+    methods: {
+        onSubmit() {
+            this.$refs.bannerForm.handleBanner();
+            this.$router.push('/banners')
         },
-        cancelar(){
-            this.$router.push('/supervisor');
+        cancelar() {
+            this.$router.push('/banners');
         }
     }
 }

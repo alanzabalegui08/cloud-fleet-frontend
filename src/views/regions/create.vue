@@ -16,7 +16,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form-region></form-region>
+                                    <form-region ref="regionFrom"></form-region>
                                 </div>
                             </div>
                         </form>
@@ -44,10 +44,12 @@ export default {
     computed : {
     },
     methods : {
-        handleSubmit(){
+        onSubmit() {
+            this.$refs.regionFrom.handleRegion();
+            this.$router.push('/regiones');
         },
         cancelar(){
-            this.$router.push('/supervisor');
+            this.$router.push('/regiones');
         }
     }
 }

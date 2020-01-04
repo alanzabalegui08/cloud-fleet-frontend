@@ -27,9 +27,8 @@
 </template>
 
 <script>
-    import {
-        regionModel
-    } from "../util/model";
+    import { regionModel } from "../util/model";
+    import { mapActions } from 'vuex';
     export default {
         name: 'form-region',
         components: {},
@@ -39,12 +38,17 @@
             }
         },
         created() {
-            //this.$parent.$on('create',this.handClient)
-            this.$parent.$watch().name
         },
-        computed: {
+        computed : {
 
         },
-        methods: {}
+        methods : {
+            ...mapActions({
+               'add' : 'region/createRegion',
+            }),
+            handleRegion() {
+                this.add(this.region);
+            }
+        }
     }
 </script>

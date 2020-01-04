@@ -16,7 +16,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form-supervisor></form-supervisor>
+                                    <form-supervisor ref="supervisorForm"></form-supervisor>
                                 </div>
                             </div>
                         </form>
@@ -44,7 +44,8 @@ export default {
     computed : {
     },
     methods : {
-        onSubmit(){
+        onSubmit() {
+            this.$refs.supervisorForm.handleSupervisor();
         },
         cancelar(){
             this.$router.push('/supervisor');
