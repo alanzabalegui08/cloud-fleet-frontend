@@ -11,7 +11,7 @@
                                         <img src="https://via.placeholder.com/180x160.png"/>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="inputName">Fotografia</label>
+                                        <label for="inputName">Fotografía</label>
                                         <input type="file" class="form-control"  placeholder="">
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-4">
-                            <label for="inputPassword">Rendimeinto</label>
+                            <label for="inputPassword">Rendimiento</label>
                             <ValidationProvider vid="rendimiento" name="Rendimiento" rules="required" v-slot="{ errors }">
                                 <input type="number" class="form-control"  v-model="truck.performance" placeholder="">
                                 <span style="color:red;">{{ errors[0] }}</span>
@@ -116,11 +116,11 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-4">
-                            <label for="inputPassword">Poliza</label>
+                            <label for="inputPassword">Póliza</label>
                             <input type="text" class="form-control"  v-model="truck.poliza" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputtext">Vingencia de poliza</label>
+                            <label for="inputtext">Vigencia de póliza</label>
                             <input type="text" class="form-control"  v-model="truck.vigenciaPoliza" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
@@ -138,7 +138,7 @@
                             <input type="text" class="form-control"  v-model="truck.serieCeiba" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputtext">Region</label>
+                            <label for="inputtext">Región</label>
                             <input type="text" class="form-control"  v-model="truck.region" placeholder="">
                         </div>
                     </div>

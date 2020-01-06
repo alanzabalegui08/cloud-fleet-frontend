@@ -39,7 +39,7 @@ export default {
 <template>
     <div class="row">
         <div class="col-md-12">
-            <h3>Direccion</h3>
+            <h3>Dirección</h3>
         </div>
         <div class="form-group col-md-12">
             <input type="text" class="form-control" name="fulladdress" v-model="fulladdress">

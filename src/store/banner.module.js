@@ -30,7 +30,7 @@ const mutations = {
 }
 
 const getters = {
-    getRegions: state => {
+    getBanners: state => {
         return state.list;
     }
 }

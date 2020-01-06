@@ -15,7 +15,7 @@
                                     <input type="text" class="form-control" id="" v-model="banner.name" placeholder="">
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label for="inputName">Descripcion</label>
+                                    <label for="inputName">Descripción</label>
                                     <input type="text" class="form-control" id="" v-model="banner.description" placeholder="">
                                 </div>
                             </div>

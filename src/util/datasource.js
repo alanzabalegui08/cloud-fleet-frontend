@@ -10,7 +10,7 @@ export default {
         {
             id : 1,
             column: 'area',
-            columname : 'Area',
+            columname : 'Área',
             type : 'text',
         },
         {
@@ -66,7 +66,7 @@ export default {
         {
             id : 5,
             column: 'Accións',
-            columname : 'Acciónes',
+            columname : 'Acción',
             type : 'accion'
         },        
     ],
@@ -92,7 +92,7 @@ export default {
         {
             id : 3,
             column : 'unitymovile',
-            columname : 'Unidad Movil',
+            columname : 'Unidad Móvil',
             type : 'text',
         },
         {
@@ -115,7 +115,7 @@ export default {
         },
         {
             id : 7,
-            column : 'cellphonenetwork',
+            column : 'cellphoneNetwork',
             columname : 'Celular Red',
             type : 'text',
         },
@@ -135,7 +135,7 @@ export default {
     truck : [
         {
             id : 0,
-            column : 'truck',
+            column : 'numUnidad',
             columname : 'Unidad',
             type : 'text',
         },
@@ -165,13 +165,13 @@ export default {
         },
         {
             id : 5,
-            column : 'submarca',
+            column : 'subMarca',
             columname : 'Sub Marca',
             type : 'text',
         },
         {
             id : 6,
-            column : 'gas',
+            column : 'combustible',
             columname : 'Combustible',
             type : 'text',
         },
@@ -183,14 +183,14 @@ export default {
         },
         {
             id : 8,
-            column : 'performancereal',
+            column : 'performance',
             columname : 'Rend. real',
             type : 'text',
         },
         {
             id : 9,
             column : 'poliza',
-            columname : 'Poliza de seguro',
+            columname : 'Pó liza de seguro',
             type : 'text',
         },
         {
@@ -221,7 +221,7 @@ export default {
             id : 14,
             column : 'accion',
             columname : 'Acción',
-            type : 'text',
+            type : 'accion',
         },
     ],
     supervisor : [
@@ -245,7 +245,7 @@ export default {
         },
         {
             id : 3,
-            column : 'type',
+            column : 'userType',
             columname : 'Tipo',
             type : 'text',
         },
@@ -253,14 +253,14 @@ export default {
             id : 4,
             column : 'accion',
             columname : 'Acción',
-            type : 'text',
+            type : 'accion',
         },                                
         
     ],
     station : [
         {
             id : 0,
-            column : 'id_station',
+            column : 'idStation',
             columname : 'ID estación',
             type : 'text',
         },
@@ -286,13 +286,13 @@ export default {
             id : 4,
             column : 'accion',
             columname : 'Acción',
-            type : 'text',
+            type : 'accion',
         },
     ],
     banner : [
         {
             id : 0,
-            column : 'title',
+            column : 'name',
             columname : 'Titulo',
             type : 'text',
         },
@@ -312,7 +312,7 @@ export default {
             id : 4,
             column : 'accion',
             columname : 'Acción',
-            type : 'text',
+            type : 'accion',
         }               
     ],
     region : [
@@ -326,7 +326,7 @@ export default {
             id : 1,
             column : 'accion',
             columname : 'Acción',
-            type : 'text',
+            type : 'accion',
         }
     ],
     programming : [
@@ -431,7 +431,7 @@ export default {
         {
             id : 7,
             column: 'Subcategory',
-            columname : 'Subcategoria',
+            columname : 'Sub',
             type : 'text',
         },
         {

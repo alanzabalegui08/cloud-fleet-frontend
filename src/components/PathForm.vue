@@ -101,7 +101,7 @@
                             </select>
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="inputName">Codigo</label>
+                            <label for="inputName">Código</label>
                             <input type="text" class="form-control" v-model="turn.code">
                         </div>
                         <div class="form-group col-md-1">

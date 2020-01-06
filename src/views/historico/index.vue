@@ -9,7 +9,7 @@
                         <div class="masonry-item  w-100">
                             <div class="row gap-20 bd bgc-white ">
                                 <div class="col-md-12">
-                                    <h2 class="">Historico unidad</h2>
+                                    <h2 class="">Histórico unidad</h2>
                                 </div>
                             </div>                            
                             <div class="row gap-20 bd bgc-white ">

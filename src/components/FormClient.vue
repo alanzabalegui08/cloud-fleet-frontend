@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import Turno from './Turno';
+import turno from './turno';
 import GoogleMap from './GoogleMap';
 import MapAddress from './MapAddress';
 import { mapActions } from 'vuex';
@@ -57,7 +57,7 @@ import Swatches from 'vue-swatches';
 export default {
   name : 'form-client',
   components : {
-      Turno,
+      turno,
       GoogleMap,
       Swatches,
       MapAddress,

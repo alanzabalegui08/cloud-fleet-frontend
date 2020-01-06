@@ -99,7 +99,7 @@ export default {
             toggle : false,
             submenu : [
                 {
-                    name : 'Historico unidad',
+                    name : 'Histórico unidad',
                     path : '/historico-unidad',
                     icon : ''
                 },
@@ -126,7 +126,7 @@ export default {
             ]                
         },
         {
-            name : 'Conbustible',
+            name : 'Combustible',
             only : false,
             down : true,
             path : '/',
@@ -161,7 +161,7 @@ export default {
                     icon : ''
                 },
                 {
-                    name : 'Comentarios x categoria',
+                    name : 'Comentarios x categoría',
                     path : '/',
                     icon : ''
                 }

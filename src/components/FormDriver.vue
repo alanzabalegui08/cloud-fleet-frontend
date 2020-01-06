@@ -11,7 +11,7 @@
                                         <img src="https://via.placeholder.com/180x160.png"/>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label for="inputName">Fotografia</label>
+                                        <label for="inputName">Fotografía</label>
                                         <input type="file" class="form-control"  placeholder="">
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@
                             <input type="text" class="form-control"  v-model="driver.typeBlood" placeholder="">
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="inputtext">Region</label>
+                            <label for="inputtext">Región</label>
                             <input type="text" class="form-control"  v-model="driver.region" placeholder="">
                         </div>
                     </div>

@@ -46,6 +46,7 @@ export default {
     methods : {
         onSubmit() {
             this.$refs.supervisorForm.handleSupervisor();
+            this.$router.push('/supervisor');   
         },
         cancelar(){
             this.$router.push('/supervisor');

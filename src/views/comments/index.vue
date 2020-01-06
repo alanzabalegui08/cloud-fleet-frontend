@@ -28,19 +28,19 @@
                                             <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
                                         </div>
                                         <div class="form-group col-xs-1 text-center">
-                                            <h5>Categoria </h5>
+                                            <h5>Categoría </h5>
                                         </div>
                                         <div class="form-group col-md-2 text-center">
                                             <select class="form-control select-form" id="" >
-                                                <option>Seleccionar categoria</option>
+                                                <option>Seleccionar categoría</option>
                                             </select>                                    
                                         </div>
                                         <div class="form-group col-xs-1 text-center">
-                                            <h5>Sub Categoria </h5>
+                                            <h5>Sub Categoría </h5>
                                         </div>
                                         <div class="form-group col-md-2 text-center">
                                             <select class="form-control select-form" id="" >
-                                                <option>Seleccionar sub categoria</option>
+                                                <option>Seleccionar sub categoría</option>
                                             </select>                                    
                                         </div>
                                     </div>
@@ -74,7 +74,7 @@
                                         </div>
                                         <div class="form-group col-md-2 text-center">
                                             <select class="form-control select-form" id="" >
-                                                <option>Seleccionar sub categoria</option>
+                                                <option>Seleccionar sub categoría</option>
                                             </select>                                    
                                         </div>
                                         <div class="form-group col-md-1 text-center">
