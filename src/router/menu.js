@@ -157,12 +157,12 @@ export default {
             submenu : [
                 {
                     name : 'Rutas x cliente',
-                    path : '/',
+                    path : '/grafica/rutas-cliente',
                     icon : ''
                 },
                 {
                     name : 'Comentarios x categoría',
-                    path : '/',
+                    path : '/grafica/comentarios-categoria',
                     icon : ''
                 }
             ] 

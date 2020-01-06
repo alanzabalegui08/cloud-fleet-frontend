@@ -61,6 +61,11 @@ import LoadGasDataView from '../views/loadgas/data.vue';
 import LoadGasCreateView from '../views/loadgas/create.vue';
 import AlertGas  from  '../views/alerts';
 
+//charts
+import Chart from '../views/chart/'
+import ChartCategory from '../views/chart/comments-category.vue'
+
+
 
 
 
@@ -309,6 +314,22 @@ export const router  = new Router({
                 requiresAuth: true,
             }          
         },
+        {
+            path : '/grafica/rutas-cliente',
+            name : 'Grafica- rutas-cliente',
+            component : Chart,            
+            meta : {
+                requiresAuth: true,
+            }          
+        }, 
+        {
+            path : '/grafica/comentarios-categoria',
+            name : 'Grafica-comentarios-categoria',
+            component : ChartCategory,            
+            meta : {
+                requiresAuth: true,
+            }          
+        },        
         {
             path: '/login',
             name: 'login',

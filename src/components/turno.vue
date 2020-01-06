@@ -1,27 +1,30 @@
 <template>
-    <div class="mT-30">
-        <div class="form-row">
-            <div class="form-group col-xs-5">
-                <label for="inputName">Nombre</label>
-                <input type="text" class="form-control" id="name_client" v-model="turno.name">
+    <div class="mT-10">
+        <fieldset>
+            <legend class=""><span class="title-form-klay">Turnos</span></legend>
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputName">Nombre</label>
+                    <input type="text" class="form-control" id="name_client" v-model="turno.name">
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Entrada</label>
+                    <select class="form-control" id="color_client" v-model="turno.input">
+                        <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Salida</label>
+                    <select class="form-control" id="color_down" v-model="turno.output">
+                        <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-1">
+                    <button type="button" class="btn cur-p btn-outline-danger mT-25"
+                        @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
             </div>
-            <div class="form-group col-xs-3">
-                <label>Entrada</label>
-                <select class="form-control" id="color_client" v-model="turno.input">
-                    <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
-                </select>
-            </div>
-            <div class="form-group col-xs-3">
-                <label>Salida</label>
-                <select class="form-control" id="color_down" v-model="turno.output">
-                    <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
-                </select>
-            </div>
-            <div class="form-group col-xs-1">
-                <button type="button" class="btn cur-p btn-outline-danger mr-3 position-absolute"
-                    @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button>
-            </div>
-        </div>
+        </fieldset>
         <div class="table-responsive">
             <table id="table_turn" class="table">
                 <thead>

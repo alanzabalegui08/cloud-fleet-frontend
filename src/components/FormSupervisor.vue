@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-        <div class="masonry-item col-md-12">
-            <div class="bgc-white p-20 bd">
+        <div class="  col-md-12">
+            <div class="bgc-white p-10">
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="col-md-12">

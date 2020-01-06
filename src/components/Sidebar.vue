@@ -37,7 +37,9 @@
           </a>
           <ul class="dropdown-menu" v-if="item.down">
             <li  v-for="(o, i) in item.submenu" :key="i" >
-              <router-link :to="o.path">{{o.name}}</router-link>
+              <router-link :to="o.path"> 
+                <span v-on:click="changeToggleNav">{{o.name}}</span>
+              </router-link>
               <!-- <a class='sidebar-link' :href="o.path">{{o.name}}</a> -->
             </li>
           </ul>
@@ -66,9 +68,10 @@ export default {
     },
     methods : {
       acctionSubmenu (menu) {
-        console.log(menu);
+        console.log(menu.name);
         if(menu.only){
           this.$router.push(menu.path);
+          toggleNav();
         }
         (!menu.toggle) ? menu.class += ' open': menu.class = menu.class.replace('open','');
         menu.toggle = !menu.toggle;

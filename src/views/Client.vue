@@ -6,14 +6,14 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="masonry-sizer col-md-10">
+                        <div class="  col-md-10">
                             <h2>Clientes</h2>
                         </div>
-                        <div class="masonry-sizer col-md-2">
+                        <div class="  col-md-2">
                             <button type="button" class="btn cur-p btn-outline-primary"
                                 @click="showModal">Nuevo</button>
                         </div>
-                        <div class="masonry-item colo-xs-12 col-md-12">
+                        <div class="  colo-xs-12 col-md-12">
                             <div class="bgc-white p-20 bd">
                                 <div class="mT-30">
                                     <div class="row">

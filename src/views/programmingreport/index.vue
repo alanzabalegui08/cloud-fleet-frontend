@@ -6,7 +6,7 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="masonry-item  w-100">
+                        <div class="   w-100">
                             <div class="row gap-20 bd bgc-white ">
                                 <div class="col-md-12">
                                     <h2 class="">Programación</h2>

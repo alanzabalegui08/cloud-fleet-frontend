@@ -1,12 +1,12 @@
 <template>
     <div class="row gap-20 masonry pos-r">
-        <div class="masonry-sizer col-md-10">
+        <div class="  col-md-10">
             <h2 >Programación</h2>
         </div>
-        <div class="masonry-sizer col-md-2">
+        <div class="  col-md-2">
             <router-link to="/regiones/nuevo" class="btn cur-p btn-outline-primary">Nuevo</router-link>
         </div>
-        <div class="masonry-item colo-xs-12 col-md-12">
+        <div class="  colo-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
                 <div class="mT-30">
                     <div class="row">

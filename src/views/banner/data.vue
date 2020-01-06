@@ -1,14 +1,14 @@
 <template>
-    <div class="row gap-20 masonry pos-r p-15">
-        <div class="masonry-sizer col-md-10">
+    <div class="row p-5" >
+        <div class="col">
             <h2 >Banner</h2>
         </div>
-        <div class="masonry-sizer col-md-2">
+        <div class="col text-right">
             <router-link to="/banners/nuevo" class="btn cur-p btn-outline-primary">Nuevo</router-link>
         </div>
-        <div class="masonry-item colo-xs-12 col-md-12">
-            <div class="bgc-white p-20 bd">
-                <div class="mT-30">
+        <div class="col-xs-12 col-md-12">
+            <div class="bgc-white p-10 bd">
+                <div class="mT-10">
                     <div class="row">
                         <div class="col-md-12">
                             <table-klay :list="banners" :columns="dataHeader" @onDeleteItem="onDeleteItem" ></table-klay>

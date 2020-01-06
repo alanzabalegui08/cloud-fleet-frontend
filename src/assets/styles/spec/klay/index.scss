@@ -1,10 +1,35 @@
+
+.title-klay {
+    font-size: 26pt;
+}
+.title-form-klay {
+    font-size: 14pt;
+}
+
 .table {
     width: 100%;
-  }
-  
-  @media (max-width: 600px) {
-      .table {
-          width: 700px
-      }
-  }
-  
+}
+.btn-md {
+    display: inline;
+}
+.btn-xs {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .title-klay {
+        font-size: 16pt;
+    }
+    .table {
+        width: 700px;
+    }
+    .table .thead-dark th h5 { 
+        font-size: 7pt;
+    }
+    .btn-md {
+        display: none;
+    }
+    .btn-xs {
+        display: inline;
+    }
+}

@@ -11,7 +11,7 @@
                         </div>
                     </div>                    
                     <div class="row gap-20 masonry pos-r">
-                        <div class="masonry-item  w-100">
+                        <div class="   w-100">
                             <div class="row gap-20">
                                 <div class='col-md-3'>
                                     <div class="layers bd bgc-white p-20">

@@ -1,21 +1,13 @@
 <template>
     <div class="row gap-20 masonry pos-r">
-        <div class="masonry-item colo-xs-12 col-md-12">
+        <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
                 <div class="mT-10">
                     <ValidationObserver v-slot="{handleSubmit}">
                         <form @submit.prevent="handleSubmit(onSubmit)">
+                            <bar-submit :title="titleBar" @cancelar="cancelar"></bar-submit>
                             <div class="row">
-                                <div class="masonry-sizer col-md-6">
-                                    <h2>Nuevo Supervisor</h2>
-                                </div>
-                                <div class="masonry-sizer col-md-6">
-                                    <button type="submit" class="btn cur-p btn-outline-success mr-5">Guardar</button>
-                                    <button @click="cancelar" class="btn cur-p btn-outline-danger">Cancelar</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 mT-50">
                                     <form-supervisor ref="supervisorForm"></form-supervisor>
                                 </div>
                             </div>
@@ -29,14 +21,17 @@
 
 <script>
 
-import FormSupervisor from '../../components/FormSupervisor';
+import FormSupervisor from '@/components/FormSupervisor';
+import BarSubmit from '@/components/BarSubmit';
 export default {
     name : 'create',
     components : {
-        FormSupervisor
+        FormSupervisor,
+        BarSubmit
     },
     data () {
         return {
+            titleBar : 'Nuevo supervisor'
         }
     },
     created (){

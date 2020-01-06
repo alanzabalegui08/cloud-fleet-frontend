@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-        <div class="masonry-item col-md-12">
-            <div class="bgc-white p-20 bd" >
+        <div class="  col-md-12">
+            <div class="bgc-white " >
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="col-md-5">
@@ -22,7 +22,7 @@
                         <div class="col-md-7">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="bgc-white p-20 bd" style="width:100%;height:450px">
+                                    <div class="bgc-white p-10" style="width:100%;height:450px">
                                         <google-map/>
                                     </div> 
                                 </div>

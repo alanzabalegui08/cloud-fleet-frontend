@@ -23,7 +23,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-datepicker": "^1.7.1",
     "brand-colors": "^2.0.1",
-    "chart.js": "^2.9.2",
+    "chart.js": "^2.9.3",
     "core-js": "^3.4.3",
     "cross-env": "^5.1.0",
     "css-loader": "^0.28.7",

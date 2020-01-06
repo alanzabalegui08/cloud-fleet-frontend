@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-        <div class="masonry-item col-md-4">
-            <div class="bgc-white p-20 bd">
+        <div class="  col-md-4">
+            <div class="bgc-white p-10 ">
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="form-group col-md-12">
@@ -52,8 +52,8 @@
                 </div>
             </div>
         </div>
-        <div class="masonry-item col-md-8">
-            <div class="bgc-white p-20 bd">
+        <div class="  col-md-8">
+            <div class="bgc-white p-10">
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="form-group col-md-12">
@@ -77,38 +77,41 @@
                                 v-model="route.url_route_output" placeholder="">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-3">
-                            <label for="inputName">Nombre</label>
-                            <input type="text" class="form-control" v-model="turn.name">
+                    <fieldset>
+                        <legend class=""><span class="title-form-klay">Turno</span></legend>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputName">Nombre</label>
+                                <input type="text" class="form-control" v-model="turn.name">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Entrada</label>
+                                <select class="form-control" v-model="turn.input">
+                                    <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Salida</label>
+                                <select class="form-control" v-model="turn.output">
+                                    <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Sentido</label>
+                                <select class="form-control" v-model="turn.sentido">
+                                    <option v-for="(away,index) in awayOptions" :key="index">{{away.name}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputName">Código</label>
+                                <input type="text" class="form-control" v-model="turn.code">
+                            </div>
+                            <div class="form-group col-md-1">
+                                <button type="button" class="btn cur-p btn-outline-danger mT-25"
+                                    @click="addTrun"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
                         </div>
-                        <div class="form-group col-md-2">
-                            <label>Entrada</label>
-                            <select class="form-control" v-model="turn.input">
-                                <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label>Salida</label>
-                            <select class="form-control" v-model="turn.output">
-                                <option v-for="(time,index) in selectTime" :key="index">{{time.name}}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label>Sentido</label>
-                            <select class="form-control" v-model="turn.sentido">
-                                <option v-for="(away,index) in awayOptions" :key="index">{{away.name}}</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputName">Código</label>
-                            <input type="text" class="form-control" v-model="turn.code">
-                        </div>
-                        <div class="form-group col-md-1">
-                            <button type="button" class="btn cur-p btn-outline-danger mr-3 position-absolute"
-                                @click="addTrun"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
+                    </fieldset>
                 </div>
             </div>
             <div class="table-responsive">
