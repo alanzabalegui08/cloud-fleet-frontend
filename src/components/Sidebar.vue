@@ -40,7 +40,6 @@
               <router-link :to="o.path"> 
                 <span v-on:click="changeToggleNav">{{o.name}}</span>
               </router-link>
-              <!-- <a class='sidebar-link' :href="o.path">{{o.name}}</a> -->
             </li>
           </ul>
         </li>         
@@ -68,7 +67,6 @@ export default {
     },
     methods : {
       acctionSubmenu (menu) {
-        console.log(menu.name);
         if(menu.only){
           this.$router.push(menu.path);
           toggleNav();

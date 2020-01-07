@@ -46,11 +46,9 @@ export default {
     },
     methods : {
         handlerDelete(item){
-            console.log(item);
             this.$emit('onDeleteItem',item);
         },
         handlerEdit(item){
-            console.log(" [ KLAY Edit] : method edit");
             console.log(item);
         }
     }
