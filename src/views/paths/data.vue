@@ -25,8 +25,8 @@ import {
     mapActions
 } from 'vuex';
 import $ from 'jquery';
-import TableKlay from '../../components/Table';
-import DataHeader from '../../util/datasource';
+import TableKlay from '@/components/Table';
+import DataHeader from '@/util/datasource';
 import {
     alerts
 } from '@/util/alerts';

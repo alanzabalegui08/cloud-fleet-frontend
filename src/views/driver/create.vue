@@ -1,6 +1,6 @@
 <template>
     <div class="row gap-20 masonry pos-r">
-        <div class="  col-xs-12 col-md-12">
+        <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
                 <div class="mT-10">
                     <ValidationObserver v-slot="{handleSubmit}">
@@ -18,7 +18,6 @@
         </div>
     </div>
 </template>
-
 <script>
 import FormDriver from '@/components/FormDriver';
 import BarSubmit from '@/components/BarSubmit';
@@ -34,8 +33,8 @@ export default {
         }
     },
     created() {},
-    computed: {},
-    methods: {
+    computed : {},
+    methods : {
         onSubmit() {
             this.$refs.formDriver.handleDriver();
             this.$router.push('/operadores')

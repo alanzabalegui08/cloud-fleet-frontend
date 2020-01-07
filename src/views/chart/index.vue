@@ -36,14 +36,12 @@
                                     </select>                                    
                                 </div>
                                 <div class="col-md-12" style="height:700px;">
-                                <chart width="1000" height="340"
-                                    id="chart1"
-                                    title="# rutas por cliente"
-                                    :labels='["Honda", "Intel", "Molex", "piza","Guardias", "Close"]'
-                                    :data='[100,70,125,20,40,90 ]'
-                                    :background-color="'rgba(153, 102, 255, 0.2)'"
-                                    :border-color="'rgba(153, 102, 255, 1)'"
-                                ></chart>                                    
+                                    <GChart
+                                        type="BarChart"
+                                        :data="chartData"
+                                        :options="chartOptions"
+                                        style="height: 700px;"
+                                    />                                  
                                 </div>
                             </div>
                         </div>
@@ -62,7 +60,7 @@ import Sidebar from '../../components/Sidebar';
 import Navbar from '../../components/Navbar';
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
-import Chart from '../../components/Chart';
+import { GChart } from 'vue-google-charts';
 
 export default {
     name: 'chart-ruza',
@@ -70,7 +68,7 @@ export default {
         Sidebar,
         Navbar,
         datePicker,
-        Chart,
+        GChart,
     },
     data () {
         return {
@@ -82,6 +80,22 @@ export default {
                 showClear: true,
                 showClose: true,
                 locale : 'es-es',
+            },
+            chartData: [
+                ['City', '', { role: 'style' }],
+                ['Factores extremos - Trafico', 8175000,'#b87333'],
+                ['Mecanica motor', 3792000,'#980000'],
+                ['Mecanica Taller ruza', 2695000,'#ffcc22'],
+                ['Negligencia - Dormido', 2099000,'#0b5394'],
+                ['Negligencia - No programado', 2926000,'#FF0000'],
+                ['Negligencia - any', 1526000,'#00ffff'],
+                ['Negligencia - No programado', 1626000,'#38761d'],
+            ],
+            chartOptions : {
+                chart : {
+                    title: 'Company Performance',
+                    subtitle: 'Sales, Expenses, and Profit: 2014-2017',                    
+                },
             }
         }
     },

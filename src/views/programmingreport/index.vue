@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                     <div class="row m-10">
-                                        <table-klay :list="datasource" :colums="gridHeader"></table-klay>
+                                        <table-klay :list="datasource" :columns="gridHeader"></table-klay>
                                     </div>
                                 </div>
                             </div>

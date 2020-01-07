@@ -1,43 +1,45 @@
 <template>
-  <div class="row m-10">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="">Programación</h2>
+  <div class="row">
+    <div class="col-7">
+      <h2 class="title-klay mL-10">Programación</h2>
+    </div>
+    <div class="col-5 text-right">
+      <button type="button" class="btn cur-p btn-outline-primary mr-3" title="Actualizar programación">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btn cur-p btn-outline-primary mr-3" title="Reordenar programación">
+        <i class="fa fa-random" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="col">
+      <div class="row m-5">
+        <div class="form-group col-md-2">
+          <select class="form-control select-form">
+            <option>Cliente</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <select class="form-control select-form">
+            <option>Truno</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3"></div>
+        <div class="form-group col-md-2">
+          <select class="form-control select-form">
+            <option>Sentido</option>
+          </select>
+        </div>
+        <div class="form-group col-md-1">
+          Sin unidades
+          <input class="form-check-input m-5" type="checkbox" />
+        </div>
+        <div class="form-group col-md-2 text-center">
+          <date-picker class="select-form " v-model="date" language="es" :config="options"></date-picker>
+        </div>                
       </div>
-    </div>
-    <div class="form-group col-md-3">
-      <select class="form-control select-form" id="">
-        <option>Honda</option>
-        <option>Cloe</option>
-        <option>DANSA</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <select class="form-control select-form" id="">
-        <option>Honda</option>
-        <option>Cloe</option>
-        <option>DANSA</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <select class="form-control select-form" id="">
-        <option>AMBOS</option>
-        <option>ENTRADA</option>
-        <option>SALIDA</option>
-      </select>
-    </div>
-    <div class="form-group col-md-1">
-      Sin unidades
-      <input class="form-check-input m-5" type="checkbox" />
-    </div>
-    <div class="form-group col-md-2 text-center">
-      <button type="button" class="btn cur-p btn-outline-primary mr-3"><i class="fa fa-refresh"
-          aria-hidden="true"></i></button>
-      <button type="button" class="btn cur-p btn-outline-primary mr-3"><i class="fa fa-random"
-          aria-hidden="true"></i></button>
-    </div>
-    <div class="form-group col-md-2 text-center">
-      <date-picker class="select-form " v-model="date" language="es" :config="options"></date-picker>
+      <div class="row m-5">
+        <table-klay :list="list" :columns="dataHeader" ></table-klay>
+      </div>
     </div>
   </div>
 </template>
@@ -46,11 +48,14 @@
 
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
+import TableKlay from '@/components/Table';
+import DataGrid from '@/util/datasource.js';
 
 export default {
   name : 'bar-search',  
   components : {
-    datePicker
+    datePicker,
+    TableKlay,
   },
   data () {
     return {
@@ -59,13 +64,17 @@ export default {
           format: 'DD/MM/YYYY',
           useCurrent: false,
           locale : 'es-es',        
-        }      
+        },
+        dataHeader : DataGrid.programming,
+        list : [],
+        
     }
   },
   created (){
+    
   },
   computed : {
-
+    
   },
   methods : {
   }

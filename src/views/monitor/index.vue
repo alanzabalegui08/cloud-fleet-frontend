@@ -6,12 +6,12 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <filter-monitor />
                         </div>
-                        <div class="col-md-9">
-                            <div class="bgc-white p-20 bd" style="height:750px">
-                                <google-map/>
+                        <div class="col-md-10">
+                            <div class="bgc-white p-10" style="height:850px">
+                                <google-map style="height:100%"/>
                             </div>                             
                         </div>
                     </div>                    
@@ -23,10 +23,10 @@
 <script>
 
 import $ from 'jquery';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
-import GoogleMap from '../../components/GoogleMap'
-import FilterMonitor from '../../components/FilterMonitor'
+import Sidebar from '@/components/Sidebar';
+import Navbar from '@/components/Navbar';
+import GoogleMap from '@/components/GoogleMap'
+import FilterMonitor from '@/components/FilterMonitor'
 export default {
     name : 'monitor',
     components : {

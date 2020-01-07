@@ -15,26 +15,26 @@
                             <div class="row gap-20 bd bgc-white" style="height:750px">
                                 <div class="col-md-12">
                                     <div class="row m-10">
-                                        <div class="form-group col-xs-1">
-                                            <h5>Fecha: </h5>
+                                        <div class="form-group col-md-2 text-center d-flex">
+                                             <h5>Fecha: </h5>
+                                             <div class="form-group col text-center">
+                                                 <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
+                                             </div>
                                         </div>
-                                        <div class="form-group col-md-2 text-center">
-                                            <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
-                                        </div>
-                                        <div class="form-group col-xs-1 text-center">
+                                        <div class="form-group col-md-2 text-center d-flex">
                                             <h5>Turno</h5>
-                                        </div>
-                                        <div class="form-group col-md-2 text-center">
-                                            <select class="form-control select-form" id="" >
-                                                <option>Seleccionar turno</option>
-                                            </select>                                    
+                                            <div class="form-group col text-center">
+                                                <select class="form-control select-form" id="" >
+                                                    <option>Seleccionar turno</option>
+                                                </select>
+                                            </div>                 
                                         </div>
                                         <div class="form-group col-md-1 text-center">
                                              <button type="button" class="btn cur-p btn-outline-primary mr-3 select-form" >Generar</button>                                 
                                         </div>
                                     </div>
                                     <div class="row m-10">
-                                        <table-klay :list="datasource" :colums="gridHeader"></table-klay>
+                                        <table-klay :list="datasource" :columns="gridHeader"></table-klay>
                                     </div>
                                 </div>
                             </div>

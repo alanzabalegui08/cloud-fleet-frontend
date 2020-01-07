@@ -30,7 +30,7 @@
                                 <div class="form-group col-md-2 text-center">
                                     <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
                                 </div>
-                                <div class="form-group col-md-2 text-center">
+                                <div class="form-group col-md-2">
                                     <button type="button" class="btn cur-p btn-outline-primary mr-3" >Actualizar</button>
                                 </div>
                                 <div class="col-md-12">
