@@ -1,23 +1,23 @@
 <template>
-    <div class="row gap-20 masonry pos-r">
-        <div class="  col-md-10">
-            <h2 >Cargas de combustibles</h2>
+    <div class="row p-5">
+        <div class="col">
+            <h2 class="title-klay">Cargas de combustibles</h2>
         </div>
-        <div class="  col-md-2">
-            <router-link to="/carga-combustible/nuevo" class="btn cur-p btn-outline-primary"  >Agregar</router-link>
+        <div class="col text-right">
+            <router-link to="/carga-combustible/nuevo" class="btn cur-p btn-outline-primary">Agregar</router-link>
         </div>
-        <div class="  colo-xs-12 col-md-12">
-            <div class="bgc-white p-20 bd">
-                <div class="mT-30">
+        <div class="col-xs-12 col-md-12">
+            <div class="bgc-white p-10 bd">
+                <div class="mT-10">
                     <div class="row">
                         <div class="col-md-12">
                             <table-klay :list="clients" :columns="dataHeader"></table-klay>
                         </div>
                     </div>
                 </div>
-            </div>                            
+            </div>
         </div>
-    </div>    
+    </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';

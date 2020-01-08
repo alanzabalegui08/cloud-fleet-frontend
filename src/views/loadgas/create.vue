@@ -1,19 +1,11 @@
 <template>
     <div class="row gap-20 masonry pos-r">
-        <div class="  colo-xs-12 col-md-12">
+        <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
-                <div class="mT-10">
+                <div class="mT-30">
                     <ValidationObserver v-slot="{handleSubmit}">
                     <form @submit.prevent="handleSubmit(onSubmit)">
-                        <div class="row">
-                            <div class="  col-md-6">
-                                <h2>Carga de combustible</h2>
-                            </div>
-                            <div class="  col-md-6">
-                                <button type="submit" class="btn cur-p btn-outline-success mr-5">Guardar</button>
-                                <button @click="cancelar" class="btn cur-p btn-outline-danger">Cancelar</button>
-                            </div>
-                        </div>
+                        <bar-submit :title="titleBar"  @cancelar="cancelar"></bar-submit>
                         <div class="row">
                             <div class="col-md-12">
                                 <form-loadgas ref="loadgasForm"></form-loadgas>
@@ -29,14 +21,17 @@
 
 <script>
 
-import FormLoadgas from '../../components/FormLoadgas';
+import FormLoadgas from '@/components/FormLoadgas';
+import BarSubmit from '@/components/BarSubmit';
 export default {
     name : 'create',
     components : {
         FormLoadgas,
+        BarSubmit,
     },
     data () {
         return {
+            titleBar : 'Carga de combustible',
         }
     },
     created (){

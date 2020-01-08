@@ -4,21 +4,20 @@
             <div class="bgc-white p-20 bd">
                 <div class="mT-10">
                     <ValidationObserver v-slot="{handleSubmit}">
-                    <form @submit.prevent="handleSubmit(onSubmit)">
-                        <bar-submit :title="titleBar" @cancelar="cancelar"></bar-submit>
-                        <div class="row">
-                            <div class="col-md-12 mT-50">
-                                <path-form ref="pathForm"></path-form>
+                        <form @submit.prevent="handleSubmit(onSubmit)">
+                            <bar-submit :title="titleBar" @cancelar="cancelar"></bar-submit>
+                            <div class="row">
+                                <div class="col-md-12 mT-50">
+                                    <path-form ref="pathForm"></path-form>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
                     </ValidationObserver>
                 </div>
-            </div>                            
+            </div>
         </div>
     </div>
 </template>
-
 <script>
 
 import PathForm from '@/components/PathForm';

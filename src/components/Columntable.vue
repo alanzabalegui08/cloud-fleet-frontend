@@ -4,8 +4,8 @@
         <span v-if="type === 'color' ">{{value}}</span>
         <div  v-if="type === 'accion' ">
             <button type="button" class="btn cur-p btn-outline-danger mr-3"  @click="onDeleteItem(item)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-            <button type="button" class="btn cur-p btn-outline-success mr-3" @click="onDeleteItem(item)"><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
-            <button type="button" class="btn cur-p btn-outline-primary mr-3" @click="onDeleteItem(item)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button type="button" class="btn cur-p btn-outline-success mr-3" ><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
+            <button type="button" class="btn cur-p btn-outline-primary mr-3" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
         </div>
     </div>
 </template>
