@@ -6,12 +6,10 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="   w-100">
-                            <div class="row gap-20 bd bgc-white ">
-                                <div class="col-md-12">
-                                    <h2 class="">Operadores sin ruta</h2>
-                                </div>
-                            </div>  
+                        <div class="col-md-12">
+                            <h2 class="">Operadores sin ruta</h2>
+                        </div>
+                        <div class="w-100">
                             <div class="row gap-20 bd bgc-white" style="height:750px">
                                 <div class="col-md-12">
                                     <div class="row m-10">

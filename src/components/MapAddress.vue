@@ -5,8 +5,12 @@ import {
     mapGetters,
     mapActions
 } from 'vuex';
+import GoogleMap from './GoogleMap';
 export default {
     name: "map-address",
+    components : {
+        GoogleMap,
+    },    
     computed: {
         ...mapGetters({
             getFullAddress: 'map/getFullAddress'
@@ -20,7 +24,6 @@ export default {
                 return this.getFullAddress;
             }
         }
-
     },
     mounted() {
 
@@ -38,15 +41,16 @@ export default {
 
 <template>
     <div class="row">
-        <div class="col-md-12">
-            <h3>Dirección</h3>
-        </div>
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-10">
+            <label for="inputPassword">Puedes poner un punto en el mapa o escribir la direccion </label>
             <input type="text" class="form-control" name="fulladdress" v-model="fulladdress">
             <span style="color:red;"></span>
         </div>
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-2 text-right mButtonTop">
             <button class="btn btn-primary" type="button" @click="checkAddress">Verificar</button>
+        </div>
+        <div class="form-group col-md-12 ">
+            <google-map style=""/>
         </div>
     </div>
 </template>

@@ -5,14 +5,12 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row bgc-white p-20 mb-3">
-                        <div class="layer w-100 ">
-                            <h2 class="lh-1">Notificaciones</h2>
-                        </div>
-                    </div>                    
+                    <div class="layer w-100 ">
+                        <h2 class="lh-1">Notificaciones</h2>
+                    </div>
                     <div class="row">
                         <div class="w-100">
-                            <div class="row gap-20">
+                            <div class="row gap-20 m-5">
                                 <div class='col-md-3'>
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">

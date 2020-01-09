@@ -6,13 +6,13 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="  col-md-6"></div>
-                        <div class="   w-100">
+                        <div class="col-md-6"></div>
+                        <div class="w-100">
                             <div class="row gap-20">
                                 <div class='col-md-3'>
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
-                                            <h4 class="lh-1">CATALOGO</h4>
+                                            <h4 class="lh-1">CATÁLOGO</h4>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
@@ -42,7 +42,7 @@
                                 <div class='col-md-3'>
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
-                                            <h4 class="lh-1">PROGRAMACION</h4>
+                                            <h4 class="lh-1">PROGRAMACIÓN</h4>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">

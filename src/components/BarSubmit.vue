@@ -3,8 +3,8 @@
         <div class="col-7">
             <h2 class="title-klay">{{title}}</h2>
         </div>
-        <div class="col-5 text-right">
-            <button type="submit" class="btn cur-p btn-outline-success mr-5 btn-md">Guardar</button>
+        <div class="col-5 text-right mT-10">
+            <button type="submit" class="btn cur-p btn-outline-success mR-20 btn-md">Guardar</button>
             <button @click="cancelar" class="btn cur-p btn-outline-danger btn-md">Cancelar</button>
             <button type="submit" class="btn cur-p btn-outline-success mr-3 btn-xs" title="Guardar">
                 <i class="fa fa-floppy-o" aria-hidden="true"></i>

@@ -5,12 +5,20 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
+                    <div class="row">
+                        <div class="col-7">
+                            <h2 class="title-klay mL-10">PV XR</h2>
+                        </div>
+                        <div class="col-5 text-right">
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-15">
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        </div>                    
                     <div class="bgc-white bd" >
                         <div class="mT-10">
                             <bar-programming />
-                            <div class="col-md-12">
-                                <table-klay :list="datasource" :colums="gridHeader"></table-klay>
-                            </div>
+                            <table-klay :list="datasource" :columns="gridHeader"></table-klay>
                         </div>
                     </div>
                 </div>
@@ -23,11 +31,11 @@
 
 
 import $ from 'jquery';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
-import TableKlay from '../../components/Table';
-import DataGrid from '../../util/datasource.js';
-import BarProgramming from '../../components/BarProgramming'
+import Sidebar from '@/components/Sidebar';
+import Navbar from '@/components/Navbar';
+import TableKlay from '@/components/Table';
+import DataGrid from '@/util/datasource.js';
+import BarProgramming from '@/components/BarProgramming'
 
 export default {
     name : 'pvxr',

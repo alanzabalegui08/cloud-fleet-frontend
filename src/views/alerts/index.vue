@@ -5,30 +5,31 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row bd bgc-white p-20 mb-3">
+                    <div class="row  p-20 ">
                         <div class="layer w-100 ">
                             <h2 class="lh-1">Alertas</h2>
                         </div>
                     </div>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="  col-md-6"></div>
-                        <div class="   w-100">
+                        <div class="col-md-6"></div>
+                        <div class="w-100">
                             <div class="row gap-20">
                                 <div class='col-md-3'>
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="lh-1">UNIDADES DE BAJO RENDIMIENTO</h4>
+                                            <br>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
                                                     <i class="fa fa-tachometer" aria-hidden="true"
-                                                        style="font-size: 45px; color: red;"></i>
+                                                        style="font-size: 35px; color: red;"></i>
                                                 </div>
                                                 <div class="peer">
                                                     <span
                                                         class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-red-50 c-red-500"
-                                                        style="font-size: 45px;">10</span>
+                                                        style="font-size: 35px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -43,12 +44,12 @@
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
                                                     <i class="fa fa-question" aria-hidden="true"
-                                                        style="font-size: 45px; color: #ffc107;"></i>
+                                                        style="font-size: 35px; color: #ffc107;"></i>
                                                 </div>
                                                 <div class="peer">
                                                     <span
                                                         class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-yellow-50 c-yellow-500"
-                                                        style="font-size: 45px;">10</span>
+                                                        style="font-size: 35px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -58,17 +59,18 @@
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="lh-1">UNIDADES CON BAJA PRODUCTIVIDAD</h4>
+                                            <br>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
                                                     <i class="fa fa-bar-chart" aria-hidden="true"
-                                                        style="font-size: 45px; color: #4caf50 ;"></i>
+                                                        style="font-size: 35px; color: #4caf50 ;"></i>
                                                 </div>
                                                 <div class="peer">
                                                     <span
                                                         class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-green-50 c-green-500"
-                                                        style="font-size: 45px;">10</span>
+                                                        style="font-size: 35px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,17 +80,18 @@
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="lh-1">OPERADORES CON INCIDENCIA</h4>
+                                            <br>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
                                                     <i class="fa fa-user-o" aria-hidden="true"
-                                                        style="font-size: 45px; color: #2196f3 ;"></i>
+                                                        style="font-size: 35px; color: #2196f3 ;"></i>
                                                 </div>
                                                 <div class="peer">
                                                     <span
                                                         class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-blue-50 c-blue-500"
-                                                        style="font-size: 45px;">10</span>
+                                                        style="font-size: 35px;">10</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,17 +101,18 @@
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="lh-1">OPERADORES CON INCIDENCIA</h4>
+                                            <br>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 <div class="peer peer-greed">
                                                     <i class="fa fa-file-text-o" aria-hidden="true"
-                                                        style="font-size: 45px; color: #b9c2d0 ;"></i>
+                                                        style="font-size: 35px; color: #b9c2d0 ;"></i>
                                                 </div>
                                                 <div class="peer">
                                                     <span
                                                         class="d-ib lh-0 va-m fw-600 bdrs-10em pX-20 pY-20 bgc-grey-50 c-grey-500"
-                                                        style="font-size: 45px;">10</span>
+                                                        style="font-size: 35px;">10</span>
                                                 </div>
                                             </div>
                                         </div>

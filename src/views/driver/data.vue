@@ -1,6 +1,5 @@
-}
 <template>
-    <div class="row p-5">
+    <div class="row p-0">
         <div class="col">
             <h2 >Operadores</h2>
         </div>
@@ -8,8 +7,8 @@
             <router-link to="/operadores/nuevo" class="btn cur-p btn-outline-primary"  >Nuevo</router-link>
         </div>
         <div class="col-xs-12 col-md-12">
-            <div class="bgc-white p-10 bd">
-                <div class="mT-10">
+            <div class="bgc-white p-0 bd">
+                <div class="mT-0">
                     <div class="row">
                         <div class="col-md-12">
                             <table-klay :list="drivers" :columns="dataHeader" @onDeleteItem="onDeleteItem"></table-klay>

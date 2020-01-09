@@ -5,14 +5,16 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row gap-20 bd bgc-white mB-30">
+                    <div class="row">
                         <div class="col-7">
                             <h2 class="title-klay mL-10">Comentarios</h2>
                         </div>
                         <div class="col-5 text-right">
                             <button type="button"
-                                class="btn cur-p btn-outline-primary mr-3 select-form">Generar</button>
+                                class="btn cur-p btn-outline-primary mr-3 mT-15 select-form">Generar</button>
                         </div>
+                    </div>
+                    <div class="row gap-20 bd bgc-white mB-30 mT-10">
                         <div class="col-md-12">
                             <div class="row m-10">
                                 <div class="col-md-3 col-md-3 d-flex">
@@ -81,7 +83,7 @@
                                     </div>                                  
                                 </div>
                             </div>
-                            <div class="row m-10">
+                            <div class="row m-0">
                                 <table-klay :list="datasource" :columns="gridHeader"></table-klay>
                             </div>
                         </div>

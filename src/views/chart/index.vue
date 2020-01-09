@@ -5,30 +5,26 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row bd bgc-white p-20 mb-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="">Rutas por cliente</h2>
+                        </div>
+                    </div>
+                    <div class="row p-20 ">
                         <div class="layer w-100 ">
-                        <div class="w-100">
-                            <div class="row gap-20 bd bgc-white ">
-                                <div class="col-md-12">
-                                    <h2 class="">Rutas por cliente</h2>
-                                </div>
-                            </div>                            
+                        <div class="w-100">                           
                             <div class="row gap-20 bd bgc-white ">
                                 <div class="form-group col-md-2">
                                     <select class="form-control select-form"  >
                                         <option>Seleccione un cliente</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-md-1">
-                                    <h4>Fecha : </h4>
-                                </div>
-                                <div class="form-group col-md-2 text-center">
+                                <div class="form-group col-md-2 d-flex">
+                                    <h4 class="title-form-klay mR-15">Fecha: </h4>
                                     <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
                                 </div>
-                                <div class="form-group col-md-1">
-                                    <h4>Turno : </h4>
-                                </div>
-                                <div class="form-group col-md-2 text-center">
+                                <div class="form-group col-md-2 text-center d-flex">
+                                    <h4 class="title-form-klay mR-15">Turno: </h4>
                                     <select class="form-control select-form" id="">
                                         <option>Turno 1</option>
                                         <option>Turno 2</option>

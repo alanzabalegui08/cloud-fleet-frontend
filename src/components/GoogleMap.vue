@@ -1,10 +1,8 @@
 <template>
-  <div class="row">
-    <gmap-map :center="center" :zoom="14" style="width:100%;  height: 800px;" @click="addMarketAction">
+    <gmap-map :center="center" :zoom="14" style="width:100%;  height: 550px;" @click="addMarketAction">
       <GmapMarker v-for="(item, index) in markets" :key="index" :position="item.position"
         @click="center = item.position" />
     </gmap-map>
-  </div>
 </template>
 
 <script>
@@ -17,15 +15,15 @@ export default {
   data() {
     return {
       center: {
-        lat: 20.6736,
-        lng: -103.344
+        lat : 20.6736,
+        lng : -103.344
       },
-      markers: [],
-      places: [],
+      markers : [],
+      places  : [],
       currentPlace: null,
       coordinates: {
-        lat: 20.6736,
-        lng: -103.344,
+        lat : 20.6736,
+        lng : -103.344,
       },
     };
   },

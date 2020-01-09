@@ -1,14 +1,14 @@
 <template>
-<div class="table-responsive">
+<div class="table-responsive container-fluid">
     <table id="table_turn" class="table"> 
         <thead class="thead-dark" >
-            <tr >
-                <th v-for="(colum,index) in columns" :key="index" ><h5> {{colum.columname}}</h5></th>
+            <tr class="row">
+                <th class="col text-center" v-for="(colum,index) in columns" :key="index" ><h5> {{colum.columname}}</h5></th>
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(item,index) in list" :key="index">
-                <td v-for="(column, indexColum) in columns" :key="indexColum">
+            <tr v-for="(item,index) in list" :key="index" class="row" >
+                <td v-for="(column, indexColum) in columns" :key="indexColum" v-bind:class="column.class" >
                     <columntable :value="item[column.column]" @onDeleteItem="handlerDelete(item)" :type="column.type" :item="item" ></columntable>
                 </td>               
             </tr>
@@ -33,14 +33,12 @@ export default {
     components : {
         Columntable,
     },
-
     data () {
         return {
 
         }
     },
     created (){
-   
     },
     computed : {
     },

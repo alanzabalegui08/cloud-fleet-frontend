@@ -9,6 +9,11 @@
 .table {
     width: 100%;
 }
+
+.table .thead-dark th h5 { 
+    font-size: 12pt;
+}
+
 .btn-md {
     display: inline;
 }
@@ -20,6 +25,10 @@
     border-radius: 5em;
 }
 
+.mButtonTop {
+    margin-top: 29px;
+}
+
 @media (max-width: 600px) {
     .title-klay {
         font-size: 16pt;
@@ -28,7 +37,7 @@
         width: 700px;
     }
     .table .thead-dark th h5 { 
-        font-size: 11pt;
+        font-size: 10pt;
     }
     .btn-md {
         display: none;

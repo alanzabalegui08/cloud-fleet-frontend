@@ -1,6 +1,9 @@
 <template>
     <div class="row">
-        <div class="  col-md-12">
+        <div class="col-md-12">
+            <span  class="title-form-klay" style="color:#2196f3;">/ Estaciones / Nueva estación </span>
+        </div> 
+        <div class="col-md-12">
             <div class="bgc-white " >
                 <div class="mT-10">
                     <div class="form-row">

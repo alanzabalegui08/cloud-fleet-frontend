@@ -2,12 +2,12 @@
     <div class="row gap-20 masonry pos-r">
         <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
-                <div class="mT-10">
+                <div class="mT-0">
                     <ValidationObserver v-slot="{handleSubmit}">
                         <form @submit.prevent="handleSubmit(onSubmit)">
                             <bar-submit :title="titleBar" @cancelar="cancelar"></bar-submit>
                             <div class="row">
-                                <div class="col-md-12 mT-50">
+                                <div class="col-md-12 mT-0">
                                     <form-station ref="stationForm"></form-station>
                                 </div>
                             </div>

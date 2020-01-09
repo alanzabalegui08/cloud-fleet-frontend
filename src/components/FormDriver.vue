@@ -1,5 +1,8 @@
 <template>
     <div class="row">
+        <div class="col-md-12">
+            <span  class="title-form-klay" style="color:#2196f3;">/ Operadores / Nuevo operador </span>
+        </div>        
         <div class="col-md-6">
             <div class="bgc-white " >
                 <div class="mT-10">

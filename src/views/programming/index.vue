@@ -5,9 +5,24 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="bgc-white bd" >
+                    <div class="row">
+                        <div class="col-7">
+                            <h2 class="title-klay mL-10">Programación</h2>
+                        </div>
+                        <div class="col-5 text-right">
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-15"
+                                title="Actualizar programación">
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-15"
+                                title="Reordenar programación">
+                                <i class="fa fa-random" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bgc-white bd">
                         <div class="mT-10">
-                            <bar-search/>
+                            <bar-search />
                             <div class="col-md-12">
                                 <table-klay :list="datasource" :colums="gridHeader"></table-klay>
                             </div>
@@ -21,16 +36,12 @@
 
 <script>
 
-/*
- remuve button for afdd newfeatures
-*/
-
 import $ from 'jquery';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
-import TableKlay from '../../components/Table';
-import DataGrid from '../../util/datasource.js';
-import BarSearch from '../../components/BarSearch';
+import Sidebar from '@/components/Sidebar';
+import Navbar from '@/components/Navbar';
+import TableKlay from '@/components/Table';
+import DataGrid from '@/util/datasource.js';
+import BarSearch from '@/components/BarSearch';
 
 export default {
     name : 'banner',

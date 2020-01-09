@@ -6,11 +6,11 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="   w-100">
+                        <div class="form-group col-md-12">
+                            <h4 class="title-klay">Resumen de la Programación</h4>
+                        </div>
+                        <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">
-                                <div class="form-group col-md-12">
-                                    <h4>Resumen de la Programación</h4>
-                                </div>
                                 <div class="col-md-3 m-20">
                                     <div class="row">
                                         <div class="form-group col-md-12">

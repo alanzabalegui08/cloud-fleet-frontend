@@ -1,6 +1,9 @@
 <template>
     <div class="row">
-        <div class="  col-md-12">
+        <div class="col-md-12">
+            <span  class="title-form-klay" style="color:#2196f3;">/ Regiones / Nueva región </span>
+        </div>          
+        <div class="col-md-12">
             <div class="bgc-white">
                 <div class="mT-10">
                     <div class="form-row">
@@ -10,8 +13,7 @@
                                     <label for="inputName">Nombre</label>
                                     <ValidationProvider vid="name" name="Nombre" rules="required|alpha"
                                         v-slot="{ errors }">
-                                        <input type="text" class="form-control" id="" v-model="region.name"
-                                            placeholder="">
+                                        <input type="text" class="form-control" v-model="region.name" placeholder="">
                                         <span style="color:red;">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                 </div>

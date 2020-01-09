@@ -1,13 +1,5 @@
 <template>
-  <div class="row m-10">
-    <div class="col-7">
-      <h2 class="title-klay mL-10">PV XR</h2>
-    </div>
-    <div class="col-5 text-right">
-      <button type="button" class="btn cur-p btn-outline-primary mr-3"><i class="fa fa-refresh"
-          aria-hidden="true"></i></button>
-    </div>
-    <div class="col-12 m-0">  
+  <div class="row m-0">
       <div class="form-group col-md-2 text-center">
         <date-picker class="select-form " v-model="date" language="es" :config="options"></date-picker>
       </div>
@@ -21,7 +13,6 @@
           <option>Región</option>
         </select>
       </div>
-    </div>
   </div>
 </template>
 

@@ -20,7 +20,7 @@
                     </select>
                 </div>
                 <div class="form-group col-md-1">
-                    <button type="button" class="btn cur-p btn-outline-danger mT-25"
+                    <button type="button" class="btn cur-p btn-outline-danger mButtonTop"
                         @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button>
                 </div>
             </div>
@@ -29,18 +29,18 @@
             <table id="table_turn" class="table">
                 <thead>
                     <tr>
-                        <th>Nombre Turno</th>
-                        <th>Entrada</th>
-                        <th>Salida</th>
-                        <th>Acciones</th>
+                        <th class="col-md-5">Nombre Turno</th>
+                        <th class="col-md-3">Entrada</th>
+                        <th class="col-md-3">Salida</th>
+                        <th class="col-md-1 text-right">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="(turno,index) in list" :key="index">
-                        <td>{{turno.name}}</td>
-                        <td>{{turno.input}}</td>
-                        <td>{{turno.output}}</td>
-                        <td>
+                        <td class="col-md-5" >{{turno.name}}</td>
+                        <td class="col-md-3" >{{turno.input}}</td>
+                        <td class="col-md-3" >{{turno.output}}</td>
+                        <td class="col-md-1 text-right">
                             <button type="button" class="btn cur-p btn-outline-danger" @click="removeTurn(turno)">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </button>

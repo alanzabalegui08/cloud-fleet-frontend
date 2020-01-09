@@ -1,7 +1,7 @@
 export default {
     menu :[
         {
-            name : 'Catalogo',
+            name : 'Catálogo',
             only : false,
             down : true,
             path : '/',

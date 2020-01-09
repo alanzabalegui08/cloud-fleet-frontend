@@ -2,11 +2,14 @@
     <div class="row gap-20 masonry pos-r">
         <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-20 bd">
-                <div class="mT-30">
+                <div class="mT-0">
                     <ValidationObserver v-slot="{handleSubmit}">
                     <form @submit.prevent="handleSubmit(onSubmit)">
                         <bar-submit :title="titleBar"  @cancelar="cancelar"></bar-submit>
                         <div class="row">
+                            <div class="col-md-12">
+                                <span  class="title-form-klay" style="color:#2196f3;">/ Combustible / Carga de combustible </span>
+                            </div>
                             <div class="col-md-12">
                                 <form-loadgas ref="loadgasForm"></form-loadgas>
                             </div>

@@ -8,7 +8,7 @@
               <div class="peers ai-c fxw-nw">
                 <div class="peer">
                   <div class="logo">
-                    <img :src="logo" alt="" :style="{height: 50 + 'px',}">
+                    <img :src="logo" alt="" :style="{ height: 50 + 'px', }" class="m-5">
                   </div>
                 </div>
                 <div class="peer peer-greed"></div>
@@ -17,7 +17,7 @@
           </div>
           <div class="peer">
             <div class="mobile-toggle sidebar-toggle">
-              <a  href="#" @click.prevent="changeToggleNav()" class="td-n">
+              <a href="#" @click.prevent="changeToggleNav()" class="td-n">
                 <i class="ti-arrow-circle-left"></i>
               </a>
             </div>
@@ -26,7 +26,7 @@
       </div>
       <ul class="sidebar-menu scrollable pos-r">
         <li  v-for="(item, index) in listMenu" :class="item.class" :key="index" >
-          <a  :class="(item.down) ? 'dropdown-toggle' :'sidebar-link'"  href="#"  @click.prevent="acctionSubmenu(item)">
+          <a  :class="(item.down) ? 'dropdown-toggle' :'sidebar-link'" href="#" @click.prevent="acctionSubmenu(item)">
             <span class="icon-holder">
               <i :class="item.icon"></i>
             </span>
@@ -49,9 +49,9 @@
 </template>
 
 <script>
-import logo from '../assets/static/images/logo_klay.png';
-import sidebarMenu from '../router/menu';
-import { toggleNav }  from '../util/SettingLayout';
+import logo from '@/assets/static/images/klay_logo_small.png';
+import sidebarMenu from '@/router/menu';
+import { toggleNav }  from '@/util/SettingLayout';
 export default {
     name : 'sidebar',
     data () {
@@ -69,12 +69,11 @@ export default {
       acctionSubmenu (menu) {
         if(menu.only){
           this.$router.push(menu.path);
-          toggleNav();
         }
         (!menu.toggle) ? menu.class += ' open': menu.class = menu.class.replace('open','');
         menu.toggle = !menu.toggle;
+        
       },
-
       changeToggleNav(){
         toggleNav();
       }

@@ -1,16 +1,5 @@
 <template>
   <div class="row">
-    <div class="col-7">
-      <h2 class="title-klay mL-10">Programación</h2>
-    </div>
-    <div class="col-5 text-right">
-      <button type="button" class="btn cur-p btn-outline-primary mr-3" title="Actualizar programación">
-        <i class="fa fa-refresh" aria-hidden="true"></i>
-      </button>
-      <button type="button" class="btn cur-p btn-outline-primary mr-3" title="Reordenar programación">
-        <i class="fa fa-random" aria-hidden="true"></i>
-      </button>
-    </div>
     <div class="col">
       <div class="row m-5">
         <div class="form-group col-md-2">
@@ -35,10 +24,10 @@
         </div>
         <div class="form-group col-md-2 text-center">
           <date-picker class="select-form " v-model="date" language="es" :config="options"></date-picker>
-        </div>                
+        </div>
       </div>
-      <div class="row m-5">
-        <table-klay :list="list" :columns="dataHeader" ></table-klay>
+      <div class="row m-0">
+        <table-klay :list="list" :columns="dataHeader"></table-klay>
       </div>
     </div>
   </div>
