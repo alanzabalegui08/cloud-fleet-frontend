@@ -8,7 +8,7 @@
               <div class="peers ai-c fxw-nw">
                 <div class="peer">
                   <div class="logo">
-                    <img :src="logo" alt="" :style="{ height: 50 + 'px', }" class="m-5">
+                    <a href="/"><img :src="logo" alt="" :style="{ height: 50 + 'px', }" class="m-5"></a>
                   </div>
                 </div>
                 <div class="peer peer-greed"></div>

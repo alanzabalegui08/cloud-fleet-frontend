@@ -61,6 +61,7 @@
     "vee-validate": "^3.2.0",
     "vue": "^2.6.10",
     "vue-bootstrap-datetimepicker": "^5.0.1",
+    "vue-color": "^2.7.0",
     "vue-datatables-net": "^1.2.5",
     "vue-google-charts": "^0.3.2",
     "vue-router": "^3.1.3",
