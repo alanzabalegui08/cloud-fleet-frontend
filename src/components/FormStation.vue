@@ -7,7 +7,7 @@
             <div class="bgc-white " >
                 <div class="mT-10">
                     <div class="form-row">
-                        <div class="col-md-5">
+                        <div class="col-md-5 pR-15">
                             <div class="row">
                                 <div class="form-group col-md-12">
                                     <label for="inputName">Nombre</label>
@@ -25,8 +25,8 @@
                         <div class="col-md-7">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="bgc-white p-10" style="width:100%;height:450px">
-                                        <google-map/>
+                                    <div class="bgc-white " >
+                                        <google-map :mapStyle="mapStyle"/>
                                     </div> 
                                 </div>
                             </div>
@@ -53,6 +53,10 @@ export default {
     data() {
         return {
             station: stationModel(),
+            mapStyle : {
+                width : '100%',
+                height: '450px',
+            }
         }
     },
     created() {

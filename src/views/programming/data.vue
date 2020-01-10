@@ -1,6 +1,6 @@
 <template>
-    <div class="row gap-20 masonry pos-r">
-        <div class="  col-md-10">
+    <div class="row gap-20 pos-r">
+        <div class="col-md-10">
             <h2 >Programación</h2>
         </div>
         <div class="  col-md-2">
@@ -22,8 +22,8 @@
 <script>
 import { mapGetters } from 'vuex';
 import $ from 'jquery';
-import TableKlay from '../../components/Table';
-import DataGrid from '../../util/datasource.js';
+import TableKlay from '@/components/Table';
+import DataGrid from '@/util/datasource.js';
 
 export default {
     name : 'data',

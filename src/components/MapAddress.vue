@@ -8,6 +8,11 @@ import {
 import GoogleMap from './GoogleMap';
 export default {
     name: "map-address",
+    props : {
+        mapStyle : {
+            type : Object
+        }
+    },
     components : {
         GoogleMap,
     },    
@@ -50,7 +55,7 @@ export default {
             <button class="btn btn-primary" type="button" @click="checkAddress">Verificar</button>
         </div>
         <div class="form-group col-md-12 ">
-            <google-map style=""/>
+            <google-map :mapStyle="mapStyle"/>
         </div>
     </div>
 </template>

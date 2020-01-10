@@ -1,15 +1,15 @@
 <template>
-  <div class="row m-0">
+  <div class="row mB-0 mL-0 mT-5 mR-0">
       <div class="form-group col-md-2 text-center">
-        <date-picker class="select-form " v-model="date" language="es" :config="options"></date-picker>
+        <date-picker class=" " v-model="date" language="es" :config="options"></date-picker>
       </div>
       <div class="form-group col-md-2">
-        <select class="form-control select-form" >
+        <select class="form-control " >
           <option>Turno</option>
         </select>
       </div>
       <div class="form-group col-md-2">
-        <select class="form-control select-form" >
+        <select class="form-control " >
           <option>Región</option>
         </select>
       </div>
@@ -45,12 +45,3 @@ export default {
   }
 }
 </script>
-
-
-<style scoped>
-
-.select-form {
-  border-radius: 5em;
-  
-}
-</style>

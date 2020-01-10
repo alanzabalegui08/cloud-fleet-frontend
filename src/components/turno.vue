@@ -19,7 +19,7 @@
                         <select class="form-control col mL-15" id="color_down" v-model="turno.output">
                             <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
                         </select>
-                        <button type="button" class="col-4 btn cur-p btn-outline-danger mL-10" 
+                        <button type="button" class="col-4 btn cur-p btn-outline-danger mL-10 mR-15" 
                             @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button> 
                     </div>         
                 </div>
@@ -40,7 +40,7 @@
                         <td class="col-md-5" >{{turno.name}}</td>
                         <td class="col-md-3" >{{turno.input}}</td>
                         <td class="col-md-3" >{{turno.output}}</td>
-                        <td class="col-md-1 text-right">
+                        <td class="col-md-1 text-center">
                             <button type="button" class="btn cur-p btn-outline-danger" @click="removeTurn(turno)">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </button>

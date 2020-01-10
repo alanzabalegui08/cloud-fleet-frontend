@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8" style="border-left: 1px solid #72777a;">
+        <div class="col-md-8 border-form" >
             <div class="bgc-white p-10">
                 <div class="mT-10">
                     <div class="form-row">

@@ -6,66 +6,52 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="col-md-12">
+                        <div class="col-7">
                             <h2 class="">Programación</h2>
+                        </div>
+                        <div class="col-5 text-right">
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 " >Generar</button>
                         </div>
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">
                             </div>  
                             <div class="row gap-20 bd bgc-white" style="height:750px">
-                                <div class="col-md-12">
+                                <div class="col-md-12 p-0">
                                     <div class="row m-10">
-                                        <div class="form-group col-xs-1">
-                                            <h5>Periodo del: </h5>
+                                        <div class="form-group col-md-2 d-md-flex p-0">
+                                             <h5 class="mR-10">Periodo del: </h5>
+                                            <date-picker class="col" name="date" v-model="date" :config="options"></date-picker>
                                         </div>
-                                        <div class="form-group col-md-2 text-center">
-                                            <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
+                                        <div class="form-group col-md-2 d-md-flex p-0">
+                                            <h5 class="mL-10 mR-10">al</h5>
+                                            <date-picker class="col" name="date" v-model="date" :config="options"></date-picker>
                                         </div>
-                                        <div class="form-group col-xs-1 text-center">
-                                            <h5>al </h5>
-                                        </div>
-                                        <div class="form-group col-md-2 text-center">
-                                            <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
-                                        </div>
-                                        <div class="form-group col-xs-1 text-center">
-                                            <h5>Cliente </h5>
-                                        </div>
-                                        <div class="form-group col-md-2 text-center">
-                                            <select class="form-control select-form" id="" >
+                                        <div class="form-group col-md-2 d-md-flex  p-0">
+                                            <h5  class="mL-10 mR-10" >Cliente </h5>
+                                            <select class="form-control col" id="" >
                                                 <option>Seleccionar cliente</option>
                                             </select>                                    
                                         </div>
-                                        <div class="form-group col-xs-1 text-center">
-                                            <h5>Turno</h5>
-                                        </div>
-                                        <div class="form-group col-md-2 text-center">
-                                            <select class="form-control select-form" id="" >
+                                        <div class="form-group col-md-2 d-md-flex  p-0">
+                                            <h5  class="mL-10 mR-10" >Turno</h5>
+                                            <select class="form-control col" id="" >
                                                 <option>Seleccionar turno</option>
                                             </select>                                    
                                         </div>
-                                    </div>
-                                    <div class="row m-10">
-                                        <div class="form-group col-xs-1">
-                                            <h5>Unidad: </h5>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <select class="form-control select-form" id="" >
+                                        <div class="form-group col-md-2 d-md-flex  p-0">
+                                            <h5  class="mL-10 mR-10" >Unidad: </h5>
+                                            <select class="form-control col" id="" >
                                                 <option>Seleccionar unidad</option>
                                             </select>                                                
                                         </div>
-                                        <div class="form-group col-xs-1 text-center">
-                                            <h5>Operador </h5>
-                                        </div>
-                                        <div class="form-group col-md-2 text-center">
-                                            <select class="form-control select-form" id="" >
+                                        <div class="form-group col-md-2 d-md-flex  p-0">
+                                            <h5  class="mL-10 mR-10" >Operador </h5>
+                                            <select class="form-control col" id="" >
                                                 <option>Seleccionar operador</option>
                                             </select>    
                                         </div>
-                                        <div class="form-group col-md-1 text-center">
-                                             <button type="button" class="btn cur-p btn-outline-primary mr-3 select-form" >Generar</button>                                 
-                                        </div>
                                     </div>
-                                    <div class="row m-10">
+                                    <div class="row ">
                                         <table-klay :list="datasource" :columns="gridHeader"></table-klay>
                                     </div>
                                 </div>
@@ -81,12 +67,12 @@
 <script>
 
 import $ from 'jquery';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
+import Sidebar from '@/components/Sidebar';
+import Navbar from '@/components/Navbar';
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
-import TableKlay from '../../components/Table';
-import DataGrid from '../../util/datasource.js';
+import TableKlay from '@/components/Table';
+import DataGrid from '@/util/datasource.js';
 
 export default {
     name : 'comments',
@@ -123,9 +109,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.select-form {
-  border-radius: 5em;
-}
-</style>
+
+
  

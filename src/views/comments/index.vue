@@ -7,77 +7,78 @@
                 <div id='mainContent'>
                     <div class="row">
                         <div class="col-7">
-                            <h2 class="title-klay mL-10">Comentarios</h2>
+                            <h2 class="title-klay mL-10">Comentarios </h2>
                         </div>
                         <div class="col-5 text-right">
                             <button type="button"
-                                class="btn cur-p btn-outline-primary mr-3 mT-15 select-form">Generar</button>
+                                class="btn cur-p btn-outline-primary mr-3 ">Generar</button>
                         </div>
                     </div>
-                    <div class="row gap-20 bd bgc-white mB-30 mT-10">
+                    <div class="bgc-white bd">
+                        <div class="mT-0">
                         <div class="col-md-12">
                             <div class="row m-10">
-                                <div class="col-md-3 col-md-3 d-flex">
+                                <div class="col-2 d-flex p-0">
                                     <h5>Periodo del: </h5>                                
                                     <div class="form-group col text-center">
-                                        <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
-                                    </div>                                    
-                                </div>
-                                <div class="col-md-3 d-flex">
-                                        <h5>al </h5>
-                                    <div class="form-group col text-center">
-                                        <date-picker class="select-form" name="date" v-model="date" :config="options">
+                                        <date-picker class="" name="date" v-model="date" :config="options">
                                         </date-picker>
                                     </div>                                    
                                 </div>
-                                <div class="col-md-3 d-flex">
+                                <div class="col-2 d-flex p-0">
+                                        <h5>al</h5>
+                                    <div class="form-group col text-center">
+                                        <date-picker class="" name="date" v-model="date" :config="options">
+                                        </date-picker>
+                                    </div>                                    
+                                </div>
+                                <div class="col-2 d-flex p-0">
                                     <h5>Categoría </h5>
                                     <div class="form-group col text-center">
-                                        <select class="form-control select-form" id="">
+                                        <select class="form-control " id="">
                                             <option>Seleccionar categoría</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3 d-flex">
-                                    <h5>Sub Categoría </h5>
+                                <div class="col-md-2 d-flex p-0">
+                                    <h5>Sub categoría </h5>
                                     <div class="form-group col text-center">
-                                        <select class="form-control select-form" id="">
+                                        <select class="form-control " id="">
                                             <option>Seleccionar sub categoría</option>
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row m-10">
-                                <div class="col-md-3 d-flex">
+                                <div class="col-2 d-flex">
                                     <h5>Unidad: </h5>                                
                                     <div class="form-group col text-center">
-                                        <select class="form-control select-form" id="">
+                                        <select class="form-control " id="">
                                             <option>Seleccionar unidad</option>
                                         </select>
                                     </div>                                 
                                 </div>
-                                <div class="col-md-3 d-flex">
+                                <div class="col-2 d-flex">
                                     <h5>Operador: </h5>                                
                                     <div class="form-group col text-center">
-                                        <select class="form-control select-form" id="">
+                                        <select class="form-control " id="">
                                             <option>Seleccionar operador</option>
                                         </select>
                                     </div>                                  
-                                </div>
-
-                                <div class="col-md-3 d-flex">
+                                </div>                                                               
+                            </div>
+                            <div class="row m-10 ">
+                                <div class="col-2 d-flex p-0">
                                     <h5>Turno: </h5>                                
                                     <div class="form-group col text-center">
-                                        <select class="form-control select-form" id="">
+                                        <select class="form-control " id="">
                                             <option>Seleccionar turno</option>
                                         </select>
                                     </div>                                
                                 </div>
 
-                                <div class="col-md-3 d-flex">
+                                <div class="col-2 d-flex p-0">
                                     <h5>Cliente: </h5>                                
                                     <div class="form-group col text-center">
-                                        <select class="form-control select-form" id="">
+                                        <select class="form-control " id="">
                                             <option>Seleccionar cliente</option>
                                         </select>
                                     </div>                                  
@@ -88,6 +89,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </main>
         </div>
@@ -139,9 +141,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.select-form {
-  border-radius: 5em;
-}
-</style>
  

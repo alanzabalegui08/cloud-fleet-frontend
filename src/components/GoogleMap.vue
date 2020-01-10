@@ -1,5 +1,5 @@
 <template>
-    <gmap-map :center="center" :zoom="14" style="width:100%;  height: 550px;" @click="addMarketAction">
+    <gmap-map :center="center" :zoom="14" :style="{ height: mapStyle.height }" @click="addMarketAction">
       <GmapMarker v-for="(item, index) in markets" :key="index" :position="item.position"
         @click="center = item.position" />
     </gmap-map>
@@ -12,6 +12,11 @@ import {
 } from 'vuex';
 export default {
   name: "GoogleMap",
+    props : {
+        mapStyle : {
+            type : Object
+        },
+    },    
   data() {
     return {
       center: {

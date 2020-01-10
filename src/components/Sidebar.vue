@@ -8,10 +8,12 @@
               <div class="peers ai-c fxw-nw">
                 <div class="peer">
                   <div class="logo">
-                    <a href="/"><img :src="logo" alt="" :style="{ height: 50 + 'px', }" class="m-5"></a>
+                    <a href="/"><img :src="logo" alt="" :style="{ height: 35 + 'px', }" class="m-15"></a>
                   </div>
                 </div>
-                <div class="peer peer-greed"></div>
+                <div class="peer peer-greed">
+                  <h4>KLAY 2.0</h4>
+                </div>
               </div>
             </a>
           </div>
@@ -39,7 +41,7 @@
           <ul class="dropdown-menu" v-if="item.down">
             <li  v-for="(o, i) in item.submenu" :key="i" >
               <router-link :to="o.path"> 
-                <span v-on:click="changeToggleNav">{{o.name}}</span>
+                <span v-on:click="changeToggleNav('link-bar')">{{o.name}}</span>
               </router-link>
             </li>
           </ul>

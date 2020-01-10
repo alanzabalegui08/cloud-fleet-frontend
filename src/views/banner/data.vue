@@ -1,7 +1,7 @@
 <template>
     <div class="row p-0">
         <div class="col">
-            <h2 >Banner</h2>
+            <h2 class="title-klay" >Banners</h2>
         </div>
         <div class="col text-right">
             <router-link to="/banners/nuevo" class="btn cur-p btn-outline-primary">Nuevo</router-link>
@@ -22,7 +22,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import $ from 'jquery';
-import TableKlay from '../../components/Table';
+import TableKlay from '@/components/Table';
 import DataHeader from '@/util/datasource.js';
 import { alerts } from '@/util/alerts';
 

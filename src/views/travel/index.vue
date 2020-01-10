@@ -6,8 +6,11 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="form-group col-md-12">
-                            <h4 class="title-klay">Resumen de la Programación</h4>
+                        <div class="col-md-10">
+                            <h4 class="title-klay">Viajes - Resumen de la Programación</h4>
+                        </div>
+                        <div class="  col-md-2">
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 -form" >Generar reporte</button>
                         </div>
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">
@@ -15,44 +18,48 @@
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Desde</label>
-                                            <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
+                                            <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Hasta</label>
-                                            <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
+                                            <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Cliente</label>
-                                            <select class="form-control select-form" id="" >
+                                            <select class="form-control " id="" >
                                                 <option>Seleccionar cliente</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Ruta</label>
-                                            <select class="form-control select-form" id="" >
+                                            <select class="form-control " id="" >
                                                 <option>Seleccionar ruta</option>
                                             </select>
                                         </div>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-3 m-20">
+                                    <div class="row">
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Sentido</label>
-                                            <select class="form-control select-form" id="" >
+                                            <select class="form-control " id="" >
                                                 <option>Entrada</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Unidad</label>
-                                            <select class="form-control select-form" id="" >
+                                            <select class="form-control " id="" >
                                                 <option>------</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Operador</label>
-                                            <select class="form-control select-form" id="" >
+                                            <select class="form-control " id="" >
                                                 <option>------</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <button type="button" class="btn cur-p btn-outline-primary mr-3 select-form" >Generar reporte</button>
+                                            
                                         </div>
                                     </div>                                    
                                 </div>
@@ -69,8 +76,8 @@
 
 
 import $ from 'jquery';
-import Sidebar from '../../components/Sidebar';
-import Navbar from '../../components/Navbar';
+import Sidebar from '@/components/Sidebar';
+import Navbar from '@/components/Navbar';
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
 
@@ -108,9 +115,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.select-form {
-  border-radius: 5em;
-}
-</style>
  

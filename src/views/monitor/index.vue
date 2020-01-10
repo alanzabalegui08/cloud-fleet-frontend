@@ -5,13 +5,16 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
+                    <div  class="row">
+                        <h4 class="title-klay pT-10 pL-5" >Monitor</h4>
+                    </div>
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-2 p-0">
                             <filter-monitor />
                         </div>
-                        <div class="col-md-10">
-                            <div class="bgc-white p-10" style="height:850px">
-                                <google-map style="height:100%"/>
+                        <div class="col-md-10 pL-10">
+                            <div class="bgc-white p-10" style="height:800px">
+                                <google-map :mapStyle="mapStyle" />
                             </div>                             
                         </div>
                     </div>                    
@@ -37,6 +40,9 @@ export default {
     },
     data () {
         return {
+            mapStyle : {
+                height : '800px',
+            }
         }
     },
     created (){

@@ -4,12 +4,11 @@
         <div class="mT-5">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="p-15">Monitor</h2>
                 </div>
                 <div class="col-md-12">
-                    <h5 class="p-15">Filtro</h5>
+                    <h5 class="pT-10 pL-15">Filtro</h5>
                     <div class="form-group col-md-12">
-                        <select type="text" class="form-control select-form" >
+                        <select type="text" class="form-control" >
                             <option>UNIDAD</option>
                         </select>
                     </div>
@@ -18,7 +17,7 @@
             <div class="form-row">
                 <div class="col-md-12">
                     <div class="form-group col-md-12">
-                        <select type="text" class="form-control select-form" >
+                        <select type="text" class="form-control" >
                             <option>CLIENTE</option>
                         </select>
                     </div>

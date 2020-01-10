@@ -40,7 +40,7 @@
             <div class="mT-10">
                 <fieldset>
                     <legend class=""><span class="title-form-klay">Dirección</span></legend>
-                    <MapAddress></MapAddress>
+                    <MapAddress :mapStyle="mapStyle"></MapAddress>
                 </fieldset>
             </div>
         </div>
@@ -70,6 +70,10 @@ export default {
             primarycolor : '#1CA085',
             backgroundcolor : '#FF0000',
         },
+        mapStyle : {
+            width : '100%',
+            height: '550px',
+        }
     }
   },
   created () { },

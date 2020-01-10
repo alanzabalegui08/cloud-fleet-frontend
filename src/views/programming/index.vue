@@ -7,21 +7,25 @@
                 <div id='mainContent'>
                     <div class="row">
                         <div class="col-7">
-                            <h2 class="title-klay mL-10">Programación</h2>
+                            <h2 class="title-klay mL-10">Programación </h2>
                         </div>
                         <div class="col-5 text-right">
-                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-15"
+                            <div class="btn cur-p mr-3 ">
+                                Sin unidades
+                                <input class="form-check-input m-5" type="checkbox" /> 
+                            </div>
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 "
                                 title="Actualizar programación">
                                 <i class="fa fa-refresh" aria-hidden="true"></i>
                             </button>
-                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-15"
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 "
                                 title="Reordenar programación">
                                 <i class="fa fa-random" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>
                     <div class="bgc-white bd">
-                        <div class="mT-10">
+                        <div class="mT-0">
                             <bar-search />
                             <div class="col-md-12">
                                 <table-klay :list="datasource" :colums="gridHeader"></table-klay>

@@ -10,13 +10,13 @@
                             <h2 class="title-klay mL-10">PV XR</h2>
                         </div>
                         <div class="col-5 text-right">
-                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-15">
+                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-5">
                                 <i class="fa fa-refresh" aria-hidden="true"></i>
                             </button>
                         </div>
                         </div>                    
                     <div class="bgc-white bd" >
-                        <div class="mT-10">
+                        <div class="mT-20">
                             <bar-programming />
                             <table-klay :list="datasource" :columns="gridHeader"></table-klay>
                         </div>

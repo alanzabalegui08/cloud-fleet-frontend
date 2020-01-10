@@ -1,7 +1,7 @@
 <template>
     <div class="row p-0">
         <div class="col">
-            <h2 >Operadores</h2>
+            <h2 class="title-klay" >Operadores</h2>
         </div>
         <div class="col text-right">
             <router-link to="/operadores/nuevo" class="btn cur-p btn-outline-primary"  >Nuevo</router-link>

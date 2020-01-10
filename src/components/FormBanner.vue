@@ -8,7 +8,7 @@
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="col-md-5">
-                            <div class="row">
+                            <div class="row pR-15">
                                 <div class="form-group col-md-12">
                                     <label for="inputName">Imagen</label>
                                     <input type="file" class="form-control" id=""  placeholder="">
