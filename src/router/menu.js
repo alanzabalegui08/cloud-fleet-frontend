@@ -1,3 +1,7 @@
+import combustibleGray from '@/assets/static/images/combustible_gray.png';
+import mapGray from '@/assets/static/images/mapa_gray.png';
+import catalogoGray from '@/assets/static/images/capas.png';
+
 export default {
     menu :[
         {
@@ -5,7 +9,11 @@ export default {
             only : false,
             down : true,
             path : '/',
-            icon : 'fa fa-list',
+            icon : {        
+                icon : catalogoGray,
+                iconHover : catalogoGray,
+                img : true,
+            },
             class: 'nav-item dropdown',
             toggle : false,
             submenu : [
@@ -55,7 +63,11 @@ export default {
             only : true,
             down : false,
             path : '/monitor',
-            icon : 'fa fa-laptop',
+            icon : {        
+                icon : mapGray,
+                iconHover : mapGray,
+                img : true,
+            },
             class: 'nav-item dropdown',
             toggle : false,
         },
@@ -130,7 +142,11 @@ export default {
             only : false,
             down : true,
             path : '/',
-            icon : 'fa fa-bus',
+            icon : {        
+                icon : combustibleGray,
+                iconHover : combustibleGray,
+                img : true,
+            },
             class: 'nav-item dropdown',
             toggle : false,
             submenu : [

@@ -3,11 +3,11 @@
         <fieldset>
             <legend class=""><span class="title-form-klay">Turnos</span></legend>
             <div class="form-row">
-                <div class="form-group col-md-5">
+                <div class="form-group col-md-7">
                     <label for="inputName">Nombre</label>
                     <input type="text" class="form-control" id="name_client" v-model="turno.name">
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                     <label>Entrada</label>
                     <select class="form-control" id="color_client" v-model="turno.input">
                         <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
@@ -15,13 +15,13 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label>Salida</label>
-                    <select class="form-control" id="color_down" v-model="turno.output">
-                        <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-1">
-                    <button type="button" class="btn cur-p btn-outline-danger mButtonTop"
-                        @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <div class="row">
+                        <select class="form-control col mL-15" id="color_down" v-model="turno.output">
+                            <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
+                        </select>
+                        <button type="button" class="col-4 btn cur-p btn-outline-danger mL-10" 
+                            @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button> 
+                    </div>         
                 </div>
             </div>
         </fieldset>

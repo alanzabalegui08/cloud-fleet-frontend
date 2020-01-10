@@ -41,12 +41,12 @@ export default {
 
 <template>
     <div class="row">
-        <div class="form-group col-md-10">
+        <div class="form-group col-md-12 d-flex m-0">
             <label for="inputPassword">Puedes poner un punto en el mapa o escribir la direccion </label>
-            <input type="text" class="form-control" name="fulladdress" v-model="fulladdress">
-            <span style="color:red;"></span>
         </div>
-        <div class="form-group col-md-2 text-right mButtonTop">
+        
+        <div class="form-group col-md-12 d-flex">            
+            <input type="text" class="form-control mR-20" name="fulladdress" v-model="fulladdress">
             <button class="btn btn-primary" type="button" @click="checkAddress">Verificar</button>
         </div>
         <div class="form-group col-md-12 ">

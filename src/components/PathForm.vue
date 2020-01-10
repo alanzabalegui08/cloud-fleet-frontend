@@ -55,18 +55,14 @@
                 </div>
             </div>
         </div>
-        <div class="  col-md-8">
+        <div class="col-md-8" style="border-left: 1px solid #72777a;">
             <div class="bgc-white p-10">
                 <div class="mT-10">
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <div class="">Activo</div>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox" v-model="route.active" />
-                                    </label>
-                                </div>
+                            <label for="inputName">Activo</label>
+                            <div class="form-group"> 
+                                <input class="" type="checkbox" v-model="route.active" />
                             </div>
                         </div>
                         <div class="form-group col-md-12">

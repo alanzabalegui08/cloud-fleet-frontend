@@ -3,7 +3,7 @@
     <table id="table_turn" class="table"> 
         <thead class="thead-dark" >
             <tr class="row">
-                <th class="col text-center" v-for="(colum,index) in columns" :key="index" ><h5> {{colum.columname}}</h5></th>
+                <th  v-for="(colum,index) in columns" :key="index" :class="colum.class" ><h5> {{colum.columname}}</h5></th>
             </tr>
         </thead>
         <tbody>

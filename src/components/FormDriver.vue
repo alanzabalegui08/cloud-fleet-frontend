@@ -10,9 +10,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <div class="col-md-12">
-                                        <img src="https://via.placeholder.com/180x160.png"/>
-                                    </div>
+                                    <img src="https://via.placeholder.com/180x160.png"/>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Fotografía</label>
                                         <input type="file" class="form-control"  placeholder="">
@@ -95,7 +93,7 @@
                             <input type="text" class="form-control"  v-model="driver.noLicenciaEstatal" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputtext">Vingencia Licencia Estatal </label>
+                            <label for="inputtext">Vig. Licencia Estatal </label>
                             <date-picker class="form-control" name="date" v-model="driver.vigLicenciaEstatal" :config="options" autocomplete="off"></date-picker >
                         </div>
                         <div class="form-group col-md-3">
@@ -103,7 +101,7 @@
                             <input type="text" class="form-control"  v-model="driver.noLicenciaFederal" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputtext">Vigencia Licencia Federal </label>
+                            <label for="inputtext">Vig. Licencia Federal </label>
                             <date-picker class="form-control" name="date" v-model="driver.vigLicenciaFederal" :config="options" autocomplete="off"></date-picker>
                         </div>
                     </div>

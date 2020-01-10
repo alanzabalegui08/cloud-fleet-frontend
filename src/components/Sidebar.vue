@@ -17,7 +17,7 @@
           </div>
           <div class="peer">
             <div class="mobile-toggle sidebar-toggle">
-              <a href="#" @click.prevent="changeToggleNav()" class="td-n">
+              <a href="#" @click.prevent="changeToggleNav('sidebar-mobil')" class="td-n">
                 <i class="ti-arrow-circle-left"></i>
               </a>
             </div>
@@ -28,6 +28,7 @@
         <li  v-for="(item, index) in listMenu" :class="item.class" :key="index" >
           <a  :class="(item.down) ? 'dropdown-toggle' :'sidebar-link'" href="#" @click.prevent="acctionSubmenu(item)">
             <span class="icon-holder">
+              <img v-if="item.icon.img" :src="item.icon.icon" alt="" :style="{ height: 20 + 'px', }" />     
               <i :class="item.icon"></i>
             </span>
             <span class="title">{{item.name}}</span>
@@ -74,8 +75,8 @@ export default {
         menu.toggle = !menu.toggle;
         
       },
-      changeToggleNav(){
-        toggleNav();
+      changeToggleNav( accion = null){
+        toggleNav(accion);
       }
     }
 }

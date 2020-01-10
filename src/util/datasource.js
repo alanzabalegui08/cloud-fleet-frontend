@@ -5,28 +5,28 @@ export default {
             column: 'name',
             columname : 'Nombre',
             type : 'text',
-            class : 'col text-center',
+            class : 'col-6 text-left',
         },
         {
             id : 1,
             column: 'primarycolor',
             columname : 'Color primario',
             type : 'color',
-            class : 'col text-center',
+            class : 'col-2 text-center',
         },
         {
             id : 2,
             column: 'backgroundcolor',
             columname : 'Color de fondo',
             type : 'color',
-            class : 'col text-center',
+            class : 'col-2 text-center',
         },
         {
             id : 3,
             column : 'accion',            
             columname : 'Acción',
             type : 'accion',
-            class : 'col text-center'
+            class : 'col-2 text-center'
         }
     ],
     path : [
