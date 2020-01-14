@@ -64,6 +64,7 @@ import AlertGas  from  '../views/alerts';
 //charts
 import Chart from '../views/chart/'
 import ChartCategory from '../views/chart/comments-category.vue'
+import ListAlerts from '../views/alerts/list.vue';
 
 
 
@@ -312,7 +313,16 @@ export const router  = new Router({
             component : AlertGas,            
             meta : {
                 requiresAuth: true,
-            }          
+            }
+        },
+        {
+            path : '/alertas/detalles',
+            name : 'alertadetalles',
+            component : ListAlerts,
+            props: true,
+            meta : {
+                requiresAuth: true,
+            }
         },
         {
             path : '/grafica/rutas-cliente',
@@ -320,7 +330,7 @@ export const router  = new Router({
             component : Chart,            
             meta : {
                 requiresAuth: true,
-            }          
+            }
         }, 
         {
             path : '/grafica/comentarios-categoria',
@@ -328,7 +338,7 @@ export const router  = new Router({
             component : ChartCategory,            
             meta : {
                 requiresAuth: true,
-            }          
+            }
         },        
         {
             path: '/login',

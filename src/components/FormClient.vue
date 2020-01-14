@@ -22,15 +22,16 @@
                                 <span style="color:red;">{{ errors[0] }}</span>
                             </ValidationProvider>
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-3 d-flex">
                             <strong>Color de texto:</strong>
-                            <swatches v-model="client.primarycolor" colors="text-advanced" popover-to="left"></swatches>
+                            <verte class="ml-3" picker="square" v-model="client.primarycolor"></verte>
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-3 d-flex">
                             <strong>Color de fondo:</strong>
-                            <swatches v-model="client.backgroundcolor" colors="text-advanced" popover-to="left">
-                            </swatches>
+                            <verte class="ml-3" picker="square" v-model="client.backgroundcolor"></verte>
                         </div>
+
+                        
                     </div>
                 </fieldset>
                 <turno :list="client.turn" />
@@ -49,17 +50,16 @@
 
 <script>
 import turno from './Turno';
-//import GoogleMap from './GoogleMap';
+import Verte from 'verte';
+import 'verte/dist/verte.css';
 import MapAddress from './MapAddress';
 import { mapActions } from 'vuex';
-import Swatches from 'vue-swatches';
 
 export default {
   name : 'form-client',
   components : {
       turno,
-      //GoogleMap,
-      Swatches,
+      Verte,
       MapAddress,
   },
   data () {
@@ -73,7 +73,8 @@ export default {
         mapStyle : {
             width : '100%',
             height: '550px',
-        }
+        },
+        colors :''
     }
   },
   created () { },

@@ -4,7 +4,7 @@
             <h2 class="title-klay">Cargas de combustibles</h2>
         </div>
         <div class="col text-right">
-            <router-link to="/carga-combustible/nuevo" class="btn cur-p btn-outline-primary mT-15">Agregar</router-link>
+            <router-link to="/carga-combustible/nuevo" class="btn cur-p btn-outline-primary mT-0">Agregar</router-link>
         </div>
         <div class="col-xs-12 col-md-12">
             <table-klay :list="clients" :columns="dataHeader"></table-klay>

@@ -5,57 +5,59 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
+                    <div class="row pL-15">
+                        <h3 class="title-klay">Resumen Grafica</h3>
+                    </div>
                     <div class="row">
                         <div class="col-md-2">
-                            <div class="row gap-20 bd bgc-white ">
+                            <div class="row bgc-white p-10">
                                 <div class="col-md-12">
-                                    <h4 class="">Comentario por categoria</h4>
+                                    <h5 class="">Comentario por categoria</h5>
                                     <spam class="">utiliza los filtros para mejores resultados</spam>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <h4>Fecha : </h4>
-                                    <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
+                                    <h5>Fecha : </h5>
+                                    <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                 </div>
                                 <div class="form-group col-md-12 ">
-                                    <h4>Categoria : </h4>
-                                    <select class="form-control select-form" id="">
+                                    <h5>Categoria : </h5>
+                                    <select class="form-control " id="">
                                          <option>Categoria</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <h4>Subcategoria : </h4>
-                                    <select class="form-control select-form" id="">
+                                    <h5>Subcategoria : </h5>
+                                    <select class="form-control " id="">
                                          <option>Subcategoria</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                     <h4>Unidad : </h4>
-                                    <select class="form-control select-form" id="">
+                                     <h5>Unidad : </h5>
+                                    <select class="form-control " id="">
                                          <option>Unidad</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <h4>Operador : </h4>
-                                    <select class="form-control select-form" id="">
+                                    <h5>Operador : </h5>
+                                    <select class="form-control " id="">
                                          <option>Operador</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                     <h4>Turno : </h4>
-                                    <select class="form-control select-form" id="">
+                                     <h5>Turno : </h5>
+                                    <select class="form-control " id="">
                                          <option>Turno</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <h4>Cliente : </h4>
-                                    <select class="form-control select-form" id="">
+                                    <h5>Cliente : </h5>
+                                    <select class="form-control " id="">
                                         <option>Cliente</option>
                                     </select>
                                 </div>
                             </div>   
                         </div>
-                        <div class="col-md-10">
-                            <h3>Resumen Grafica</h3>
+                        <div class="col-md-10 bgc-white">
                             <GChart
                                 type="BarChart"
                                 :data="chartData"

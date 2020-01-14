@@ -2,18 +2,18 @@
   <div class="row">
     <div class="col">
       <div class="row mB-15 mL-0 mT-15 mR-0">
-        <div class="form-group col-md-2 mTopProgramming">
+        <div class="form-group col-md-2 mTopProgramming pr-md-0">
           <select class="form-control ">
             <option>Cliente</option>
           </select>
         </div>
-        <div class="form-group col-md-2 mTopProgramming">
+        <div class="form-group col-md-2 mTopProgramming pr-md-0">
           <select class="form-control ">
             <option>Turno</option>
           </select>
         </div>
-        <div class="form-group col-md-4 d-none d-sm-block  mTopProgramming"></div>
-        <div class="form-group col-md-2 mTopProgramming">
+        <div class="form-group col-md-4 d-none d-sm-block mTopProgramming" ></div>
+        <div class="form-group col-md-2 mTopProgramming pr-md-0">
           <select class="form-control ">
             <option>Sentido</option>
           </select>

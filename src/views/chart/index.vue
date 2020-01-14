@@ -15,17 +15,17 @@
                         <div class="w-100">                           
                             <div class="row gap-20 bd bgc-white ">
                                 <div class="form-group col-md-2">
-                                    <select class="form-control select-form"  >
+                                    <select class="form-control "  >
                                         <option>Seleccione un cliente</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-md-2 d-flex">
+                                <div class="form-group col-md-2 d-md-flex pb-sm-0">
                                     <h4 class="title-form-klay mR-15">Fecha: </h4>
-                                    <date-picker class="select-form" name="date" v-model="date" :config="options"></date-picker>
+                                    <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                 </div>
-                                <div class="form-group col-md-2 text-center d-flex">
+                                <div class="form-group col-md-2 d-md-flex pb-sm-0">
                                     <h4 class="title-form-klay mR-15">Turno: </h4>
-                                    <select class="form-control select-form" id="">
+                                    <select class="form-control " id="">
                                         <option>Turno 1</option>
                                         <option>Turno 2</option>
                                         <option>Turno 3</option>

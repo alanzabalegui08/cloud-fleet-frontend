@@ -2,8 +2,8 @@
 <div class="table-responsive container-fluid">
     <table id="table_turn" class="table"> 
         <thead class="thead-dark" >
-            <tr class="row">
-                <th  v-for="(colum,index) in columns" :key="index" :class="colum.class" ><h5> {{colum.columname}}</h5></th>
+            <tr class="row table-row-head">
+                <th  v-for="(colum,index) in columns" :key="index" class="table-space-word p-10" :class="colum.class" ><h5> {{colum.columname}}</h5></th>
             </tr>
         </thead>
         <tbody>

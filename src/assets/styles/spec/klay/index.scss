@@ -18,6 +18,15 @@
     font-size: 13px;
 }
 
+.table-row-head {
+    height: 40px;
+    overflow: hidden;
+}
+
+.table-space-word {
+    white-space: nowrap;
+}
+
 .btn-md {
     display: inline;
 }
@@ -26,7 +35,7 @@
 }
 
 .select-form {
-    border-radius: 5em;
+    border-radius: .8em;
 }
 
 .mButtonTop {
@@ -50,6 +59,12 @@
     border-right: 1px solid rgb(233, 236, 239);
 }
 
+.table .thead-dark th {
+    background-color: #73787b;
+}
+.n-color-pallete {
+    background-color: #ebecf0 !important;
+}
 
 @media (max-width: 600px) {
     .title-klay {

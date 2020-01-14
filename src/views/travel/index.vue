@@ -9,20 +9,20 @@
                         <div class="col-md-10">
                             <h4 class="title-klay">Viajes - Resumen de la Programación</h4>
                         </div>
-                        <div class="  col-md-2">
+                        <div class="col-md-2 text-right">
                             <button type="button" class="btn cur-p btn-outline-primary mr-3 -form" >Generar reporte</button>
                         </div>
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">
-                                <div class="col-md-3 m-20">
+                                <div class="col-md-3 mL-10 mR-0 mT-10  border-form-right">
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Desde</label>
-                                            <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
+                                            <date-picker v-model="date" :config="options"></date-picker>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Hasta</label>
-                                            <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
+                                            <date-picker v-model="date" :config="options"></date-picker>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Cliente</label>
@@ -38,7 +38,7 @@
                                         </div>
                                     </div>                                    
                                 </div>
-                                <div class="col-md-3 m-20">
+                                <div class="col-md-3 mR-10 mT-10 mL-0 ">
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Sentido</label>

@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <span  class="title-form-klay" style="color:#2196f3;">/ Rutas / Nueva ruta </span>
         </div>        
-        <div class="col-md-4">
+        <div class="col-md-4 border-form-right">
             <div class="bgc-white p-10 ">
                 <div class="mT-10">
                     <div class="form-row">

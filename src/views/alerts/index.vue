@@ -11,10 +11,10 @@
                         </div>
                     </div>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div> 
                         <div class="w-100">
                             <div class="row gap-20">
-                                <div class='col-md-3'>
+                                <div class='col-md-3' @click="clickAlert('UNIDADES DE BAJO RENDIMIENTO')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="lh-1">UNIDADES DE BAJO RENDIMIENTO</h4>
@@ -35,10 +35,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3'>
+                                <div class='col-md-3' @click="clickAlert('CARGAS NO RECONOCIDAS')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
-                                            <h4 class="lh-1">CARGAS COMBUSTIBLE NO RECONOCIDAS</h4>
+                                            <h4 class="lh-1">CARGAS NO RECONOCIDAS</h4>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
@@ -55,11 +55,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3'>
+                                <div class='col-md-3' @click="clickAlert('UNIDADES CON BAJA PRODUCTIVIDAD')" >
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="lh-1">UNIDADES CON BAJA PRODUCTIVIDAD</h4>
-                                            <br>
                                         </div>
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
@@ -76,7 +75,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3'>
+                                <div class='col-md-3' @click="clickAlert('OPERADORES CON INCIDENCIA')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="lh-1">OPERADORES CON INCIDENCIA</h4>
@@ -97,10 +96,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3'>
+                                <div class='col-md-3' @click="clickAlert('VER TODAS LAS ALERTAS')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
-                                            <h4 class="lh-1">OPERADORES CON INCIDENCIA</h4>
+                                            <h4 class="lh-1">VER TODAS LAS ALERTAS</h4>
                                             <br>
                                         </div>
                                         <div class="layer w-100">
@@ -149,9 +148,21 @@ export default {
     },
     computed: {},
     methods: {
+
         showModal() {
             let element = this.$refs.modal.$el;
             $(element).modal('show');
+        },
+        clickAlert(title) {
+            this.$router.push(
+                { 
+                    name: 'alertadetalles',
+                    params: {
+                        title: title,
+                        data : this.datasource
+                    }
+                }
+            );
         }
     }
 }
