@@ -10,7 +10,7 @@
                             <h4 class="title-klay">Viajes - Resumen de la Programación</h4>
                         </div>
                         <div class="col-md-2 text-right">
-                            <button type="button" class="btn cur-p btn-outline-primary mr-3 -form" >Generar reporte</button>
+                            <button type="button" class="btn cur-p btn-outline-primary py-1 mt-md-2" >Generar reporte</button>
                         </div>
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">

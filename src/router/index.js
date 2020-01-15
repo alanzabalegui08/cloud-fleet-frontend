@@ -374,9 +374,9 @@ router.beforeEach((to, from, next) => {
       }
   } else if(to.matched.some(record => record.meta.guest)) {
       if ( to.path == '/' && storage === null) {
-        console.log(' two ');
+        console.log('two');
         router.push('/login');
-        console.log(' two ');
+        console.log('two');
       } else {
         console.log(' tree ');
         next();

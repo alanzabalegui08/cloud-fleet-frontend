@@ -7,7 +7,6 @@ const initialState = () => ({
 
 const state = initialState ();
 
-
 const actions = {
     createTruck ({commit}, truck) {
         commit('create', truck);

@@ -6,8 +6,11 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-8">
                             <h2 class="title-klay mL-10">Histórico de unidad </h2>
+                        </div>
+                        <div class="col-4 text-right">
+                            <button type="button" class="btn cur-p btn-outline-primary py-1 mt-sm-2">Actualizar</button>
                         </div>
                     </div>
                     <div class="bgc-white bd">
@@ -21,18 +24,16 @@
                                             </select>
                                         </div>
                                         <div class="form-group col-md-2 text-center d-flex pL-0">
-                                            <h5 class="mR-10 mT-5">Desde</h5>
+                                            <h5 class="mR-10 mT-5 ml-3 ml-md-0">Desde</h5>
                                             <date-picker class="" name="date" v-model="date" :config="options">
                                             </date-picker>
                                         </div> 
 
                                         <div class="form-group col-md-2 text-center d-flex pL-0">
-                                            <h5 class="mR-10 mT-5">Hasta:</h5>
+                                            <h5 class="mR-10 mT-5 ml-3 ml-md-0">Hasta:</h5>
                                             <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                         </div>                                        
                                         <div class="form-group col-md-2">
-                                            <button type="button"
-                                                class="btn cur-p btn-outline-primary mr-3">Actualizar</button>
                                         </div>
                                     </div>
                                 </div>

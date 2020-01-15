@@ -44,14 +44,18 @@ export default {
     },
     methods : {
         onSubmit(){
+            
             if(this.existsgTurn){
                 this.$refs.clientForm.handClient();
                 this.$router.push('/clientes');
                 return;
             }
-            this.$toasted.show('Debes agregar al menos un turno',{
-                position: "top-right", 
-                duration : 5000
+            this.$toast.open({
+                message: "Error: debes agregar almenos un turno",
+                type: "error",
+				duration: 5000,
+                dismissible: true,
+                position : 'top',
             });
         },
         cancelar(){

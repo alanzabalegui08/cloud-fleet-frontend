@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-12">
-            <span  class="title-path-klay" style="color:#2196f3;">/ Supervisor / Nuevo supervisor </span>
+            <router-link class="title-form-klay" style="color:#2196f3;"  to="/supervisor">/ Supervisor / Nuevo supervisor </router-link>
         </div>        
         <div class="col-md-12">
             <div class="bgc-white p-10">
@@ -9,7 +9,7 @@
                     <div class="form-row">
                         <div class="col-md-6">
                             <div class="row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-6 ">
                                     <label for="inputName">Nombre</label>
                                     <ValidationProvider vid="name" name="Nombre" rules="required|alpha"
                                         v-slot="{ errors }">

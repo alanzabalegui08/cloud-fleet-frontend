@@ -8,7 +8,7 @@
                         <bar-submit :title="titleBar"  @cancelar="cancelar"></bar-submit>
                         <div class="row">
                             <div class="col-md-12">
-                                <span  class="title-form-klay" style="color:#2196f3;">/ Combustible / Carga de combustible </span>
+                                <router-link class="title-form-klay" style="color:#2196f3;" to="/carga-combustible">/ Combustible / Carga de combustible</router-link>
                             </div>
                             <div class="col-md-12">
                                 <form-loadgas ref="loadgasForm"></form-loadgas>
@@ -17,11 +17,10 @@
                     </form>
                     </ValidationObserver>
                 </div>
-            </div>                            
+            </div>
         </div>
     </div>
 </template>
-
 <script>
 
 import FormLoadgas from '@/components/FormLoadgas';

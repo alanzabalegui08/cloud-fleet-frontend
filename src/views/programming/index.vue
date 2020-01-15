@@ -9,8 +9,8 @@
                         <div class="col-7">
                             <h2 class="title-klay mL-10">Programación </h2>
                         </div>
-                        <div class="col-5 text-right">
-                            <div class="btn cur-p mr-3 ">
+                        <div class="col-5 text-right pb-2 py-sm-2">
+                            <div class="btn cur-p mr-3 my-1">
                                 Sin unidades
                                 <input class="form-check-input m-5" type="checkbox" /> 
                             </div>

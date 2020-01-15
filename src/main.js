@@ -19,15 +19,18 @@ import {
   localize
 } from 'vee-validate';
 import es from 'vee-validate/dist/locale/es.json';
-import Toasted from 'vue-toasted';
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/index.css';
+
 import {
   API_KEY_MAPS
 } from "./util/constant";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import VTooltip from 'v-tooltip';
+Vue.use(VTooltip);
 
 Object.keys(rules).forEach(rule => {
   extend(rule, rules[rule]);
@@ -45,7 +48,7 @@ Vue.use(VueGoogleMaps, {
     libraries: ['places'],
   }
 });
-Vue.use(Toasted);
+Vue.use(VueToast);
 new Vue({
   el: '#app',
   store,

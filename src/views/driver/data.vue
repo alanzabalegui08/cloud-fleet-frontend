@@ -4,7 +4,7 @@
             <h2 class="title-klay" >Operadores</h2>
         </div>
         <div class="col text-right">
-            <router-link to="/operadores/nuevo" class="btn cur-p btn-outline-primary"  >Nuevo</router-link>
+            <router-link to="/operadores/nuevo" class="btn cur-p btn-outline-primary py-1 mt-sm-2"  >Nuevo</router-link>
         </div>
         <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-0 bd">

@@ -9,8 +9,8 @@
                         <div class="col-7">
                             <h2 class="">Programación</h2>
                         </div>
-                        <div class="col-5 text-right">
-                            <button type="button" class="btn cur-p btn-outline-primary mr-3 " >Generar</button>
+                        <div class="col-5 text-right pr-md-0">
+                            <button type="button" class="btn cur-p btn-outline-primary py-1 mt-md-2" >Generar</button>
                         </div>
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">

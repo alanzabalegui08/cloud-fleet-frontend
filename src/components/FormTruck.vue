@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-12">
-            <span  class="title-path-klay" style="color:#2196f3;">/ Unidades / Nueva unidad </span>
+            <router-link class="title-form-klay" style="color:#2196f3;"  to="/unidades">/ Unidades / Nueva unidad </router-link>
         </div>        
         <div class="col-md-6">
             <div class="bgc-white" >

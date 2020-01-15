@@ -11,7 +11,7 @@
                         </div>
                         <div class="col-5 text-right">
                             <button type="button"
-                                class="btn cur-p btn-outline-primary mr-3 ">Generar</button>
+                                class="btn cur-p btn-outline-primary py-1 mt-md-2">Generar</button>
                         </div>
                     </div>
                     <div class="bgc-white bd">

@@ -1,10 +1,10 @@
 <template>
     <div class="row p-0">
         <div class="col">
-            <h2 >Rutas</h2>
+            <h2 class="klay-title" >Rutas</h2>
         </div>
         <div class="col text-right">
-            <router-link to="/rutas/nuevo" class="btn cur-p btn-outline-primary"  >Nuevo</router-link>
+            <router-link to="/rutas/nuevo" class="btn cur-p btn-outline-primary py-1 mt-2"  >Nuevo</router-link>
         </div>
         <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-0 bd">

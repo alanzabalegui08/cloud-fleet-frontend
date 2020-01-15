@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-12">
-            <span  class="title-form-klay" style="color:#2196f3;">/ Clientes / Nuevo cliente </span>
+            <router-link class="title-form-klay" style="color:#2196f3;"  to="/clientes">/ Clientes / Nuevo cliente</router-link>
         </div>
         <div class="col-md-6">
             <div class="mT-10">
@@ -28,10 +28,8 @@
                         </div>
                         <div class="form-group col-md-3 d-flex">
                             <strong>Color de fondo:</strong>
-                            <verte class="ml-3" picker="square" v-model="client.backgroundcolor"></verte>
+                            <verte class="ml-3" v-model="client.backgroundcolor"></verte>
                         </div>
-
-                        
                     </div>
                 </fieldset>
                 <turno :list="client.turn" />
@@ -55,38 +53,39 @@ import 'verte/dist/verte.css';
 import MapAddress from './MapAddress';
 import { mapActions } from 'vuex';
 
+
 export default {
-  name : 'form-client',
-  components : {
-      turno,
-      Verte,
-      MapAddress,
-  },
-  data () {
-    return {
-        client : {
-            name : '',
-            password: '',
-            primarycolor : '#1CA085',
-            backgroundcolor : '#FF0000',
+    name: 'form-client',
+    components: {
+        turno,
+        Verte,
+        MapAddress,
+    },
+    data() {
+        return {
+            client: {
+                name: '',
+                password: '',
+                primarycolor: '#1CA085',
+                backgroundcolor: '#FF0000',
+            },
+            mapStyle: {
+                width: '100%',
+                height: '550px',
+            },
+            colors: ''
+        }
+    },
+    created() {},
+    mounted() {},
+    computed: {},
+    methods: {
+        ...mapActions({
+            add: 'client/createClient'
+        }),
+        handClient() {
+            this.add(this.client);
         },
-        mapStyle : {
-            width : '100%',
-            height: '550px',
-        },
-        colors :''
     }
-  },
-  created () { },
-  mounted () { },
-  computed : { },
-  methods : {
-      ...mapActions({
-          add : 'client/createClient'
-      }),
-      handClient () {
-          this.add(this.client);
-      },
-  }
 }
 </script>

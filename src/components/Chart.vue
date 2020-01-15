@@ -18,7 +18,7 @@
                             label: this.title,
                             data: this.data,
                             fill: this.fill,
-                            backgroundColor: '#ff0000',
+                            backgroundColor: '#43a047',
                             borderColor: this.borderColor,
                             borderWidth: this.borderWidth ? this.borderWidth : 1
                         },

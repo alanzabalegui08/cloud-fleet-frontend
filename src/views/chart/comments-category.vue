@@ -5,7 +5,7 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row pL-15">
+                    <div class="row pL-20">
                         <h3 class="title-klay">Resumen Grafica</h3>
                     </div>
                     <div class="row">

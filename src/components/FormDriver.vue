@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-12">
-            <span  class="title-path-klayy" style="color:#2196f3;">/ Operadores / Nuevo operador </span>
+            <router-link class="title-form-klay" style="color:#2196f3;"  to="/operadores">/ Operadores / Nuevo operador</router-link>
         </div>        
         <div class="col-md-6">
             <div class="bgc-white " >

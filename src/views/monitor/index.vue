@@ -6,7 +6,7 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div  class="row">
-                        <h4 class="title-klay pT-10 pL-15" >Monitor</h4>
+                        <h4 class="title-klay pT-10 pl-3 pl-md-1" >Monitor</h4>
                     </div>
                     <div class="row">
                         <div class="col-md-2 p-0 p-sm-10" >

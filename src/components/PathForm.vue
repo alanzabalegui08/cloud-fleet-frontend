@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-12">
-            <span  class="title-form-klay" style="color:#2196f3;">/ Rutas / Nueva ruta </span>
+            <router-link class="title-form-klay" style="color:#2196f3;"  to="/rutas">/ Rutas / Nueva ruta </router-link>
         </div>        
         <div class="col-md-4 border-form-right">
             <div class="bgc-white p-10 ">
