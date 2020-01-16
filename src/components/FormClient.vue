@@ -47,12 +47,11 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import turno from './Turno';
 import Verte from 'verte';
 import 'verte/dist/verte.css';
 import MapAddress from './MapAddress';
-import { mapActions } from 'vuex';
-
 
 export default {
     name: 'form-client',

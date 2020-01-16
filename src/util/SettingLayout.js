@@ -1,7 +1,9 @@
 export function toggleNav(from = null) {
+  console.log(from);
+  
   const app = document.querySelector('.is-collapsed');
   if (from === 'link-bar') {
-    document.querySelector('.app').classList.remove('is-collapsed');
+    document.querySelector('.app').classList.add('is-collapsed');
     return;
   }
 
@@ -34,7 +36,6 @@ export function StringToHSL(color) {
 }
 
 export function HSLToHex(color) {
-  console.log(color);
   let h = color[0];
   let s = color[1];
   let l = color[2];
@@ -71,12 +72,11 @@ export function HSLToHex(color) {
     g = 0;
     b = x;
   }
-  // Having obtained RGB, convert channels to hex
+  
   r = Math.round((r + m) * 255).toString(16);
   g = Math.round((g + m) * 255).toString(16);
   b = Math.round((b + m) * 255).toString(16);
 
-  // Prepend 0s, if necessary
   if (r.length == 1)
     r = "0" + r;
   if (g.length == 1)

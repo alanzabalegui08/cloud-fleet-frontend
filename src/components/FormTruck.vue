@@ -11,11 +11,11 @@
                             <div class="row">
                                 <div class="col-md-3 p-0">
                                     <div class="col-md-12">
-                                        <img class="img-profile" src="https://via.placeholder.com/350x225.png" />
+                                        <img class="img-profile" :src="truck.image" />
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputName">Fotografía</label>
-                                        <input type="file" class="form-control"  placeholder="">
+                                        <input type="file"  @change="onFileChange($event)" class="form-control"  placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-9  border-form-right p-0">
@@ -205,6 +205,11 @@ export default {
 
         handleTruck() {
             this.add(this.truck);
+        },
+
+        onFileChange(e) {
+            const file =  e.target.files[0];
+            this.truck.image = URL.createObjectURL(file);
         }
     }
 }

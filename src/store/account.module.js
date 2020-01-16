@@ -1,4 +1,5 @@
-//import {userService} from '../service';
+import {userService} from '../service';
+import { USERNAME_DEV,PASSWORD_DEV } from "../util/constant";
 import {
     router
 } from '../router';
@@ -6,14 +7,12 @@ import {
 // estado inicial del modulo
 const initialState = () => ({
     status: {
-        loggedIn: false
+        loggedIn: false,
+        errorLogin : false,
     },
     user: null,
-    saludo: ''
+    saludo: '',
 });
-
-// se crea la inicializacion del state 
-//model of account 
 
 const state = initialState();
 
@@ -21,10 +20,13 @@ const actions = {
     login({
         commit
     }, user) {
-        //const user_ = userService.login(user.username,user.password);
-        //console.warn (user_);
-        commit('loginSuccess', user);
-        router.push('/');
+        console.warn (user);
+        if(user.username === USERNAME_DEV && user.password === PASSWORD_DEV){
+            commit('loginSuccess', user);
+            router.push('/');
+        }else {
+            commit('errorLogin');
+        }
     },
     logout() {
         // datasheet 
@@ -40,10 +42,18 @@ const actions = {
 const mutations = {
 
     loginSuccess(state, user) {
+        console.log(user);
         state.status = {
-            loggedIn: true
+            loggedIn: true,
+            errorLogin : false,
         };
-        state.user = user;
+        const userAuth = userService.login(user.username,user.password);
+        state.user = userAuth;
+    },
+    errorLogin (state) {
+        state.status =  {
+            errorLogin : true,
+        };
     },
 
     stateReset(state) {
@@ -58,6 +68,9 @@ const mutations = {
 const getters = {
     isLoggedIn: state => {
         return state.status.loggedIn;
+    },
+    isErrorLogin : state => {
+        return state.status.errorLogin;
     }
 };
 

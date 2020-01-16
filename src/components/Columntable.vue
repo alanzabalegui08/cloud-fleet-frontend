@@ -1,12 +1,18 @@
 <template>
     <div >
-        <span v-if="type === 'text' ">{{value}}</span>
+        <span v-if="type === 'text'" style="font-size:13pt;">{{value}}</span>
         <span class="text-center" v-if="type === 'color' ">
             <div class="mx-auto w-10 p-3" v-tooltip.top-center="value" :style="{ height: 30 +'px', width: 30 + 'px',backgroundColor : value}" ></div></span>
         <div  v-if="type === 'accion' ">
             <button type="button" class="btn cur-p btn-outline-danger mr-3"  @click="onDeleteItem(item)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
             <button type="button" class="btn cur-p btn-outline-success mr-3" ><i class="fa fa-location-arrow" aria-hidden="true"></i></button>
             <button type="button" class="btn cur-p btn-outline-primary mr-3" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        </div>
+        <div  v-if="type === 'image' ">
+            <img class="img-profile" :src="value"  :style="{ height: 70 +'px',width :'100px'}" />
+        </div>
+        <div  v-if="type === 'banner' ">
+            <img class="img-profile" :src="value"  :style="{ height: 115 +'px',}" />
         </div>
     </div>
 </template>

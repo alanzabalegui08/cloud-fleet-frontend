@@ -11,11 +11,11 @@
                             <div class="row">
                                 <div class="col-md-3 pR-sm-0">
                                     <div class="">
-                                        <img class="img-profile" src="https://via.placeholder.com/350x225.png" />
+                                        <img class="img-profile" :src="driver.image" />
                                     </div>
                                     <div class="form-group">
                                         <label for="inputName">Fotografía</label>
-                                        <input type="file" class="form-control"  placeholder="">
+                                        <input type="file" class="form-control" @change="onFileChange($event)"  placeholder=""   >
                                     </div>
                                 </div>
                                 <div class="col-md-9 border-form-right p-0">
@@ -77,7 +77,7 @@
                                     <span style="color:red;">{{ errors[0] }}</span>
                                 </ValidationProvider>
                             </div>
-                        </div>                    
+                        </div>
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="inputPassword">RFC</label>
@@ -128,7 +128,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@
 <script>
 import {
     driverModel
-} from "../util/model";
+} from "@/util/model";
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
 import {
@@ -175,6 +175,11 @@ export default {
 
         handleDriver() {
             this.add(this.driver);
+        },
+
+        onFileChange(e) {
+            const file =  e.target.files[0];
+            this.driver.image = URL.createObjectURL(file);
         }
     }
 }

@@ -16,6 +16,7 @@ export const driverModel = () => ({
     typeBlood : 'O+',
     region : 'XXXXX',
     active : false,
+    image : 'https://via.placeholder.com/350x225.png',
 });
 
 export const truckModel = () =>  ({
@@ -43,6 +44,7 @@ export const truckModel = () =>  ({
     tirada : false,
     puntaje : '',
     fotografia : '',
+    image : 'https://via.placeholder.com/350x225.png',
 });
 
 export const supervisorModel = () => ({

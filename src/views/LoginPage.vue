@@ -1,129 +1,519 @@
 <template>
-    <div class="peers ai-s fxw-nw h-100vh">
-      <div class="d-n@sm- peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" v-bind:style="{ 'background-image': 'url(' + img_background + ')' }">
-        <div class="pos-a centerXY">
-          <div class="bgc-white bdrs-50p pos-r" style='width: 120px; height: 120px;'>
-            <img class="pos-a centerXY" src="assets/static/images/logo.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
-        
-        <form>
-          <div class="form-group">
-            <label class="text-normal text-dark">Usaurio</label>
-            <input type="email" class="form-control" placeholder="">
-          </div>
-          <div class="form-group">
-            <label class="text-normal text-dark">Password</label>
-            <input type="password" class="form-control" placeholder="">
-          </div>
-          <div class="form-group">
-            <div class="peers ai-c jc-sb fxw-nw">
-              <div class="peer">
-                <div class="checkbox checkbox-circle checkbox-info peers ai-c">
-                  <input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer">
-                  <label for="inputCall1" class=" peers peer-greed js-sb ai-c">
-                    <!-- <span class="peer peer-greed">Remember Me</span> -->
-                  </label>
-                </div>
-              </div>
-              <div class="peer">
-                <button class="btn btn-primary">Ingresar</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+        <ValidationObserver v-slot="{handleSubmit}">
+				<form class="login100-form validate-form"  @submit.prevent="handleSubmit(onSubmit)" >
+					<span class="login100-form-title p-b-26 mB-40">
+						<a href="/"><img :src="logo" alt="" :style="{ height: 150 + 'px', }" class="m-15"></a>
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+            <ValidationProvider vid="text" name="Usuario o instnacia" rules="required" v-slot="{ errors }">
+              <input type="text" class="input100" name="Nombre" v-model="user.username" placeholder="Usuario o instancia">              
+              <span class="focus-input100" placeholder="Email"></span>
+              <span style="color:red;">{{ errors[0] }}</span>
+            </ValidationProvider>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+            <ValidationProvider vid="text" name="Contraseña" rules="required" v-slot="{ errors }">
+              <input type="password" class="input100" name="Contraseña" placeholder="Contraseña" v-model="user.password">
+              <span class="focus-input100" data-placeholder=""></span>
+              <span style="color:red;">{{ errors[0] }}</span>
+            </ValidationProvider>
+					</div>
+					<div class="container-login100-form-btn">
+            <span class="error-login" v-if="errologin"> Error al inicar session </span>
+					</div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Ingresar
+							</button>
+						</div>
+					</div>
+					<div class="text-center p-t-115">
+						<span class="txt1"></span>
+					</div>
+				</form>
+        </ValidationObserver>
+			</div>
+      
+		</div>
+	</div>
 </template>
-    <style>
-      #loader {
-        transition: all 0.3s ease-in-out;
-        opacity: 1;
-        visibility: visible;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        background: #fff;
-        z-index: 90000;
-      }
-
-      #loader.fadeOut {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .spinner {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: calc(50% - 20px);
-        left: calc(50% - 20px);
-        background-color: #333;
-        border-radius: 100%;
-        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-        animation: sk-scaleout 1.0s infinite ease-in-out;
-      }
-
-      @-webkit-keyframes sk-scaleout {
-        0% { -webkit-transform: scale(0) }
-        100% {
-          -webkit-transform: scale(1.0);
-          opacity: 0;
-        }
-      }
-
-      @keyframes sk-scaleout {
-        0% {
-          -webkit-transform: scale(0);
-          transform: scale(0);
-        } 100% {
-          -webkit-transform: scale(1.0);
-          transform: scale(1.0);
-          opacity: 0;
-        }
-      }
-    </style>
 
 <script>
-import img  from '../assets/static/images/bg.jpg';
+import { mapActions,mapGetters } from "vuex";
+import img from '@/assets/static/images/bg.jpg';
+import logo from '@/assets/static/images/logo_klay.png';
 export default {
-    name : 'login',
-    data () {
-        return {
-            user : {username : 'username',password : 'password'},
-            sumited : false,
-            img_background : img,
-        }
-    },
-    created (){
-        // reset login        
-    },
-    computed : {
-        /*...mapGetters({
-            isLoggedIn: 'account/isLoggedIn'
-        }) */
-    },
-    methods : {
-        /*
-        ...mapActions('account',['login','resetState']),
-        handleSubmit(){
-            this.sumited = true;
-            console.warn(this.user.username);
-            if (this.user.username && this.user.password) {
-                this.login(this.user);
-            }
-        },
-        clearState(){
-            console.log('reset state');
-            new Storage().removeStore;
-            this.resetState()
-        }
-        */
+  name: 'login',
+  data() {
+    return {
+      user: {
+        username: '',
+        password: ''
+      },
+      sumited: false,
+      img_background: img,
+      logo: logo,
     }
-
-    
+  },
+  created() {
+    // reset login        
+  },
+  computed: {
+    ...mapGetters({
+      isLoggedIn: 'account/isLoggedIn',
+      errologin: 'account/isErrorLogin'
+    })
+  },
+  methods: {
+    ...mapActions('account', ['login', 'resetState']),
+    onSubmit() {
+      this.sumited = true;
+      if (this.user.username && this.user.password) {
+        this.login(this.user);
+      }
+    },
+    clearState() {
+      console.log('reset state');
+      new Storage().removeStore;
+      this.resetState()
+    }
+  }
 }
 </script>
 
+<style>
+
+a:hover {
+	text-decoration: none;
+  color: #6a7dfe;
+  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  color: -o-linear-gradient(left, #21d4fd, #b721ff);
+  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #adadad;}
+input:-moz-placeholder { color: #adadad;}
+input::-moz-placeholder { color: #adadad;}
+input:-ms-input-placeholder { color: #adadad;}
+
+textarea::-webkit-input-placeholder { color: #adadad;}
+textarea:-moz-placeholder { color: #adadad;}
+textarea::-moz-placeholder { color: #adadad;}
+textarea:-ms-input-placeholder { color: #adadad;}
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.txt2 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f2f2f2;  
+}
+
+.wrap-login100 {
+  width: 460px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/*------------------------------------------------------------------
+[ Form ]*/
+
+.login100-form {
+  width: 100%;
+}
+
+.login100-form-title {
+  display: block;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+}
+.login100-form-title i {
+  font-size: 60px;
+}
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+}
+
+.input100 {
+  font-size: 22px;
+  color: #555555;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px;
+}
+
+/*---------------------------------------------*/ 
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  background: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+.focus-input100::after {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.2;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  padding-left: 5px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100::after {
+  top: -15px;
+}
+
+.input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+.has-val.input100 + .focus-input100::after {
+  top: -15px;
+}
+
+.has-val.input100 + .focus-input100::before {
+  width: 100%;
+}
+
+/*---------------------------------------------*/
+.btn-show-pass {
+  font-size: 15px;
+  color: #999999;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btn-show-pass:hover {
+  color: #6a7dfe;
+  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  color: -o-linear-gradient(left, #21d4fd, #b721ff);
+  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+.btn-show-pass.active {
+  color: #6a7dfe;
+  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  color: -o-linear-gradient(left, #21d4fd, #b721ff);
+  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 13px;
+}
+
+.wrap-login100-form-btn {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.login100-form-bgbtn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #2196f3;
+  background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  top: 0;
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+}
+
+.wrap-login100-form-btn:hover .login100-form-bgbtn {
+  left: 0;
+}
+
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding: 77px 15px 33px 15px;
+  }
+  .input100 {
+    font-size: 15px;
+  }
+  .error-login {
+    color: #c80000;
+    font-size: 12px;
+  }  
+}
+
+
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: #fff;
+  border: 1px solid #c80000;
+  border-radius: 2px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0px;
+  pointer-events: none;
+
+  font-family: Poppins-Regular;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #c80000;
+
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 5px;
+}
+.error-login {
+  color: #c80000;
+  font-size: 20px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media (max-width: 576px) {
+  .error-login {    
+    font-size: 13px;
+  }  
+}
+
+
+
+</style>
