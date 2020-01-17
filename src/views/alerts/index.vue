@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3 alerts-card' @click="clickAlert('VER TODAS LAS ALERTAS')">
+                                <div class='col-md-3 alerts-card' @click="clickAlert('TODAS LAS ALERTAS')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="title-alert-klay">VER TODAS LAS ALERTAS</h4>

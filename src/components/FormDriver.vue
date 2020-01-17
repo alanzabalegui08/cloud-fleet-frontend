@@ -63,7 +63,7 @@
             <div class="bgc-white ">
                 <div class="mT-10">
                         <div class="row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6 ">
                                 <label for="inputPassword">Celular</label>
                                 <ValidationProvider vid="cellphone" name="Celular" rules="digits:10" v-slot="{ errors }">
                                     <input type="text" class="form-control"  v-model="driver.cellphone" placeholder="">

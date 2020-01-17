@@ -5,7 +5,7 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row pL-20">
+                    <div class="row pL-0">
                         <h3 class="title-klay">Resumen Grafica</h3>
                     </div>
                     <div class="row">
@@ -102,13 +102,13 @@ export default {
             },
             chartData: [
                 ['City', '', { role: 'style' }],
-                ['Factores extremos - Trafico', 8175000,'#b87333'],
-                ['Mecanica motor', 3792000,'#980000'],
-                ['Mecanica Taller ruza', 2695000,'#ffcc22'],
-                ['Negligencia - Dormido', 2099000,'#0b5394'],
-                ['Negligencia - No programado', 2926000,'#FF0000'],
-                ['Negligencia - any', 1526000,'#00ffff'],
-                ['Negligencia - No programado', 1626000,'#38761d'],
+                ['Factores extremos - Trafico', 8175000,'#50d890'],
+                ['Mecanica motor', 3792000,'#297ca0'],
+                ['Mecanica Taller ruza', 2695000,'#f0134d'],
+                ['Negligencia - Dormido', 2099000,'#12cad6'],
+                ['Negligencia - No programado', 2926000,'#ffcc00'],
+                ['Negligencia - any', 1526000,'#00028c'],
+                ['Negligencia - No programado', 1626000,'#ff5959'],
             ],
             chartOptions : {
                 chart : {

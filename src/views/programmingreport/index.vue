@@ -6,10 +6,10 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="col-7">
+                        <div class="col-7 pL-0 ">
                             <h2 class="">Programación</h2>
                         </div>
-                        <div class="col-5 text-right pr-md-0">
+                        <div class="col-5 text-right pr-md-0 pR-0">
                             <button type="button" class="btn cur-p btn-outline-primary py-1 mt-md-2" >Generar</button>
                         </div>
                         <div class="w-100">

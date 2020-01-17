@@ -13,15 +13,15 @@
                         <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
                     </select>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                     <label>Salida</label>
-                    <div class="row">
-                        <select class="form-control col mL-15" id="color_down" v-model="turno.output">
-                            <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
-                        </select>
-                        <button type="button" class="col-4 btn cur-p btn-outline-danger mL-10 mR-15" 
+                    <select class="form-control" id="color_down" v-model="turno.output">
+                        <option v-for="(time,index) in turnTime" :key="index">{{time.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-1">
+                    <button type="button" class="btn cur-p btn-outline-danger mT-25" style="width:100%;"
                             @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button> 
-                    </div>         
                 </div>
             </div>
         </fieldset>
@@ -59,11 +59,11 @@
     } from 'vuex';
     import {
         mix
-    } from "../util/mixins";
+    } from "@/util/mixins";
     import { alerts } from '@/util/alerts'
     import {
         SELECT_TIME
-    } from '../util/datafield';
+    } from '@/util/datafield';
     export default {
         name: 'turno',
         mixins: [mix,alerts],

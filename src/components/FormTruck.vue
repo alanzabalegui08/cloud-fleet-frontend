@@ -103,8 +103,8 @@
                             </ValidationProvider>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="inputtext">Maquina</label>
-                            <ValidationProvider vid="maquina" name="Maquina" rules="required|alpha_num" v-slot="{ errors }">
+                            <label for="inputtext">Máquina</label>
+                            <ValidationProvider vid="maquina" name="Máquina" rules="required|alpha_num" v-slot="{ errors }">
                                 <input type="text" class="form-control"  v-model="truck.machine" placeholder="">
                                 <span style="color:red;">{{ errors[0] }}</span>
                             </ValidationProvider>

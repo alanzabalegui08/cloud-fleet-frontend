@@ -6,7 +6,7 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="col-7">
+                        <div class="col-7 pL-0">
                             <h2 class="title-klay">Operadores sin ruta</h2>
                         </div>
                         <div class="col-5 text-right pR-0 ">

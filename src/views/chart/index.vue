@@ -79,7 +79,7 @@ export default {
             },
             chartData: [
                 ['City', '', { role: 'style' }],
-                ['Factores extremos - Trafico', 8175000,'#43a047'],
+                ['Factores extremos - Trafico', 8175000,'#50d890'],
                 ['Mecanica motor', 3792000,'#ff5722'],
                 ['Mecanica Taller ruza', 2695000,'#9c27b0'],
                 ['Negligencia - Dormido', 2099000,'#1e88e5'],

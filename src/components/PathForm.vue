@@ -106,7 +106,7 @@
                                 <input type="text" class="form-control" v-model="turn.code">
                             </div>
                             <div class="form-group col-md-1">
-                                <button type="button" class="btn cur-p btn-outline-danger mT-25"
+                                <button type="button" class="btn cur-p btn-outline-danger mT-25" style="width:100%;"
                                     @click="addTrun"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                         </div>
@@ -114,25 +114,26 @@
                 </div>
             </div>
             <div class="table-responsive">
-                <table id="" class="table" cellspacing="0" width="100%">
+                <table  class="table" cellspacing="0" width="100%">
                     <thead>
                         <tr>
-                            <th>Nombre Turno</th>
-                            <th>Hora inicio </th>
-                            <th>Hora fin</th>
-                            <th>Sentido</th>
-                            <th>Codigo</th>
-                            <th></th>
+                            <th class="" >Nombre Turno</th>
+                            <th class="" >Hora inicio </th>
+                            <th class="" >Hora fin</th>
+                            <th class="" >Sentido</th>
+                            <th class="" >Codigo</th>
+
+                            <th class="" ></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="(turn, index) in route.turns" :key="index">
-                            <td>{{turn.name}}</td>
-                            <td>{{turn.input}}</td>
-                            <td>{{turn.output}}</td>
-                            <td>{{turn.sentido}}</td>
-                            <td>{{turn.code}}</td>
-                            <td>
+                            <td class="" >{{turn.name}}</td>
+                            <td class="" >{{turn.input}}</td>
+                            <td class="" >{{turn.output}}</td>
+                            <td class="" >{{turn.sentido}}</td>
+                            <td class="">{{turn.code}}</td>
+                            <td class="" >
                                 <button type="button" class="btn cur-p btn-outline-danger" @click="removeTurn(turn)">
                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                 </button>
