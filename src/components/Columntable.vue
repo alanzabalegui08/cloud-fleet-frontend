@@ -9,7 +9,7 @@
             <button type="button" class="btn cur-p btn-outline-primary mr-3" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
         </div>
         <div  v-if="type === 'image' ">
-            <img class="img-profile" :src="value"  :style="{ height: 70 +'px',width :'100px'}" />
+            <img class="img-profile" :src="value"  :style="{ height: '40px',width :'80px'}" />
         </div>
         <div  v-if="type === 'banner' ">
             <img class="img-profile" :src="value"  :style="{ height: 115 +'px',}" />

@@ -80,10 +80,12 @@ export default {
     computed: {},
     methods: {
         ...mapActions({
-            add: 'client/createClient'
+            add: 'client/createClient',
+            cleanTurn : 'turn/clean'
         }),
         handClient() {
             this.add(this.client);
+            this.cleanTurn();
         },
     }
 }

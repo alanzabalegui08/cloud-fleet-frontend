@@ -12,8 +12,8 @@
                         <div class="col-md-2">
                             <div class="row bgc-white p-10">
                                 <div class="col-md-12">
-                                    <h5 class="">Comentario por categoria</h5>
-                                    <spam class="">utiliza los filtros para mejores resultados</spam>
+                                    <h5 style="font-size:9px;">Comentario por categoria</h5>
+                                    <spam style="font-size:9px;" >utiliza los filtros para mejores resultados</spam>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <h5>Fecha : </h5>

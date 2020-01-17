@@ -12,6 +12,9 @@ const actions = {
     removeTurn({ state,commit }, turn) {
         const indexTurn = state.list.findIndex(item => item.id === turn.id);
         commit('removeTurn',indexTurn);0
+    },
+    clean ({commit} ) {
+        commit('clearTurn');
     }
 }
 
@@ -26,6 +29,9 @@ const  mutations = {
     },
     removeTurn(state,indexTurn){
         state.list.splice(indexTurn,1);
+    },
+    clearTurn() {
+        state.list = []
     }
 };
 

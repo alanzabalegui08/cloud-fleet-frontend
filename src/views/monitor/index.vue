@@ -6,9 +6,9 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div  class="row">
-                        <h4 class="title-klay p-0 p-sm-10" >Monitor</h4>
+                        <h4 class="title-klay pl-2 p-sm-10" >Monitor</h4>
                     </div>
-                    <div class="row">
+                    <div class="row pl-1">
                         <div class="col-md-2 p-0 p-sm-10" >
                             <filter-monitor />
                         </div>

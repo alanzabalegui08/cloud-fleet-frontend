@@ -73,6 +73,19 @@
 .alerts-card :hover {
     cursor: pointer;
 }
+.buttonTop {
+    position: absolute;
+    top: 5%;    
+}
+.ceneterLogo {
+    position: relative;
+    top: 5px;
+}
+
+.centro {
+    display: flex;
+    align-items: center;
+}
 
 @media (max-width: 600px) {
     .title-klay {

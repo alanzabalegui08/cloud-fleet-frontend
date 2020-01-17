@@ -11,7 +11,7 @@
                     <a href="/"><img :src="logo" alt="" :style="{ height: 35 + 'px', }" class="m-15"></a>
                   </div>
                 </div>
-                <div class="peer peer-greed">
+                <div class="peer peer-greed ceneterLogo">
                   <h4>KLAY 2.0</h4>
                 </div>
               </div>
@@ -64,7 +64,8 @@ export default {
           menu : null,
         }
     },
-    created (){      
+    created (){
+
     },
     computed : {
     },

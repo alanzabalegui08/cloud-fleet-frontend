@@ -1,3 +1,6 @@
+import genericImg from '../assets/static/images/gris_img.jpg';
+
+
 export const driverModel = () => ({
     name: 'Carlos',
     lastname: 'Lastra',
@@ -16,7 +19,7 @@ export const driverModel = () => ({
     typeBlood : 'O+',
     region : 'XXXXX',
     active : false,
-    image : 'https://via.placeholder.com/350x225.png',
+    image : genericImg,
 });
 
 export const truckModel = () =>  ({
@@ -44,7 +47,7 @@ export const truckModel = () =>  ({
     tirada : false,
     puntaje : '',
     fotografia : '',
-    image : 'https://via.placeholder.com/350x225.png',
+    image : genericImg,
 });
 
 export const supervisorModel = () => ({

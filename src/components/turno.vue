@@ -20,7 +20,7 @@
                     </select>
                 </div>
                 <div class="form-group col-md-1">
-                    <button type="button" class="btn cur-p btn-outline-danger mT-25" style="width:100%;"
+                    <button type="button" class="btn cur-p btn-outline-danger mT-25 buttonTop" style="width:100%;"
                             @click="handleTurn()"><i class="fa fa-plus" aria-hidden="true"></i></button> 
                 </div>
             </div>
@@ -41,7 +41,7 @@
                         <td class="col-md-3" >{{turno.input}}</td>
                         <td class="col-md-3" >{{turno.output}}</td>
                         <td class="col-md-1 text-center">
-                            <button type="button" class="btn cur-p btn-outline-danger" @click="removeTurn(turno)">
+                            <button type="button" class="btn cur-p btn-outline-danger " @click="removeTurn(turno)">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </button>
                         </td>

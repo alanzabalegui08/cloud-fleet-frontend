@@ -4,7 +4,7 @@
             <router-link class="title-form-klay" style="color:#2196f3;"  to="/unidades">/ Unidades / Nueva unidad </router-link>
         </div>        
         <div class="col-md-6">
-            <div class="bgc-white" >
+            <div class="bgc-white mT-10" >
                 <div class="mT-0">
                     <div class="form-row">
                         <div class="col-md-12">
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="col-md-6 pL-15">
-            <div class="bgc-white" >
+            <div class="bgc-white mT-10" >
                 <div class="mT-0">
                     <div class="row">
                         <div class="form-group col-md-4">

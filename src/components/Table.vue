@@ -1,6 +1,6 @@
 <template>
 <div class="table-responsive container-fluid">
-    <table id="table_turn" class="table"> 
+    <table id="table_turn" class="table mB-0" > 
         <thead class="thead-dark" >
             <tr class="row table-row-head">
                 <th  v-for="(colum,index) in columns" :key="index" class="table-space-word p-10" :class="colum.class" ><h5> {{colum.columname}}</h5></th>
