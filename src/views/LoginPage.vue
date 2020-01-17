@@ -46,7 +46,6 @@
 				</form>
         </ValidationObserver>
 			</div>
-      
 		</div>
 	</div>
 </template>
@@ -86,7 +85,6 @@ export default {
       }
     },
     clearState() {
-      console.log('reset state');
       new Storage().removeStore;
       this.resetState()
     }
@@ -102,7 +100,7 @@ a:hover {
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  /*color: linear-gradient(left, #21d4fd, #b721ff); */
 }
 
 /*---------------------------------------------*/
@@ -273,7 +271,7 @@ iframe {
   background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   background: -o-linear-gradient(left, #21d4fd, #b721ff);
   background: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  background: linear-gradient(left, #21d4fd, #b721ff);
+  /*background: linear-gradient(left, #21d4fd, #b721ff);*/
 }
 
 .focus-input100::after {
@@ -340,7 +338,7 @@ iframe {
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  /*color: linear-gradient(left, #21d4fd, #b721ff);*/
 }
 
 .btn-show-pass.active {
@@ -348,7 +346,7 @@ iframe {
   color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
   color: -o-linear-gradient(left, #21d4fd, #b721ff);
   color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
+  /*color: linear-gradient(left, #21d4fd, #b721ff);/*/
 }
 
 
@@ -385,7 +383,7 @@ iframe {
   background: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
   background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
   background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
-  background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+  /*background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff); */
   top: 0;
   left: -100%;
 

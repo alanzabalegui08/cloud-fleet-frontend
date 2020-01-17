@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import { regionModel } from "../util/model";
+    import { regionModel } from "@/util/model";
     import { mapActions } from 'vuex';
     export default {
         name: 'form-region',

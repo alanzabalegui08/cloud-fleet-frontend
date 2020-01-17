@@ -4,6 +4,7 @@ const storage  =  new Storage();
 
 export const userService = {
     login,
+    logout,
     getUserStore
 };
 
@@ -16,6 +17,18 @@ function login(username,password) {
     };
     storage.addItem = user;
     return user;
+}
+
+function logout () {
+    if(storage.removeStore) {
+        return {
+            logout: true,
+        }
+    } else {
+        return {
+            logout : false,
+        }
+    }
 }
 
 

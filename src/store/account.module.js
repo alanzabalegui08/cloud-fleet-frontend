@@ -28,8 +28,8 @@ const actions = {
             commit('errorLogin');
         }
     },
-    logout() {
-        // datasheet 
+    logout( {commit} ) {
+        commit('logout');
     },
     resetState({
         commit
@@ -42,7 +42,6 @@ const actions = {
 const mutations = {
 
     loginSuccess(state, user) {
-        console.log(user);
         state.status = {
             loggedIn: true,
             errorLogin : false,
@@ -55,7 +54,11 @@ const mutations = {
             errorLogin : true,
         };
     },
-
+    logout(){
+        const logoutResponse =  userService.logout();
+        state.user = logoutResponse.logout; 
+        router.push('/login')
+    },
     stateReset(state) {
         const newstate = initialState();
         Object.keys(newstate).forEach(key => {

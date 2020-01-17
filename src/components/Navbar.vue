@@ -20,7 +20,7 @@
           </a>
           <ul class="dropdown-menu fsz-sm  bgcH-grey-100  c-grey-700">
             <li>
-              <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+              <a href="" @click.prevent="logout()" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                 <i class="ti-power-off mR-10"></i>
                 <span>Cerrar Sesión</span>
               </a>
@@ -33,7 +33,8 @@
 </template>
 <script>
 
-import { toggleNav } from '../util/SettingLayout.js';
+import { toggleNav } from '@/util/SettingLayout.js';
+import { mapActions } from "vuex";
 export default {
     name : 'navbar',
     data () {
@@ -45,8 +46,14 @@ export default {
     computed : {
     },
     methods : {
+      ...mapActions({
+        'logoutSession' : 'account/logout',
+      }),
       changeToggleNav(){
         toggleNav('sidebar');
+      },
+      logout() {
+        this.logoutSession();
       }
     }
 }
