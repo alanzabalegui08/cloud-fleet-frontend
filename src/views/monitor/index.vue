@@ -28,8 +28,8 @@
 import $ from 'jquery';
 import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
-import GoogleMap from '@/components/GoogleMap'
-import FilterMonitor from '@/components/FilterMonitor'
+import GoogleMap from '@/components/GoogleMap';
+import FilterMonitor from '@/components/FilterMonitor';
 export default {
     name : 'monitor',
     components : {

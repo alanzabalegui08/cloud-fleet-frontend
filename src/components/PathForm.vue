@@ -106,7 +106,7 @@
                                 <input type="text" class="form-control" v-model="turn.code">
                             </div>
                             <div class="form-group col-md-1">
-                                <button type="button" class="btn cur-p btn-outline-danger mT-25 buttonTop" style="width:100%;"
+                                <button type="button" class="btn cur-p btn-outline-danger buttonTop"
                                     @click="addTrun"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                         </div>

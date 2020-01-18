@@ -73,17 +73,28 @@
 .alerts-card :hover {
     cursor: pointer;
 }
+.afterButton {
+    position: relative;
+}
 .buttonTop {
+    width: 100%;
     position: absolute;
-    top: 5%;    
+    bottom: 0;
 }
 .ceneterLogo {
     position: relative;
     top: 5px;
 }
 
-.centro {
+.colLeft {
     display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.colCenter {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -113,7 +124,13 @@
     }
     .mTopProgramming {
         margin-bottom: 10px !important;
-    }    
+    }
+
+    .buttonTop {
+        position: inherit;
+        top: 0%;    
+    }
+
 }
 
 
