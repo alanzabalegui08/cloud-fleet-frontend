@@ -11,8 +11,8 @@
                     <div class="row">
                         <div class="w-100">
                             <div class="row gap-20 m-5">
-                                <div class='col-md-3'>
-                                    <div class="bgc-white p-10 n-color-pallete" >
+                                <div class='col-sm-6 col-lg-3'>
+                                    <div class="bgc-white p-10 n-color-pallete select-form" >
                                         <div class="row">
                                             <div class="col-9 layer w-100 mB-10">
                                                 <h4 class="lh-1">Rutas sin</h4>
@@ -30,8 +30,8 @@
                                         </div>                     
                                     </div>
                                 </div>
-                                <div class='col-md-3'>
-                                    <div class="bgc-white p-10 n-color-pallete" >
+                                <div class='col-sm-6 col-lg-3'>
+                                    <div class="bgc-white p-10 n-color-pallete select-form" >
                                         <div class="row">
                                             <div class="col-9 layer w-100 mB-10">
                                                 <h4 class="lh-1">Operador sin</h4>
@@ -48,8 +48,8 @@
                                         </div>                     
                                     </div>
                                 </div>
-                                <div class='col-md-3'>
-                                    <div class="bgc-white p-10 n-color-pallete" >
+                                <div class='col-sm-6 col-lg-3'>
+                                    <div class="bgc-white p-10 n-color-pallete select-form" >
                                         <div class="row">
                                             <div class="col-9 layer w-100 mB-10">
                                                 <h4 class="lh-1">Ruta con Retraso de </h4>
@@ -65,8 +65,8 @@
                                         </div>       
                                     </div>
                                 </div>
-                                <div class='col-md-3'>
-                                    <div class="bgc-white p-10 n-color-pallete" >
+                                <div class='col-sm-6 col-lg-3'>
+                                    <div class="bgc-white p-10 n-color-pallete select-form" >
                                         <div class="row">
                                             <div class="col-9 layer w-100 mB-10">
                                                 <h4 class="lh-1">Problemas en</h4>

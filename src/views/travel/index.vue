@@ -6,15 +6,15 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="col-md-10">
+                        <div class="col-sm-8 col-lg-10">
                             <h4 class="title-klay">Viajes - Resumen de la Programación</h4>
                         </div>
-                        <div class="col-md-2 text-right">
+                        <div class="col-sm-4 col-lg-2 text-right">
                             <button type="button" class="btn cur-p btn-outline-primary py-1 mt-md-2" >Generar reporte</button>
                         </div>
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">
-                                <div class="col-md-3 mL-10 mR-0 mT-10  border-form-right">
+                                <div class="col-sm-5 col-lg-3 mL-10 mR-0 mT-10 mB-10  border-form-right">
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Desde</label>
@@ -38,7 +38,7 @@
                                         </div>
                                     </div>                                    
                                 </div>
-                                <div class="col-md-3 mR-10 mT-10 mL-0 ">
+                                <div class="col-sm-5 col-lg-3 mR-10 mT-10 mL-0 ">
                                     <div class="row">
                                         <div class="form-group col-md-12">
                                             <label for="inputName">Sentido</label>

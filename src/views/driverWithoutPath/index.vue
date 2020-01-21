@@ -6,24 +6,23 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="col-7 pL-0">
+                        <div class="col-7 barReporProgramming ">
                             <h2 class="title-klay">Operadores sin ruta</h2>
                         </div>
-                        <div class="col-5 text-right pR-0 ">
+                        <div class="col-5 text-right pRonlyMd align-self-center  ">
                             <button type="button" class="btn cur-p btn-outline-primary mr-2 mr-md-0 py-1 mt-md-2" >Generar</button>
                         </div>
-
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white" style="height:750px">
                                 <div class="col-md-12 p-0" >
                                     <div class="row m-10">
-                                        <div class="form-group col-md-2 d-md-flex p-0 mb-0" >
+                                        <div class="form-group col-sm-4 col-lg-3 d-md-flex p-0 mb-0" >
                                              <h5 class="mr-md-3 mt-md-2" >Fecha: </h5>
                                              <div class="form-group col p-0">
                                                  <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                              </div>
                                         </div>
-                                        <div class="form-group col-md-2 d-md-flex p-0 mb-0">
+                                        <div class="form-group col-sm-4 col-lg-3 d-md-flex p-0 mb-0">
                                             <h5 class="ml-md-3 mr-md-3 mt-md-2">Turno</h5>
                                             <div class="form-group col p-0">
                                                 <select class="form-control " id="" >

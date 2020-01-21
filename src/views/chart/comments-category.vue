@@ -12,23 +12,23 @@
                         <div class="col-md-2">
                             <div class="row bgc-white p-10">
                                 <div class="col-md-12">
-                                    <h5 style="font-size:9px;">Comentario por categoria</h5>
-                                    <spam style="font-size:9px;" >utiliza los filtros para mejores resultados</spam>
+                                    <h5 style="font-size:12px;">Comentario por categoria</h5>
+                                    <spam style="font-size:12px;" >utiliza los filtros para mejores resultados</spam>
                                 </div>
                                 <div class="form-group col-md-12">
                                     <h5>Fecha : </h5>
                                     <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                 </div>
                                 <div class="form-group col-md-12 ">
-                                    <h5>Categoria : </h5>
+                                    <h5>Categoría : </h5>
                                     <select class="form-control " id="">
-                                         <option>Categoria</option>
+                                         <option>Categoría</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <h5>Subcategoria : </h5>
+                                    <h5>Subcategoría : </h5>
                                     <select class="form-control " id="">
-                                         <option>Subcategoria</option>
+                                         <option>Subcategoría</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">

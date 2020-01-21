@@ -1,14 +1,14 @@
 <template>
   <div class="row mB-0 mL-0 mT-5 mR-0">
-    <div class="form-group col-md-2 text-center pr-md-0">
+    <div class="form-group col-sm-4 col-lg-2 text-center pr-md-0">
       <date-picker class="" v-model="date" language="es" :config="options"></date-picker>
     </div>
-    <div class="form-group col-md-2 pr-md-0">
+    <div class="form-group col-sm-4 col-lg-2 pr-md-0">
       <select class="form-control ">
         <option>Turno</option>
       </select>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-sm-4 col-lg-2">
       <select class="form-control">
         <option>Región</option>
       </select>

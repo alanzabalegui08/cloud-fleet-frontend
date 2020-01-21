@@ -6,7 +6,7 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row">
-                        <div class="col-7">
+                        <div class="col-7 align-self-center">
                             <h2 class="title-klay">Programación </h2>
                         </div>
                         <div class="col-5 text-right pb-2 py-sm-2 pr-0">

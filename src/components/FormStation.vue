@@ -16,9 +16,12 @@
                                         <span style="color:red;">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                 </div>
-                                <div class="form-group col-md-12">
+                                <div class="form-group col-md-12 mb-0"> 
                                     <label for="inputName">Dirección</label>
-                                    <input type="text" class="form-control" id="" v-model="station.address" placeholder="">
+                                </div>
+                                <div class="form-group col-md-12 d-lg-flex">
+                                    <input type="text" class="form-control mb-3 mb-lg-0 mr-lg-3" id="" v-model="station.address" placeholder="">
+                                    <button class="btn btn-primary">Verificar</button>
                                 </div>
                             </div>
                         </div>

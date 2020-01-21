@@ -98,6 +98,20 @@
     align-items: center;
 }
 
+.colRight {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.barReporProgramming { 
+    padding-left: 0px !important;
+}
+
+.pRonlyMd {
+    padding-right: 0px !important;
+}
+
 @media (max-width: 600px) {
     .title-klay {
         font-size: 12pt;
@@ -131,7 +145,59 @@
         top: 0%;    
     }
 
+    .barReporProgramming { 
+        padding-left: 10px !important;
+    }
+
+    .pRonlyMd {
+        padding-right: 10px !important;
+    }    
+
 }
+
+@media (max-width: 800px) {
+    .title-klay {
+        font-size: 14pt;
+    }
+    .table {
+        width: 700px;
+    }
+    .table .thead-dark th h5 { 
+        font-size: 10pt;
+    }
+    .btn-md {
+        display: none;
+    }
+    .btn-xs {
+        display: inline;
+    }
+
+    .border-form-left {
+        border-left: none;
+    }
+    
+    .border-form-right {
+        border-right: none;
+    }
+    .mTopProgramming {
+        margin-bottom: 10px !important;
+    }
+
+    .buttonTop {
+        position: inherit;
+        top: 0%;    
+    }
+
+    .barReporProgramming { 
+        padding-left: 10px !important;
+    }
+
+    .pRonlyMd {
+        padding-right: 10px !important;
+    }    
+
+}
+
 
 
 

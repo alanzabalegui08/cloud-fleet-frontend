@@ -17,7 +17,7 @@
                                 <google-map :mapStyle="mapStyle" />
                             </div>                             
                         </div>
-                    </div>                    
+                    </div>                   
                 </div>
             </main>
         </div>

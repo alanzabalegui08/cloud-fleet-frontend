@@ -28,8 +28,6 @@
 </template>
 
 <script>
-import $ from 'jquery';
-
 export default {
     name : 'notificaciones',
     data () {
@@ -42,10 +40,7 @@ export default {
     computed : {
     },
     methods : {
-        showModal() {
-            let element = this.$refs.modal.$el;
-            $(element).modal('show');
-        }
+
     }
 }
 </script>
