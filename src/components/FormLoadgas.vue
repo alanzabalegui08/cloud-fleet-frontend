@@ -4,7 +4,7 @@
             <div class="bgc-white">
                 <div class="mT-10">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
                             <div class="form-group col-md-12">
                                 <label for="inputName">Unidad</label>
                                 <ValidationProvider vid="text" name="Unidad" rules="required" v-slot="{ errors }">

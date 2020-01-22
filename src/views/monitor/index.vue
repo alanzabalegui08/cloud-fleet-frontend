@@ -9,10 +9,10 @@
                         <h4 class="title-klay pl-2 p-sm-10" >Monitor</h4>
                     </div>
                     <div class="row pl-1">
-                        <div class="col-md-2 p-0 p-sm-10" >
+                        <div class="col-sm-3 col-md-3 col-lg-2 p-0 p-sm-10" >
                             <filter-monitor />
                         </div>
-                        <div class="col-md-10 pL-10">
+                        <div class="col-sm-9 col-md-9 col-lg-10 pL-10">
                             <div class="bgc-white p-10" style="height:800px">
                                 <google-map :mapStyle="mapStyle" />
                             </div>                             

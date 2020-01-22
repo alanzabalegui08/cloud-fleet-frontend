@@ -1,11 +1,11 @@
-/* <template>
+<template>
     <div class="row">
         <div class="col-md-12">
             <router-link class="title-form-klay" style="color:#2196f3;"  to="/operadores">/ Operadores / Nuevo operador</router-link>
         </div>        
-        <div class="col-md-6">
+        <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-md-3">
                     <div class="">
                         <img class="img-profile" :src="driver.image" />
                     </div>                   
@@ -13,7 +13,7 @@
                         Buscar <input type="file" @change="onFileChange($event)">
                     </span>
                 </div>
-                <div class="col-lg-9 pl-0" >
+                <div class="col-md-9 border-form-right " >
                     <div class="row">
                     <div class="form-group col-md-12">
                         <label for="inputName">Nombre</label>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 pL-15">
+        <div class="col-sm-12 col-md-12 col-lg-6 pL-15">
             <div class="bgc-white ">
                 <div class="mT-10">
                         <div class="row">
@@ -178,27 +178,5 @@ export default {
 </script>
 
 <style scoped>
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-}
 
-.img-profile {
-    height: auto;
-}
 </style>

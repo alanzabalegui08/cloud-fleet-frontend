@@ -20,7 +20,6 @@ const actions = {
     login({
         commit
     }, user) {
-        console.warn (user);
         if(user.username === USERNAME_DEV && user.password === PASSWORD_DEV){
             commit('loginSuccess', user);
             router.push('/');

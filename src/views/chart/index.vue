@@ -14,24 +14,24 @@
                         <div class="layer w-100 ">
                         <div class="w-100">                           
                             <div class="row gap-20 bd bgc-white ">
-                                <div class="form-group col-md-2 mb-0">
+                                <div class="form-group col-md-4 col-lg-3 mb-0">
                                     <select class="form-control "  >
                                         <option>Seleccione un cliente</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-md-2 d-md-flex pb-sm-0 mb-0">
+                                <div class="form-group col-md-4 col-lg-3 d-md-flex pb-sm-0 mb-0">
                                     <h4 class="title-form-klay mR-15">Fecha: </h4>
                                     <date-picker class="" name="date" v-model="date" :config="options"></date-picker>
                                 </div>
-                                <div class="form-group col-md-2 d-md-flex pb-sm-0 mb-0">
+                                <div class="form-group col-md-4 col-lg-3 d-md-flex pb-sm-0 mb-0">
                                     <h4 class="title-form-klay mR-15">Turno: </h4>
                                     <select class="form-control " id="">
                                         <option>Turno 1</option>
                                         <option>Turno 2</option>
                                         <option>Turno 3</option>
-                                    </select>                                    
+                                    </select>
                                 </div>
-                                <div class="col-md-12" style="height:700px;">
+                                <div class="col" style="height:700px;">
                                     <GChart
                                         type="BarChart"
                                         :data="chartData"

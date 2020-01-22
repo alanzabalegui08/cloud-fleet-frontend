@@ -5,11 +5,13 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row pL-0">
-                        <h3 class="title-klay">Resumen Grafica</h3>
+                    <div class="row">
+                        <div class="col pl-lg-0">
+                            <h3 class="title-klay">Resumen Grafica</h3>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-4 col-lg-3">
                             <div class="row bgc-white p-10">
                                 <div class="col-md-12">
                                     <h5 style="font-size:12px;">Comentario por categoria</h5>
@@ -57,7 +59,7 @@
                                 </div>
                             </div>   
                         </div>
-                        <div class="col-md-10 bgc-white">
+                        <div class="col-md-8 col-lg-9 bgc-white">
                             <GChart
                                 type="BarChart"
                                 :data="chartData"
@@ -93,7 +95,7 @@ export default {
         return {
             datasource : [],
             date: new Date(),
-            options: {
+            options : {
                 format: 'DD/MM/YYYY h:mm:ss',
                 useCurrent: false,
                 showClear: true,

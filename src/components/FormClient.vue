@@ -48,7 +48,7 @@
 
 <script>
 import { mapActions } from 'vuex';
-import turno from './turno';
+import turno from './Turno';
 import Verte from 'verte';
 import 'verte/dist/verte.css';
 import MapAddress from './MapAddress';
@@ -87,6 +87,11 @@ export default {
             this.add(this.client);
             this.cleanTurn();
         },
+    },
+    watch : {
+        client : (newClient, oldClient) =>{
+            console.log(newClient,oldClient);
+        } 
     }
 }
 </script>

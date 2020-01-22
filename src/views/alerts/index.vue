@@ -14,7 +14,7 @@
                         <div class="col-md-6"></div> 
                         <div class="w-100">
                             <div class="row gap-20">
-                                <div class='col-md-3 alerts-card' @click="clickAlert('UNIDADES DE BAJO RENDIMIENTO')">
+                                <div class='col-sm-6 col-md-6 col-lg-4 alerts-card' @click="clickAlert('UNIDADES DE BAJO RENDIMIENTO')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="title-alert-klay">UNIDADES DE BAJO RENDIMIENTO</h4>
@@ -35,7 +35,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3 alerts-card' @click="clickAlert('CARGAS NO RECONOCIDAS')">
+                                <div class='col-sm-6 col-md-6 col-lg-4 alerts-card' @click="clickAlert('CARGAS NO RECONOCIDAS')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="title-alert-klay">CARGAS NO RECONOCIDAS</h4>
@@ -56,7 +56,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3 alerts-card' @click="clickAlert('UNIDADES CON BAJA PRODUCTIVIDAD')" >
+                                <div class='col-sm-6 col-md-6 col-lg-4 alerts-card' @click="clickAlert('UNIDADES CON BAJA PRODUCTIVIDAD')" >
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="title-alert-klay">UNIDADES CON BAJA PRODUCTIVIDAD</h4>
@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3 alerts-card' @click="clickAlert('OPERADORES CON INCIDENCIA')">
+                                <div class='col-sm-6 col-md-6 col-lg-4 alerts-card' @click="clickAlert('OPERADORES CON INCIDENCIA')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="title-alert-klay">OPERADORES CON INCIDENCIA</h4>
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class='col-md-3 alerts-card' @click="clickAlert('TODAS LAS ALERTAS')">
+                                <div class='col-sm-6 col-md-6 col-lg-4 alerts-card' @click="clickAlert('TODAS LAS ALERTAS')">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h4 class="title-alert-klay">VER TODAS LAS ALERTAS</h4>

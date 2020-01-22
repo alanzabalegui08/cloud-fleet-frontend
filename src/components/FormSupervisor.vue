@@ -7,9 +7,9 @@
             <div class="bgc-white p-10">
                 <div class="mT-10">
                     <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-sm-12 col-md-12 col-md-6">
                             <div class="row">
-                                <div class="form-group col-md-6 ">
+                                <div class="form-group col-sm-6 col-md-6 col-md-6">
                                     <label for="inputName">Nombre</label>
                                     <ValidationProvider vid="name" name="Nombre" rules="required|alpha"
                                         v-slot="{ errors }">
@@ -17,7 +17,7 @@
                                         <span style="color:red;">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-sm-6 col-md-6 col-md-6">
                                     <label for="inputName">Tipo de Usuario</label>
                                     <ValidationProvider vid="userType" name="Tipo de usuario" rules="required"
                                         v-slot="{ errors }">
@@ -28,7 +28,7 @@
                                         <span style="color:red;">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-sm-6 col-md-6 col-md-6">
                                     <label for="inputName">Cliente</label>
                                     <ValidationProvider vid="customer" name="Cliente" rules="required"
                                         v-slot="{ errors }">
@@ -36,7 +36,7 @@
                                         <span style="color:red;">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-sm-6 col-md-6 col-md-6">
                                     <label for="inputName">Teléfono</label>
                                     <ValidationProvider vid="phone" name="Teléfono" rules="required"
                                         v-slot="{ errors }">
@@ -44,7 +44,7 @@
                                         <span style="color:red;">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-sm-6 col-md-6 col-md-6">
                                     <label for="inputName">Usuario APP</label>
                                     <ValidationProvider vid="userApp" name="Usuario App" rules="required"
                                         v-slot="{ errors }">
@@ -52,7 +52,7 @@
                                         <span style="color:red;">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-sm-6 col-md-6 col-md-6">
                                     <label for="inputName">Contraseña</label>
                                     <ValidationProvider vid="password" name="Contraseña" rules="required"
                                         v-slot="{ errors }">
