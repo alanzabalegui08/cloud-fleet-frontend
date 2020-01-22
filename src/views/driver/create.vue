@@ -1,6 +1,6 @@
 <template>
     <div class="row gap-20 masonry pos-r">
-        <div class="col-xs-12 col-md-12">
+        <div class="col pX-0">
             <div class="bgc-white p-20 bd">
                 <div class="mT-0">
                     <ValidationObserver v-slot="{handleSubmit}">

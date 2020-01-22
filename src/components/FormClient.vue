@@ -48,7 +48,7 @@
 
 <script>
 import { mapActions } from 'vuex';
-import turno from './Turno';
+import turno from './turno';
 import Verte from 'verte';
 import 'verte/dist/verte.css';
 import MapAddress from './MapAddress';

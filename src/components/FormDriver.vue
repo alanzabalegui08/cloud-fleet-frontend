@@ -1,61 +1,53 @@
-<template>
+/* <template>
     <div class="row">
         <div class="col-md-12">
             <router-link class="title-form-klay" style="color:#2196f3;"  to="/operadores">/ Operadores / Nuevo operador</router-link>
         </div>        
         <div class="col-md-6">
-            <div class="bgc-white " >
-                <div class="mT-10">
-                    <div class="form-row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-3 pR-sm-0">
-                                    <div class="">
-                                        <img class="img-profile" :src="driver.image" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputName">Fotografía</label>
-                                        <input type="file" class="form-control" @change="onFileChange($event)"  placeholder=""   >
-                                    </div>
-                                </div>
-                                <div class="col-md-9 border-form-right p-0">
-                                    <div class="form-group col-md-12">
-                                        <label for="inputName">Nombre</label>
-                                        <ValidationProvider vid="name" name="Nombre" rules="required|alpha" v-slot="{ errors }">
-                                            <input type="text" class="form-control"  v-model="driver.name" placeholder="" autocomplete="off">
-                                            <span style="color:red;">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputName">Apellido</label>
-                                        <ValidationProvider vid="lastname" name="Apellido" rules="required|alpha" v-slot="{ errors }">
-                                            <input type="text" class="form-control"  v-model="driver.lastname" placeholder="" autocomplete="off">
-                                            <span style="color:red;">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputName">Clave</label>
-                                        <ValidationProvider vid="clave" name="Clave" rules="alpha_num" v-slot="{ errors }">
-                                            <input type="text" class="form-control"  v-model="driver.clave" placeholder="" autocomplete="off"> 
-                                            <span style="color:red;">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputPassword">Dirección</label>                        
-                                        <input type="password" class="form-control"  v-model="driver.addresses" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputPassword">Teléfono</label>
-                                        <ValidationProvider vid="phone" name="Teléfono" rules="digits:10" v-slot="{ errors }">
-                                            <input type="text" class="form-control"  v-model="driver.phone" placeholder="">
-                                            <span style="color:red;">{{ errors[0] }}</span>
-                                        </ValidationProvider>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="">
+                        <img class="img-profile" :src="driver.image" />
+                    </div>                   
+                    <span class="btn cur-p btn-outline-primary btn-file" style="width:100%;">
+                        Buscar <input type="file" @change="onFileChange($event)">
+                    </span>
+                </div>
+                <div class="col-lg-9 pl-0" >
+                    <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="inputName">Nombre</label>
+                        <ValidationProvider vid="name" name="Nombre" rules="required|alpha" v-slot="{ errors }">
+                            <input type="text" class="form-control"  v-model="driver.name" placeholder="" autocomplete="off">
+                            <span style="color:red;">{{ errors[0] }}</span>
+                        </ValidationProvider>
                     </div>
-                    <div class="col-md-12"></div>
+                    <div class="form-group col-md-12">
+                        <label for="inputName">Apellido</label>
+                        <ValidationProvider vid="lastname" name="Apellido" rules="required|alpha" v-slot="{ errors }">
+                            <input type="text" class="form-control"  v-model="driver.lastname" placeholder="" autocomplete="off">
+                            <span style="color:red;">{{ errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputName">Clave</label>
+                        <ValidationProvider vid="clave" name="Clave" rules="alpha_num" v-slot="{ errors }">
+                            <input type="text" class="form-control"  v-model="driver.clave" placeholder="" autocomplete="off"> 
+                            <span style="color:red;">{{ errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputPassword">Dirección</label>                        
+                        <input type="password" class="form-control"  v-model="driver.addresses" placeholder="">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputPassword">Teléfono</label>
+                        <ValidationProvider vid="phone" name="Teléfono" rules="digits:10" v-slot="{ errors }">
+                            <input type="text" class="form-control"  v-model="driver.phone" placeholder="">
+                            <span style="color:red;">{{ errors[0] }}</span>
+                        </ValidationProvider>
+                    </div>                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,3 +176,29 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.img-profile {
+    height: auto;
+}
+</style>
