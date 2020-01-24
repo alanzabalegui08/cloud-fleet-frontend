@@ -1,10 +1,10 @@
 <template>
     <div class="row p-0" >
         <div class="col">
-            <h2 >Regiones</h2>
+            <h2 class="title-klay" >Regiones</h2>
         </div>
-        <div class="col text-right">
-            <router-link to="/regiones/nuevo" class="btn cur-p btn-outline-primary py-1 mt-2">Nuevo</router-link>
+        <div class="col text-right align-self-center">
+            <router-link to="/regiones/nuevo" class="btn cur-p btn-outline-primary">Nuevo</router-link>
         </div>
         <div class="col-xs-12 col-md-12">
             <div class="bgc-white p-0 bd">
@@ -23,7 +23,7 @@
 import { mapGetters, mapActions } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '@/components/Table';
-import DataHeader from '@/util/datasource.js';
+import DataHeader from '@/util/tablehead.js';
 import { alerts } from '@/util/alerts';
 
 export default {

@@ -7,9 +7,9 @@
                 <div id='mainContent'>
                     <div class="row">
                         <div class="col-8">
-                            <h2 class="title-klay mL-10">Histórico de unidad </h2>
+                            <h2 class="title-klay">Histórico de unidad </h2>
                         </div>
-                        <div class="col-4 text-right">
+                        <div class="col-4 text-right align-self-center">
                             <button type="button" class="btn cur-p btn-outline-primary py-1 mt-sm-2">Actualizar</button>
                         </div>
                     </div>

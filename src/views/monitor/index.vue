@@ -6,10 +6,12 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div  class="row">
-                        <h4 class="title-klay pl-2 p-sm-10" >Monitor</h4>
+                        <div class="col pl-lg-2">
+                            <h4 class="title-klay" >Monitor</h4>
+                        </div>
                     </div>
                     <div class="row pl-1">
-                        <div class="col-sm-3 col-md-3 col-lg-2 p-0 p-sm-10" >
+                        <div class="col-sm-3 col-md-3 col-lg-2 p-sm-10 p-lg-0" >
                             <filter-monitor />
                         </div>
                         <div class="col-sm-9 col-md-9 col-lg-10 pL-10">

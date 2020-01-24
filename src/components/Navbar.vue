@@ -18,7 +18,7 @@
               <span class="fsz-sm c-grey-900">klay user</span>
             </div>
           </a>
-          <ul class="dropdown-menu fsz-sm  bgcH-grey-100  c-grey-700">
+          <ul class="dropdown-menu fsz-sm bgcH-grey-100 c-grey-700">
             <li>
               <a href="" @click.prevent="logout()" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                 <i class="ti-power-off mR-10"></i>

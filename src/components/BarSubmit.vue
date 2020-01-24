@@ -1,9 +1,9 @@
 <template>
     <div class="row">
-        <div class="col-7">
+        <div class="col-8 pR-0">
             <h2 class="title-klay">{{title}}</h2>
         </div>
-        <div class="col-5 text-right align-self-center">
+        <div class="col-4 pl-0 text-right align-self-center">
             <button @click="cancelar" class="btn cur-p btn-outline-danger mR-20 btn-md">Cancelar</button>
             <button type="submit" class="btn cur-p btn-outline-success btn-md">Guardar</button>
 

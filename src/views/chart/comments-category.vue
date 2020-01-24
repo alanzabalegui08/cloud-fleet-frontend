@@ -6,7 +6,7 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row">
-                        <div class="col pl-lg-0">
+                        <div class="col pl-4 pl-lg-0">
                             <h3 class="title-klay">Resumen Grafica</h3>
                         </div>
                     </div>

@@ -23,7 +23,7 @@
 import { mapGetters } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '@/components/Table';
-import DataGrid from '@/util/datasource.js';
+import DataGrid from '@/util/tablehead.js';
 
 export default {
     name : 'data',

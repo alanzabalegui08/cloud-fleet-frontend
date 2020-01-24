@@ -70,7 +70,7 @@ import Navbar from '@/components/Navbar';
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
 import TableKlay from '@/components/Table';
-import DataGrid from '@/util/datasource.js';
+import DataGrid from '@/util/tablehead.js';
 
 export default {
     name : 'comments',

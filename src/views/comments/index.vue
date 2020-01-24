@@ -7,11 +7,11 @@
                 <div id='mainContent'>
                     <div class="row">
                         <div class="col-7">
-                            <h2 class="title-klay mL-10">Comentarios </h2>
+                            <h2 class="title-klay">Comentarios </h2>
                         </div>
-                        <div class="col-5 text-right">
+                        <div class="col-5 text-right align-self-center">
                             <button type="button"
-                                class="btn cur-p btn-outline-primary py-1 mt-md-2">Generar</button>
+                                class="btn cur-p btn-outline-primary ">Generar</button>
                         </div>
                     </div>
                     <div class="bgc-white bd">
@@ -103,7 +103,7 @@ import Navbar from '@/components/Navbar';
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
 import TableKlay from '@/components/Table';
-import DataGrid from '@/util/datasource.js';
+import DataGrid from '@/util/tablehead.js';
 
 export default {
     name : 'comments',

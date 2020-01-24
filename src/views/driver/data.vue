@@ -3,7 +3,7 @@
         <div class="col">
             <h2 class="title-klay" >Operadores</h2>
         </div>
-        <div class="col text-right">
+        <div class="col text-right align-self-center">
             <router-link to="/operadores/nuevo" class="btn cur-p btn-outline-primary py-1 mt-sm-2"  >Nuevo</router-link>
         </div>
         <div class="col-xs-12 col-md-12">
@@ -26,7 +26,7 @@ import {
 } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '@/components/Table';
-import DataHeader from '@/util/datasource.js';
+import DataHeader from '@/util/tablehead.js';
 import {
     alerts
 } from '@/util/alerts';

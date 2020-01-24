@@ -23,7 +23,7 @@
 import { mapGetters, mapActions } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '@/components/Table';
-import DataHeader from '@/util/datasource.js';
+import DataHeader from '@/util/tablehead.js';
 import { alerts } from '@/util/alerts';
 export default {
     name : 'data',

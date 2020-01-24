@@ -5,13 +5,15 @@
             <navbar></navbar>
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
-                    <div class="row gap-20 masonry pos-r">
-                        <div class="col-sm-8 col-lg-10">
+                    <div class="row mB-20">
+                        <div class="col-8 col-lg-10 pl-lg-1">
                             <h4 class="title-klay">Viajes - Resumen de la Programación</h4>
                         </div>
-                        <div class="col-sm-4 col-lg-2 text-right">
-                            <button type="button" class="btn cur-p btn-outline-primary py-1 mt-md-2" >Generar reporte</button>
+                        <div class="col-4 col-lg-2 text-right align-self-center pr-lg-0">
+                            <button type="button" class="btn cur-p btn-outline-primary " >Generar reporte</button>
                         </div>
+                    </div>
+                    <div class="row gap-20 ">
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white ">
                                 <div class="col-sm-5 col-lg-3 mL-10 mR-0 mT-10 mB-10  border-form-right">

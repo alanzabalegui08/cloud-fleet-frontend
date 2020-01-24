@@ -28,7 +28,7 @@ import $ from 'jquery';
 import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
 import TableKlay from '@/components/Table';
-import DataHeader from '@/util/datasource.js';
+import DataHeader from '@/util/tablehead.js';
 
 export default {
     name: 'list-alerts',

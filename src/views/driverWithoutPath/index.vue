@@ -6,11 +6,11 @@
             <main class='main-content bgc-grey-100'>
                 <div id='mainContent'>
                     <div class="row gap-20 masonry pos-r">
-                        <div class="col-7 barReporProgramming ">
+                        <div class="col-9 barReporProgramming ">
                             <h2 class="title-klay">Operadores sin ruta</h2>
                         </div>
-                        <div class="col-5 text-right pRonlyMd align-self-center  ">
-                            <button type="button" class="btn cur-p btn-outline-primary mr-2 mr-md-0 py-1 mt-md-2" >Generar</button>
+                        <div class="col-3 text-right pRonlyMd align-self-center  ">
+                            <button type="button" class="btn cur-p btn-outline-primary" >Generar</button>
                         </div>
                         <div class="w-100">
                             <div class="row gap-20 bd bgc-white" style="height:750px">
@@ -52,7 +52,7 @@ import Navbar from '@/components/Navbar';
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
 import TableKlay from '@/components/Table';
-import DataGrid from '@/util/datasource.js';
+import DataGrid from '@/util/tablehead.js';
 
 export default {
     name : 'comments',

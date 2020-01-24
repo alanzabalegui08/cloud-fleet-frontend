@@ -10,7 +10,7 @@
                             <h2 class="title-klay mL-10">PV XR</h2>
                         </div>
                         <div class="col-5 text-right">
-                            <button type="button" class="btn cur-p btn-outline-primary mr-3 mT-5">
+                            <button type="button" class="btn cur-p btn-outline-primary mr-lg-0 mT-5">
                                 <i class="fa fa-refresh" aria-hidden="true"></i>
                             </button>
                         </div>
@@ -34,7 +34,7 @@ import $ from 'jquery';
 import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
 import TableKlay from '@/components/Table';
-import DataGrid from '@/util/datasource.js';
+import DataGrid from '@/util/tablehead.js';
 import BarProgramming from '@/components/BarProgramming'
 
 export default {

@@ -3,7 +3,7 @@
         <div class="col">
             <h2 class="title-klay">Cargas de combustibles</h2>
         </div>
-        <div class="col text-right">
+        <div class="col text-right align-self-center">
             <router-link to="/carga-combustible/nuevo" class="btn cur-p btn-outline-primary mT-0">Agregar</router-link>
         </div>
         <div class="col-xs-12 col-md-12">
@@ -15,7 +15,7 @@
 import { mapGetters } from 'vuex';
 import $ from 'jquery';
 import TableKlay from '@/components/Table';
-import DataHeader from '@/util/datasource.js';
+import DataHeader from '@/util/tablehead.js';
 
 export default {
     name : 'data',

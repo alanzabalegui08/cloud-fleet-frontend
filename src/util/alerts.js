@@ -12,7 +12,7 @@ export const alerts = {
             swal("Ups !!", `No puedes agregar un ${nameModule} vacio !`, "error");
         },
 
-        deleteResource: function (nameResource) {
+        deleteResource : function (nameResource) {
             return swal({
                 title: '',
                 text: `Deseas eliminar este ${nameResource} ? `,
@@ -20,14 +20,6 @@ export const alerts = {
                 buttons: true,
                 dangerMode: true,
             });
-
-            // implement example
-            /*
-             *  this.deleteReosurce('turno')
-             *  .then( (result) => {
-             *       console.log(result);
-             *   });
-             */
-        }
+        },
     },
 }

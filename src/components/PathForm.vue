@@ -3,7 +3,7 @@
         <div class="col-md-12">
             <router-link class="title-form-klay" style="color:#2196f3;"  to="/rutas">/ Rutas / Nueva ruta </router-link>
         </div>        
-        <div class="col-md-4 border-form-right">
+        <div class="col-md-12 col-lg-4 border-form-right">
             <div class="bgc-white p-10 ">
                 <div class="mT-10">
                     <div class="form-row">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8 border-form" >
+        <div class="col-md-12 col-lg-8 border-form" >
             <div class="bgc-white p-10">
                 <div class="mT-10">
                     <div class="form-row">
@@ -105,8 +105,8 @@
                                 <label for="inputName">Código</label>
                                 <input type="text" class="form-control" v-model="turn.code">
                             </div>
-                            <div class="form-group col-md-1">
-                                <button type="button" class="btn cur-p btn-outline-danger buttonTop"
+                            <div class="form-group col-md-1 align-self-end">
+                                <button type="button" class="btn cur-p btn-outline-danger"
                                     @click="addTrun"><i class="fa fa-plus" aria-hidden="true"></i></button>
                             </div>
                         </div>
