@@ -37,32 +37,30 @@ import TableKlay from '@/components/Table';
 import DataGrid from '@/util/tablehead.js';
 
 export default {
-  name : 'bar-search',  
-  components : {
+  name: 'bar-search',
+  components: {
     datePicker,
     TableKlay,
   },
-  data () {
+  data() {
     return {
-        date: new Date(),
-        options: {
-          format: 'DD/MM/YYYY',
-          useCurrent: false,
-          locale : 'es-es',        
-        },
-        dataHeader : DataGrid.programming,
-        list : [],
-        
+      date: new Date(),
+      options: {
+        format: 'DD/MM/YYYY',
+        useCurrent: false,
+        locale: 'es-es',
+      },
+      dataHeader: DataGrid.programming,
+      list: [],
     }
   },
-  created (){
-    
+  created() {
+
   },
-  computed : {
-    
+  computed: {
+
   },
-  methods : {
-  }
+  methods: {}
 }
 </script>
 

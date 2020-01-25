@@ -1,4 +1,4 @@
-import Storage from '@/service/Storage';
+import Storage from '@/service/storage';
 
 const storage  =  new Storage();
 
@@ -7,7 +7,6 @@ export const userService = {
     logout,
     getUserStore
 };
-
 
 function login(username,password) {
     
