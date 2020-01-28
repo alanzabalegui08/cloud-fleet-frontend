@@ -27,19 +27,19 @@ import FieldsDef from '../util/FieldsDef.js';
 import _ from "lodash";
 
 export default {
-    props : {
-        list : {
-            type : Array
-        },
-        columns : {
-            type : Array
-        },
-    },    
+  props: {
+    list: {
+      type: Array
+    },
+    columns: {
+      type: Array
+    },
+  },
   components: {
     Vuetable,
     VuetablePagination
   },
-    data() {
+  data() {
     return {
       fields: FieldsDef,
       perPage: 2,
@@ -48,8 +48,8 @@ export default {
   },
   watch: {
     data(newVal, oldVal) {
-        console.log(oldVal);
-        
+      console.log(oldVal);
+
       this.$refs.vuetable.refresh();
     }
   },
@@ -72,7 +72,7 @@ export default {
           sortOrder[0].sortField,
           sortOrder[0].direction
         );
-      }      
+      }
       pagination = this.$refs.vuetable.makePagination(
         local.length,
         this.perPage

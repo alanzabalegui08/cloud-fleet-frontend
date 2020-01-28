@@ -11,8 +11,7 @@
                 <div class="mT-0">
                     <div class="row">
                         <div class="col-md-12">
-                            <!-- <table-klay  :list="clients" @onDeleteItem="onDeleteItem" :columns="dataHeader"></table-klay>-->
-                             <klay-table  :list="clients" ></klay-table>
+                            <table-klay  :list="clients" @onDeleteItem="onDeleteItem" :columns="dataHeader"></table-klay>
                         </div>
                     </div>
                 </div>
@@ -23,15 +22,15 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import $ from 'jquery';
-//import TableKlay from '@/components/Table';
+import TableKlay from '@/components/Table';
+//import TableAdapter from "@/components/TableAdapter";
 import DataHeader from '@/util/tablehead.js';
 import { alerts } from '@/util/alerts';
-import KlayTable from '../../components/KlayTable'
 export default {
     name : 'data',
     mixins : [alerts],
     components : {
-        KlayTable,
+        TableKlay,
     },
     data () {
         return {

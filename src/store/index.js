@@ -11,6 +11,7 @@ import { supervisor } from './supervisor.module';
 import { station } from './station.module';
 import { banner } from './banner.module';
 import { region } from './region.module';
+import { sidebar } from "./sidebar.module";
 
 Vue.use(Vuex);
 
@@ -27,6 +28,7 @@ export const store = new Vuex.Store({
         station,
         banner,
         region,
+        sidebar,
     }
 });
 

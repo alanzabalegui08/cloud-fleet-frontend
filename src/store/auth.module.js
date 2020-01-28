@@ -36,7 +36,10 @@ const mutations = {
         state.isAuthenticated = true;
         state.user = payload;
         state.error = {};
-        // JwtService.saveToken(payload.user.token) 
+        /**
+         * Agregar servicio de jwt 
+         * JwtService.saveToken(payload.user.token) 
+         */
     },
 
     [SET_ERROR] (state,error) {

@@ -30,7 +30,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VTooltip from 'v-tooltip';
+import VueTableDynamic from 'vue-table-dynamic';
 Vue.use(VTooltip);
+Vue.use(VueTableDynamic);
 
 Object.keys(rules).forEach(rule => {
   extend(rule, rules[rule]);

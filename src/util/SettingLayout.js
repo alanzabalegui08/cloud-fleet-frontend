@@ -1,7 +1,12 @@
+
 export function toggleNav(from = null) {
-  console.log(from);
-  
+  console.log(screen.width);
+
+  if(screen.width <= 790){
+    console.log('is phone');
+  }
   const app = document.querySelector('.is-collapsed');
+  
   if (from === 'link-bar') {
     document.querySelector('.app').classList.add('is-collapsed');
     return;

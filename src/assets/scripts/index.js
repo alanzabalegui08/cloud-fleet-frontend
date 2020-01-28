@@ -4,7 +4,7 @@ import './charts';
 import './popover';
 import './scrollbar';
 import './search';*/
-import './sidebar';
+//import './sidebar';
 
 // import './skycons';
 // import './vectorMaps';
