@@ -1,5 +1,5 @@
 <template>
-    <div class="row p-0">
+    <div class="row m-0">
         <div class="col">
             <h2 class="title-klay" >Operadores</h2>
         </div>

@@ -3,7 +3,7 @@
         <sidebar></sidebar>
         <div class="page-container">
             <navbar></navbar>
-            <main class='main-content bgc-grey-100'>
+            <main class='main-content bgc-grey-100 pl-0 pr-0'>
                 <div id='mainContent'>
                     <router-view></router-view>
                 </div>

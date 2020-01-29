@@ -1,25 +1,9 @@
+import SettingsSidebar from "@/common/Settings";
+
 
 export function toggleNav(from = null) {
-  console.log(screen.width);
-
-  if(screen.width <= 790){
-    console.log('is phone');
-  }
-  const app = document.querySelector('.is-collapsed');
-  
-  if (from === 'link-bar') {
-    document.querySelector('.app').classList.add('is-collapsed');
-    return;
-  }
-
-  if (app === null) {
-    document.querySelector('.app').classList.add('is-collapsed');
-  } else {
-    document.querySelector('.app').classList.remove('is-collapsed');
-  }
-
+  SettingsSidebar.toggleSidebar(from);
 }
-
 
 export function StringToHSL(color) {
   let hsl = color;

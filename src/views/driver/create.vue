@@ -1,5 +1,5 @@
 <template>
-    <div class="row gap-20 masonry pos-r">
+    <div class="row m-0 m-lg-3">
         <div class="col pX-0">
             <div class="bgc-white p-20 bd">
                 <div class="mT-0">

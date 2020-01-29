@@ -1,5 +1,5 @@
 <template>
-    <div class="row" >
+    <div class="row m-0 " >
         <div class="col">
             <h2 class="title-klay" >Estaciones</h2>
         </div>

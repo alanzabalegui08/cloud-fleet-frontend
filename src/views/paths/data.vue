@@ -1,5 +1,5 @@
 <template>
-    <div class="row p-0">
+    <div class="row m-0">
         <div class="col">
             <h2 class="title-klay" >Rutas</h2>
         </div>
@@ -34,7 +34,7 @@ import {
 export default {
     name: 'data',
     mixins: [alerts],
-    components: {
+   components: {
         TableKlay,
     },
     data() {

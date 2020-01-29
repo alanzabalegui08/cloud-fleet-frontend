@@ -62,7 +62,7 @@ export default {
 }
 @media (max-width: 600px) {
     .table {
-        width: 700px
+        width: 1800px
     }
 }
 </style>
