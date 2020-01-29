@@ -20,20 +20,21 @@ import VTooltip from 'v-tooltip';
 import VueTableDynamic from 'vue-table-dynamic';
 import SettingsSidebar from "./common/Settings";
 
-
-
 Object.keys(rules).forEach(rule => {
   extend(rule, rules[rule]);
 });
 
 localize('es', es);
 
+// components 
 Vue.component('ValidationObserver', ValidationObserver);
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 library.add(faUserSecret);
 
+
+//use´s
 Vue.use(VueGoogleMaps, {
   load : {
     key: API_KEY_MAPS,
@@ -45,6 +46,7 @@ Vue.use(VTooltip);
 Vue.use(VueTableDynamic);
 Vue.use(VueToast);
 
+// initial configuration 
 SettingsSidebar.init();
 
 new Vue({
