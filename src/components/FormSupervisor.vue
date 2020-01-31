@@ -71,7 +71,7 @@
 
 <script>
 import { supervisorModel } from "../util/model";
-import { SELECT_USER_TYPE } from "../util/datafield";
+import { SELECT_USER_TYPE } from "../util/selectvalue";
 import { mapActions } from 'vuex';
 export default {
   name : 'form-supervisor',

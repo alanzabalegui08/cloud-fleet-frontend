@@ -192,7 +192,7 @@
 <script>
 import { mapActions } from "vuex";
 import { truckModel } from "../util/model";
-import { SELECT_UNIDAD, SELECT_COMBUSTIBLE } from "../util/datafield";
+import { SELECT_UNIDAD, SELECT_COMBUSTIBLE } from "../util/selectvalue";
 
 export default {
     name: 'form-truck',

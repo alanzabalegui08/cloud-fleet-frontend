@@ -1,0 +1,14 @@
+common 
+  /settings
+    *index.js
+    *SettingsLayout
+    *SettingsNavbar
+    *SettingsSide
+   /storage
+    *index.js
+service
+model
+    /customer
+      *index.js
+store
+util 

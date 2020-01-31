@@ -1,4 +1,4 @@
-import Storage from '@/service/storage';
+import Storage from '../service/Storage';
 
 const storage  =  new Storage();
 

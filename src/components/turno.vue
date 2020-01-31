@@ -57,16 +57,13 @@
         mapActions,
         mapGetters
     } from 'vuex';
-    import {
-        mix
-    } from "@/util/mixins";
     import { alerts } from '@/util/alerts'
     import {
         SELECT_TIME
-    } from '@/util/datafield';
+    } from '@/util/selectvalue';
     export default {
         name: 'turno',
-        mixins: [mix,alerts],
+        mixins: [alerts],
         props: {
             turn: {
                 type: Object
