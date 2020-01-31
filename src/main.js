@@ -12,7 +12,7 @@ import { ValidationObserver, ValidationProvider, extend, localize } from 'vee-va
 import es from 'vee-validate/dist/locale/es.json';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/index.css';
-import { API_KEY_MAPS } from "./util/constant";
+import { API_KEY_MAPS } from "./common/constant";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -32,7 +32,6 @@ Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 library.add(faUserSecret);
-
 
 //use´s
 Vue.use(VueGoogleMaps, {

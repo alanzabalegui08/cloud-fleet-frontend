@@ -1,8 +1,8 @@
 import {userService} from '../service';
-import { USERNAME_DEV,PASSWORD_DEV } from "../util/constant";
+import { USERNAME_DEV,PASSWORD_DEV } from "../common/constant";
 import {
     router
-} from '../router';
+} from '@/router';
 
 // estado inicial del modulo
 const initialState = () => ({

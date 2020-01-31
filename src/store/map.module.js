@@ -1,5 +1,5 @@
 import { address } from "../util/model";
-import { API_KEY_MAPS } from "../util/constant";
+import { API_KEY_MAPS } from "../common/constant";
 import axios  from 'axios';
 
 const state  = address();

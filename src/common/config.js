@@ -1,3 +1,39 @@
-export const API_URL = '';
-export const URL_GOOGLE_MAPS_SERVICE = '';
-export const API_KEY_MAPS = 'AIzaSyCBwMj1lgPNLgRj9XVhKZFvHsfOzoSmSc4';
+export const CONFIG_API_URL = '';
+export const CONFIG_URL_GOOGLE_MAPS_SERVICE = '';
+export const CONFIG_API_KEY_MAPS = 'AIzaSyCBwMj1lgPNLgRj9XVhKZFvHsfOzoSmSc4';
+// router names 
+export const CONFIG_ROUTES = {
+    home            : '/',
+    customer        : '/clientes',
+    customerCreate  : 'nuevo',
+    path            : '/rutas',
+    pathCreate      : 'nuevo',
+    driver          : '/operadores',
+    driverCreate    : 'nuevo',
+    truck           : '/unidades',
+    truckCreate     : 'nuevo',
+    supervisor      : '/supervisor',
+    supervisorCreate: 'nuevo',
+    station         : '/estaciones',
+    stationCreate   : 'nuevo',
+    banner          : '/banners',
+    bannerCreate    : 'nuevo',
+    region          : '/regiones',
+    regionCreate    : 'nuevo',
+    monitor         : '/monitor',
+    programming     : '/programacion',
+    pvxr            : '/pvxr',
+    notification    : '/notificaciones',
+    historyTruck    : '/historico-unidad',
+    travel          : '/viajes',
+    commnets        : '/comentarios',
+    reportProgramming : '/reporte-de-programacion',
+    driverWithoutPath : '/operadore-sin-ruta',
+    loagGas         : '/carga-combustible',
+    loagGasCreate   : 'nuevo',
+    alertGas        : '/alertas-combustibles',
+    alertGasDetails : '/alertas/detalles',
+    chartPathCustomer : '/grafica/rutas-cliente',
+    chartCommentsCategory : '/grafica/comentarios-categoria',
+    login            : '/login',
+};

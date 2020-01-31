@@ -1,5 +1,5 @@
  const SettingsSidebar = {
-
+    
     init() {
         this.isOpen = false;
         this.modeMobil = false;

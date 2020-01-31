@@ -1,94 +1,32 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import { CONFIG_ROUTES } from '../common/config';
 import { userService } from "@/service";
-import HomeView from '@/views/Home.vue';
-import LoginView from '@/views/LoginPage.vue';
-// customers
-import CustomerView from '@/views/customers/index.vue';
-import CustomerDataView from '@/views/customers/data.vue';
-import CustomerCreateView from '@/views/customers/create.vue';
-// paths 
-import PathView from '@/views/paths/index.vue';
-import PathDataView from '@/views/paths/data.vue';
-import PathCreateView from '@/views/paths/create.vue';
-
-// drivers
-import DriverView from '@/views/driver/index.vue';
-import DriverDataView from '@/views/driver/data.vue';
-import DriverCreateView from '@/views/driver/create.vue';
-
-// truck
-import TruckView from '@/views/truck/index.vue';
-import TruckDataView from '@/views/truck/data.vue';
-import TruckCreateView from '@/views/truck/create.vue';
-
-// truck
-import SupervisorView from '@/views/supervisor/index.vue';
-import SupervisorDataView from '@/views/supervisor/data.vue';
-import SupervisorCreateView from '@/views/supervisor/create.vue';
-
-// stations
-import StationsView from '@/views/stations/index.vue';
-import StationsDataView from '@/views/stations/data.vue';
-import StationsCreateView from '@/views/stations/create.vue';
-
-//banners
-import BannerView from '@/views/banner/index.vue';
-import BannerDataView from '@/views/banner/data.vue';
-import BannerCreateView from '@/views/banner/create.vue';
-
-//regions
-import RegionsView from '@/views/regions/index.vue';
-import RegionsDataView from '@/views/regions/data.vue';
-import RegionsCreateView from '@/views/regions/create.vue';
-
-//monitor
-import MonitorView from '@/views/monitor';
-
-//programacion
-import ProgrammingView from '@/views/programming';
-import PvxrView from '@/views/pvxr';
-import NotificationView from '@/views/notification';
-import HistoryTruckView from '@/views/historico';
-import TravelReportView from '@/views/travel';
-import CommentsView from '@/views/comments';
-import ProgramminReportView from '@/views/programmingreport';
-import DriverPathView from '@/views/driverWithoutPath';
-
-
-// load gas
-import LoadGasView from '@/views/loadgas';
-import LoadGasDataView from '@/views/loadgas/data.vue';
-import LoadGasCreateView from '@/views/loadgas/create.vue';
-import AlertGas  from  '@/views/alerts';
-
-//charts
-import Chart from '@/views/chart/'
-import ChartCategory from '@/views/chart/comments-category.vue'
-import ListAlerts from '@/views/alerts/list.vue';
 
 Vue.use(Router);
 
 export const router = new Router({
     mode: 'history',
-    routes: [{
-            path: '/',
+    routes: [
+        {
+            path: CONFIG_ROUTES.home,
             name: 'Home',
-            component: HomeView,
+            component: () => import('@/views/Home.vue'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/clientes',
-            component: CustomerView,
-            children: [{
+            path: CONFIG_ROUTES.customer,
+            component: () => import('@/views/customers/index.vue'),
+            children: [
+                {
                     path: '',
-                    component: CustomerDataView
+                    component: () => import('@/views/customers/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: CustomerCreateView
+                    path: CONFIG_ROUTES.customerCreate,
+                    component: () => import('@/views/customers/create.vue'),
                 }
             ],
             meta: {
@@ -96,15 +34,15 @@ export const router = new Router({
             }
         },
         {
-            path: '/rutas',
-            component: PathView,
+            path: CONFIG_ROUTES.path,
+            component: () => import('@/views/paths/index.vue'),
             children: [{
                     path: '',
-                    component: PathDataView
+                    component: () => import('@/views/paths/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: PathCreateView
+                    path: CONFIG_ROUTES.pathCreate,
+                    component: () => import('@/views/paths/create.vue'),
                 }
             ],
             meta: {
@@ -112,15 +50,15 @@ export const router = new Router({
             }
         },
         {
-            path: '/operadores',
-            component: DriverView,
+            path: CONFIG_ROUTES.driver,
+            component: () => import('@/views/driver/index.vue'),
             children: [{
                     path: '',
-                    component: DriverDataView
+                    component: () => import('@/views/driver/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: DriverCreateView
+                    path: CONFIG_ROUTES.driverCreate,
+                    component: () => import('@/views/driver/create.vue'),
                 }
             ],
             meta: {
@@ -128,15 +66,15 @@ export const router = new Router({
             }
         },
         {
-            path: '/unidades',
-            component: TruckView,
+            path: CONFIG_ROUTES.truck,
+            component: () => import('@/views/truck/index.vue'),
             children: [{
                     path: '',
-                    component: TruckDataView
+                    component: () => import('@/views/truck/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: TruckCreateView
+                    path: CONFIG_ROUTES.truckCreate,
+                    component: () => import('@/views/truck/create.vue'),
                 }
             ],
             meta: {
@@ -144,15 +82,15 @@ export const router = new Router({
             }
         },
         {
-            path: '/supervisor',
-            component: SupervisorView,
+            path: CONFIG_ROUTES.supervisor,
+            component: () => import('@/views/supervisor/index.vue'),
             children: [{
                     path: '',
-                    component: SupervisorDataView
+                    component: () => import('@/views/supervisor/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: SupervisorCreateView
+                    path: CONFIG_ROUTES.supervisorCreate,
+                    component: () => import('@/views/supervisor/create.vue'),
                 }
             ],
             meta: {
@@ -160,15 +98,15 @@ export const router = new Router({
             }
         },
         {
-            path: '/estaciones',
-            component: StationsView,
+            path: CONFIG_ROUTES.station,
+            component: () => import('@/views/stations/index.vue'),
             children: [{
                     path: '',
-                    component: StationsDataView
+                    component: () => import('@/views/stations/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: StationsCreateView
+                    path: CONFIG_ROUTES.stationCreate,
+                    component: () => import('@/views/stations/create.vue'),
                 }
             ],
             meta: {
@@ -176,15 +114,15 @@ export const router = new Router({
             }
         },
         {
-            path: '/banners',
-            component: BannerView,
+            path: CONFIG_ROUTES.banner,
+            component: () => import('@/views/banner/index.vue'),
             children: [{
                     path: '',
-                    component: BannerDataView
+                    component: () => import('@/views/banner/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: BannerCreateView
+                    path: CONFIG_ROUTES.bannerCreate,
+                    component: () => import('@/views/banner/create.vue'),
                 }
             ],
             meta: {
@@ -192,15 +130,15 @@ export const router = new Router({
             }
         },
         {
-            path: '/regiones',
-            component: RegionsView,
+            path: CONFIG_ROUTES.region,
+            component: () => import('@/views/regions/index.vue'),
             children: [{
                     path: '',
-                    component: RegionsDataView
+                    component: () => import('@/views/regions/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: RegionsCreateView
+                    path: CONFIG_ROUTES.regionCreate,
+                    component: () => import('@/views/regions/create.vue'),
                 }
             ],
             meta: {
@@ -208,85 +146,85 @@ export const router = new Router({
             }
         },
         {
-            path: '/monitor',
-            component: MonitorView,
+            path: CONFIG_ROUTES.monitor,
+            component: () => import('@/views/monitor'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/programacion',
-            component: ProgrammingView,
+            path: CONFIG_ROUTES.programming,
+            component: () => import('@/views/programming'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/pvxr',
+            path: CONFIG_ROUTES.pvxr,
             name: 'PV XR',
-            component: PvxrView,
+            component: () => import('@/views/pvxr'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/notificaciones',
+            path: CONFIG_ROUTES.notification,
             name: 'Notificaciones',
-            component: NotificationView,
+            component: () => import('@/views/notification'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/historico-unidad',
+            path: CONFIG_ROUTES.historyTruck,
             name: 'Historico de unidad',
-            component: HistoryTruckView,
+            component: () => import('@/views/historico'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/viajes',
+            path: CONFIG_ROUTES.travel,
             name: 'Viajes',
-            component: TravelReportView,
+            component: () => import('@/views/travel'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/comentarios',
+            path: CONFIG_ROUTES.commnets,
             name: 'Comentarios',
-            component: CommentsView,
+            component: () => import('@/views/comments'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/reporte-de-programacion',
+            path: CONFIG_ROUTES.reportProgramming,
             name: 'Reporte programacion',
-            component: ProgramminReportView,
+            component: () => import('@/views/programmingreport'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/operadore-sin-ruta',
+            path: CONFIG_ROUTES.driverWithoutPath,
             name: 'Operadores sin ruta',
-            component: DriverPathView,
+            component: () => import('@/views/driverWithoutPath'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/carga-combustible',
-            component: LoadGasView,
+            path: CONFIG_ROUTES.loagGas,
+            component: () => import('@/views/loadgas'),
             children: [{
                     path: '',
-                    component: LoadGasDataView
+                    component: () => import('@/views/loadgas/data.vue'),
                 },
                 {
-                    path: 'nuevo',
-                    component: LoadGasCreateView
+                    path: CONFIG_ROUTES.loagGasCreate,
+                    component: () => import('@/views/loadgas/create.vue'),
                 }
             ],
             meta: {
@@ -294,73 +232,73 @@ export const router = new Router({
             }
         },
         {
-            path: '/alertas-combustibles',
+            path: CONFIG_ROUTES.alertGas,
             name: 'Alertas',
-            component: AlertGas,
+            component: () => import('@/views/alerts'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/alertas/detalles',
+            path: CONFIG_ROUTES.alertGasDetails,
             name: 'alertadetalles',
-            component: ListAlerts,
+            component: () => import('@/views/alerts/list.vue'),
             props: true,
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/grafica/rutas-cliente',
-            name: 'Grafica- rutas-cliente',
-            component: Chart,
+            path: CONFIG_ROUTES.chartPathCustomer,
+            name: 'Grafica-rutas-cliente',
+            component: () => import('@/views/chart/'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/grafica/comentarios-categoria',
+            path: CONFIG_ROUTES.chartCommentsCategory,
             name: 'Grafica-comentarios-categoria',
-            component: ChartCategory,
+            component: () => import('@/views/chart/comments-category.vue'),
             meta: {
                 requiresAuth: true,
             }
         },
         {
-            path: '/login',
+            path: CONFIG_ROUTES.login,
             name: 'login',
-            component: LoginView,
+            component: () => import('@/views/LoginPage.vue'),
             meta: {
                 guest: true
             }
         },
         {
             path: '*',
-            redirect: '/'
+            redirect: CONFIG_ROUTES.home
         }
     ],
 });
 
 router.beforeEach((to, from, next) => {
 
-    const storage  = userService.getUserStore();
+    const storage = userService.getUserStore();
 
     if (to.matched.some(record => record.meta.requiresAuth)) {
         if (storage === null) {
-            router.push('/login');
+            router.push(CONFIG_ROUTES.login);
         } else {
             next();
         }
-    } else if (to.matched.some(record => record.meta.guest)) {        
-        if (to.path === '/' && storage === null) {
-            router.push('/login');
-        } else {           
-            if(to.path === '/login' && storage !== null){
-                router.push('/');
+    } else if (to.matched.some(record => record.meta.guest)) {
+        if (to.path === CONFIG_ROUTES.home && storage === null) {
+            router.push(CONFIG_ROUTES.login);
+        } else {
+            if (to.path === CONFIG_ROUTES.login && storage !== null) {
+                router.push(CONFIG_ROUTES.home);
             }
             next();
         }
     } else {
-        next()
+        next();
     }
 });

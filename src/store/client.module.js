@@ -1,10 +1,13 @@
-import { StringToHSL, HSLToHex } from "../util/SettingLayout";
+import {
+    StringToHSL,
+    HSLToHex
+} from "@/util/SettingLayout";
 
 const initialState = () => ({
     list: [],
     status: null,
     title: 'Clientes',
-    proccess: false,
+    process: false,
 });
 
 
@@ -29,9 +32,11 @@ const actions = {
 const mutations = {
 
     createClient(state, client) {
-        var cliente = {...client} ; 
-        cliente.primarycolor  = HSLToHex ( StringToHSL(cliente.primarycolor) );
-        cliente.backgroundcolor  = HSLToHex ( StringToHSL(cliente.backgroundcolor) );
+        var cliente = {
+            ...client
+        };
+        cliente.primarycolor = HSLToHex(StringToHSL(cliente.primarycolor));
+        cliente.backgroundcolor = HSLToHex(StringToHSL(cliente.backgroundcolor));
         state.list.push(cliente);
     },
 

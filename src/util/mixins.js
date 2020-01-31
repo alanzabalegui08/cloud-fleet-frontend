@@ -19,5 +19,3 @@ export const mix  = {
         }
     },
 }
-
-/// this a example of mixins
