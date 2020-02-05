@@ -1,6 +1,6 @@
-import combustibleGray from '@/assets/static/images/combustible_gray.png';
-import mapGray from '@/assets/static/images/mapa_gray.png';
-import catalogoGray from '@/assets/static/images/capas.png';
+import imgGasGray from '@/assets/static/images/combustible_gray.png';
+import imgMapGray from '@/assets/static/images/mapa_gray.png';
+import imgCatalogoGray from '@/assets/static/images/capas.png';
 
 export default {
     menu :[
@@ -10,8 +10,8 @@ export default {
             down : true,
             path : '/',
             icon : {        
-                icon : catalogoGray,
-                iconHover : catalogoGray,
+                icon : imgCatalogoGray,
+                iconHover : imgCatalogoGray,
                 img : true,
             },
             class: 'nav-item dropdown',
@@ -64,8 +64,8 @@ export default {
             down : false,
             path : '/monitor',
             icon : {        
-                icon : mapGray,
-                iconHover : mapGray,
+                icon : imgMapGray,
+                iconHover : imgMapGray,
                 img : true,
             },
             class: 'nav-item dropdown',
@@ -143,8 +143,8 @@ export default {
             down : true,
             path : '/',
             icon : {        
-                icon : combustibleGray,
-                iconHover : combustibleGray,
+                icon : imgGasGray,
+                iconHover : imgGasGray,
                 img : true,
             },
             class: 'nav-item dropdown',

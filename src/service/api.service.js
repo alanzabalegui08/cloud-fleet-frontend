@@ -16,7 +16,7 @@ const ApiService = {
         ] = `Token`;
     },
 
-    get( resource, index = "") {
+    get( resource, index = "" ) {
         return Vue.axios.get(`${resource}/${index}`).catch( 
             error => {
                 throw new Error(`[KLAY] API Service  ${error}` )
@@ -24,7 +24,7 @@ const ApiService = {
         )
     },
 
-    post(resource, datas) {
+    post( resource, datas ) {
         return Vue.axios.post(`${resource}`,datas);
     }
 
