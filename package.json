@@ -85,7 +85,7 @@
     "vuetable-2": "^2.0.0-beta.4",
     "vuex": "^3.1.2",
     "webpack": "^4.29.6",
-    "webpack-dashboard": "^1.0.0",
+    "webpack-dashboard": "^3.3.7",
     "webpack-dev-server": "^3.1.11"
   },
   "devDependencies": {
